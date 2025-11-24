@@ -16,9 +16,8 @@ import {
 import {OverlayModule} from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-multiselect',
+  selector: 'app-multiselect-example',
   templateUrl: './multiselect.html',
-  styleUrl: './multiselect.css',
   imports: [
     Combobox,
     ComboboxInput,
@@ -29,8 +28,11 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class Multiselect {
+export class MultiselectExample {
   /** The combobox listbox popup. */
   listbox = viewChild<Listbox<string>>(Listbox);
 

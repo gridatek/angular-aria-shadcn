@@ -16,9 +16,8 @@ import {
 import {OverlayModule} from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-select',
+  selector: 'app-select-example',
   templateUrl: './select.html',
-  styleUrl: './select.css',
   imports: [
     Combobox,
     ComboboxInput,
@@ -29,8 +28,11 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class Select {
+export class SelectExample {
   /** The combobox listbox popup. */
   listbox = viewChild<Listbox<string>>(Listbox);
 

@@ -1,11 +1,14 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+
 <div ngCombobox filterMode="auto-select">
-  <div #origin class="autocomplete">
-    <span class="search-icon material-symbols-outlined" translate="no">search</span>
+  <div #origin class="flex relative items-center">
+    <span class="absolute left-3 text-gray-400 text-xl pointer-events-none material-symbols-outlined" translate="no">search</span>
     <input
       aria-label="Label dropdown"
       placeholder="Select a country"
       [(ngModel)]="query"
       ngComboboxInput
+      class="w-52 text-base rounded px-2 pl-10 py-3 text-gray-900 outline-pink-500 border border-gray-300 bg-white placeholder:text-gray-400"
     />
   </div>
 
@@ -14,16 +17,16 @@
       [cdkConnectedOverlay]="{origin, usePopover: 'inline', matchWidth: true}"
       [cdkConnectedOverlayOpen]="true"
     >
-      <div class="popup">
+      <div class="w-full mt-2 p-2 max-h-44 rounded-lg bg-gray-100 text-sm">
         @if (countries().length === 0) {
-          <div class="no-results">No results found</div>
+          <div class="p-4">No results found</div>
         }
 
-        <div ngListbox>
+        <div ngListbox class="gap-0.5 h-full flex overflow-auto flex-col">
           @for (country of countries(); track country) {
-            <div ngOption [value]="country" [label]="country">
-              <span class="option-label">{{country}}</span>
-              <span class="check-icon material-symbols-outlined" translate="no">check</span>
+            <div ngOption [value]="country" [label]="country" class="flex cursor-pointer items-center m-px px-4 min-h-9 rounded-lg hover:bg-gray-900/5 data-[active=true]:outline data-[active=true]:outline-2 data-[active=true]:-outline-offset-2 data-[active=true]:outline-pink-500 aria-selected:text-pink-500 aria-selected:bg-pink-500/5 [&:not([aria-selected=true])_.check-icon]:hidden">
+              <span class="flex-1">{{country}}</span>
+              <span class="check-icon text-sm material-symbols-outlined" translate="no">check</span>
             </div>
           }
         </div>

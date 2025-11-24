@@ -7,9 +7,11 @@ import {
 } from '@angular/aria/accordion';
 
 @Component({
-  selector: 'app-single-expansion',
+  selector: 'app-single-expansion-example',
   templateUrl: 'single-expansion.html',
-  styleUrl: 'single-expansion.css',
   imports: [AccordionGroup, AccordionTrigger, AccordionPanel, AccordionContent],
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class SingleExpansion {}
+export class SingleExpansionExample {}

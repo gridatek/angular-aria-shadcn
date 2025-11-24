@@ -1,17 +1,22 @@
-<div ngAccordionGroup class="basic-accordion" [multiExpandable]="false">
-  <h3>
-    <span ngAccordionTrigger panelId="q1" #trigger1="ngAccordionTrigger" [expanded]="true">
+<div ngAccordionGroup class="w-[500px]" [multiExpandable]="false">
+  <h3 class="relative text-base m-0 text-gray-700 box-border first:border-t-0 border-t border-gray-200 hover:before:content-[''] hover:before:absolute hover:before:h-full hover:before:w-0.5 hover:before:bg-pink-500 hover:before:top-0 hover:before:left-0 focus-within:before:content-[''] focus-within:before:absolute focus-within:before:h-full focus-within:before:w-0.5 focus-within:before:bg-pink-500 focus-within:before:top-0 focus-within:before:left-0">
+    <span ngAccordionTrigger panelId="q1" #trigger1="ngAccordionTrigger" [expanded]="true" class="flex items-center justify-between outline-none cursor-pointer p-6" [class.bg-gradient-to-r]="trigger1.expanded()" [class.from-pink-500]="trigger1.expanded()" [class.to-purple-500]="trigger1.expanded()" [class.bg-clip-text]="trigger1.expanded()" [class.text-transparent]="trigger1.expanded()">
       Which attribute tells assistive tech whether the panel is open or closed?
       <span
         aria-hidden="true"
-        class="expand-icon"
-        [class.expand-icon__expanded]="trigger1.expanded()"
+        class="relative w-4 h-4 flex-shrink-0 ml-4 before:content-[''] before:absolute before:w-full before:h-0.5 before:top-1/2 before:bg-gray-400 before:transition-all before:duration-300 before:ease-out after:content-[''] after:absolute after:w-full after:h-0.5 after:top-1/2 after:bg-gray-400 after:transition-all after:duration-300 after:ease-out after:rotate-90"
+        [class.before:-translate-y-1/2]="!trigger1.expanded()"
+        [class.before:-rotate-90]="trigger1.expanded()"
+        [class.before:opacity-0]="trigger1.expanded()"
+        [class.after:-translate-y-1/2]="trigger1.expanded()"
+        [class.after:rotate-0]="trigger1.expanded()"
+        [class.after:bg-purple-600]="trigger1.expanded()"
       ></span>
     </span>
   </h3>
   <div ngAccordionPanel panelId="q1">
     <ng-template ngAccordionContent>
-      <p>
+      <p class="m-0 px-6 pb-6 text-gray-600 text-sm">
         Use <code>aria-expanded</code> on the button element. Set it to "true" when the content
         panel is visible and "false" when the content is hidden. This is a crucial state indicator
         for screen reader users.
@@ -19,19 +24,24 @@
     </ng-template>
   </div>
 
-  <h3>
-    <span ngAccordionTrigger panelId="q2" #trigger2="ngAccordionTrigger">
+  <h3 class="relative text-base m-0 text-gray-700 box-border first:border-t-0 border-t border-gray-200 hover:before:content-[''] hover:before:absolute hover:before:h-full hover:before:w-0.5 hover:before:bg-pink-500 hover:before:top-0 hover:before:left-0 focus-within:before:content-[''] focus-within:before:absolute focus-within:before:h-full focus-within:before:w-0.5 focus-within:before:bg-pink-500 focus-within:before:top-0 focus-within:before:left-0">
+    <span ngAccordionTrigger panelId="q2" #trigger2="ngAccordionTrigger" class="flex items-center justify-between outline-none cursor-pointer p-6" [class.bg-gradient-to-r]="trigger2.expanded()" [class.from-pink-500]="trigger2.expanded()" [class.to-purple-500]="trigger2.expanded()" [class.bg-clip-text]="trigger2.expanded()" [class.text-transparent]="trigger2.expanded()">
       How do you link the button to the content it controls?
       <span
         aria-hidden="true"
-        class="expand-icon"
-        [class.expand-icon__expanded]="trigger2.expanded()"
+        class="relative w-4 h-4 flex-shrink-0 ml-4 before:content-[''] before:absolute before:w-full before:h-0.5 before:top-1/2 before:bg-gray-400 before:transition-all before:duration-300 before:ease-out after:content-[''] after:absolute after:w-full after:h-0.5 after:top-1/2 after:bg-gray-400 after:transition-all after:duration-300 after:ease-out after:rotate-90"
+        [class.before:-translate-y-1/2]="!trigger2.expanded()"
+        [class.before:-rotate-90]="trigger2.expanded()"
+        [class.before:opacity-0]="trigger2.expanded()"
+        [class.after:-translate-y-1/2]="trigger2.expanded()"
+        [class.after:rotate-0]="trigger2.expanded()"
+        [class.after:bg-purple-600]="trigger2.expanded()"
       ></span>
     </span>
   </h3>
   <div ngAccordionPanel panelId="q2">
     <ng-template ngAccordionContent>
-      <p>
+      <p class="m-0 px-6 pb-6 text-gray-600 text-sm">
         Use the <code>aria-controls</code> attribute on the button, and set its value to match the
         id of the related content panel. This establishes a programmatic relationship, allowing
         assistive technologies to jump directly to the relevant content.
@@ -39,19 +49,24 @@
     </ng-template>
   </div>
 
-  <h3>
-    <span ngAccordionTrigger panelId="q3" #trigger3="ngAccordionTrigger">
+  <h3 class="relative text-base m-0 text-gray-700 box-border first:border-t-0 border-t border-gray-200 hover:before:content-[''] hover:before:absolute hover:before:h-full hover:before:w-0.5 hover:before:bg-pink-500 hover:before:top-0 hover:before:left-0 focus-within:before:content-[''] focus-within:before:absolute focus-within:before:h-full focus-within:before:w-0.5 focus-within:before:bg-pink-500 focus-within:before:top-0 focus-within:before:left-0">
+    <span ngAccordionTrigger panelId="q3" #trigger3="ngAccordionTrigger" class="flex items-center justify-between outline-none cursor-pointer p-6" [class.bg-gradient-to-r]="trigger3.expanded()" [class.from-pink-500]="trigger3.expanded()" [class.to-purple-500]="trigger3.expanded()" [class.bg-clip-text]="trigger3.expanded()" [class.text-transparent]="trigger3.expanded()">
       What role should the heading element containing the accordion button have?
       <span
         aria-hidden="true"
-        class="expand-icon"
-        [class.expand-icon__expanded]="trigger3.expanded()"
+        class="relative w-4 h-4 flex-shrink-0 ml-4 before:content-[''] before:absolute before:w-full before:h-0.5 before:top-1/2 before:bg-gray-400 before:transition-all before:duration-300 before:ease-out after:content-[''] after:absolute after:w-full after:h-0.5 after:top-1/2 after:bg-gray-400 after:transition-all after:duration-300 after:ease-out after:rotate-90"
+        [class.before:-translate-y-1/2]="!trigger3.expanded()"
+        [class.before:-rotate-90]="trigger3.expanded()"
+        [class.before:opacity-0]="trigger3.expanded()"
+        [class.after:-translate-y-1/2]="trigger3.expanded()"
+        [class.after:rotate-0]="trigger3.expanded()"
+        [class.after:bg-purple-600]="trigger3.expanded()"
       ></span>
     </span>
   </h3>
   <div ngAccordionPanel panelId="q3">
     <ng-template ngAccordionContent>
-      <p>
+      <p class="m-0 px-6 pb-6 text-gray-600 text-sm">
         The element containing the button should typically have <code>role="heading"</code> with an
         appropriate <code>aria-level</code> to define the structure. This ensures the accordion
         section is recognized as a section header, making the page structure navigable for users.

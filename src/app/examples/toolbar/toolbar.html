@@ -1,11 +1,13 @@
-<div ngToolbar aria-label="Text Formatting Tools">
-  <div class="group">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+
+<div ngToolbar aria-label="Text Formatting Tools" class="gap-6 flex px-4 py-2 rounded-lg bg-gray-100">
+  <div class="gap-2 flex">
     <button
       ngToolbarWidget
       value="undo"
       type="button"
       aria-label="undo"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 material-symbols-outlined"
      translate="no">
       undo
     </button>
@@ -15,22 +17,22 @@
       value="redo"
       type="button"
       aria-label="redo"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 material-symbols-outlined"
      translate="no">
       redo
     </button>
   </div>
 
-  <div class="separator" role="separator"></div>
+  <div class="w-px self-center h-[calc(100%-1rem)] bg-gray-300" role="separator"></div>
 
-  <div class="group">
+  <div class="gap-2 flex">
     <button
       ngToolbarWidget
       value="bold"
       type="button"
       aria-label="bold"
       #bold="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-pressed:text-pink-600 aria-pressed:bg-pink-500/10 material-symbols-outlined"
       [aria-pressed]="bold.selected()"
      translate="no">
       format_bold
@@ -42,7 +44,7 @@
       type="button"
       aria-label="italic"
       #italic="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-pressed:text-pink-600 aria-pressed:bg-pink-500/10 material-symbols-outlined"
       [aria-pressed]="italic.selected()"
      translate="no">
       format_italic
@@ -54,16 +56,16 @@
       type="button"
       aria-label="underlined"
       #underlined="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-pressed:text-pink-600 aria-pressed:bg-pink-500/10 material-symbols-outlined"
       [aria-pressed]="underlined.selected()"
      translate="no">
       format_underlined
     </button>
   </div>
 
-  <div class="separator" role="separator"></div>
+  <div class="w-px self-center h-[calc(100%-1rem)] bg-gray-300" role="separator"></div>
 
-  <div ngToolbarWidgetGroup role="radiogroup" class="group" aria-label="Text alignment options">
+  <div ngToolbarWidgetGroup role="radiogroup" class="gap-2 flex" aria-label="Text alignment options">
     <button
       ngToolbarWidget
       role="radio"
@@ -71,7 +73,7 @@
       value="align left"
       aria-label="align left"
       #leftAlign="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-checked:text-pink-600 aria-checked:bg-pink-500/10 material-symbols-outlined"
       [aria-checked]="leftAlign.selected()"
      translate="no">
       format_align_left
@@ -84,7 +86,7 @@
       value="align center"
       aria-label="align center"
       #centerAlign="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-checked:text-pink-600 aria-checked:bg-pink-500/10 material-symbols-outlined"
       [aria-checked]="centerAlign.selected()"
      translate="no">
       format_align_center
@@ -97,7 +99,7 @@
       value="align right"
       aria-label="align right"
       #rightAlign="ngToolbarWidget"
-      class="material-symbols-outlined"
+      class="border-none cursor-pointer p-2 rounded text-xl bg-transparent text-gray-900 hover:bg-gray-900/10 active:bg-gray-900/15 focus:-outline-offset-1 focus:outline focus:outline-1 focus:outline-pink-500/60 aria-checked:text-pink-600 aria-checked:bg-pink-500/10 material-symbols-outlined"
       [aria-checked]="rightAlign.selected()"
      translate="no">
       format_align_right

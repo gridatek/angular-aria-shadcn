@@ -2,13 +2,15 @@ import {Listbox, Option} from '@angular/aria/listbox';
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-  selector: 'app-listbox',
+  selector: 'app-listbox-example',
   templateUrl: './listbox.html',
-  styleUrl: './listbox.css',
   imports: [Listbox, Option],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class Listbox {
+export class ListboxExample {
   /** The options available in the listbox. */
   options = [
     'Option 1',

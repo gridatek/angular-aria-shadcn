@@ -1,9 +1,11 @@
-<div ngMenuBar (focusin)="onFocusIn()">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+
+<div ngMenuBar (focusin)="onFocusIn()" class="flex gap-1 p-1 rounded-lg border border-gray-700/20 bg-white">
   <div
     ngMenuItem
     #fileEl
     #fileItem="ngMenuItem"
-    class="menu-bar-item"
+    class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500"
     value="File"
     [submenu]="fileMenu()"
   >
@@ -16,31 +18,31 @@
     [cdkConnectedOverlayPositions]="[{originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4}]"
     cdkAttachPopoverAsChild
   >
-    <div ngMenu #fileMenu="ngMenu">
+    <div ngMenu #fileMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
       <ng-template ngMenuContent>
-        <div ngMenuItem value="New">
-          <span class="icon material-symbols-outlined" translate="no">article</span>
-          <span class="label">New</span>
-          <span class="shortcut">⌘N</span>
+        <div ngMenuItem value="New" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">article</span>
+          <span class="flex-1 opacity-[0.875] text-sm">New</span>
+          <span class="opacity-[0.875] text-sm">⌘N</span>
         </div>
 
-        <div ngMenuItem value="Open">
-          <span class="icon material-symbols-outlined" translate="no">folder</span>
-          <span class="label">Open</span>
-          <span class="shortcut">⌘O</span>
+        <div ngMenuItem value="Open" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">folder</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Open</span>
+          <span class="opacity-[0.875] text-sm">⌘O</span>
         </div>
 
-        <div ngMenuItem value="Make a copy">
-          <span class="icon material-symbols-outlined" translate="no">file_copy</span>
-          <span class="label">Make a copy</span>
+        <div ngMenuItem value="Make a copy" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">file_copy</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Make a copy</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem #shareEl value="Share" [submenu]="shareMenu()">
-          <span class="icon material-symbols-outlined" translate="no">person_add</span>
-          <span class="label">Share</span>
-          <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
+        <div ngMenuItem #shareEl value="Share" [submenu]="shareMenu()" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">person_add</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Share</span>
+          <span class="opacity-[0.875] text-xl aria-expanded:opacity-100 material-symbols-outlined" [class.opacity-50]="!shareEl.getAttribute('aria-expanded')" translate="no">arrow_right</span>
         </div>
 
         <ng-template
@@ -49,41 +51,41 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #shareMenu="ngMenu">
+          <div ngMenu #shareMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
-              <div ngMenuItem value="Share with others">
-                <span class="icon material-symbols-outlined" translate="no">person_add</span>
-                <span class="label">Share with others</span>
+              <div ngMenuItem value="Share with others" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">person_add</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Share with others</span>
               </div>
 
-              <div ngMenuItem value="Publish to web">
-                <span class="icon material-symbols-outlined" translate="no">public</span>
-                <span class="label">Publish to web</span>
+              <div ngMenuItem value="Publish to web" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">public</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Publish to web</span>
               </div>
             </ng-template>
           </div>
         </ng-template>
 
-        <div ngMenuItem value="Download">
-          <span class="icon material-symbols-outlined" translate="no">download</span>
-          <span class="label">Download</span>
+        <div ngMenuItem value="Download" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">download</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Download</span>
         </div>
 
-        <div ngMenuItem value="Print">
-          <span class="icon material-symbols-outlined" translate="no">print</span>
-          <span class="label">Print</span>
+        <div ngMenuItem value="Print" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">print</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Print</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem value="Rename">
-          <span class="icon material-symbols-outlined" translate="no">edit</span>
-          <span class="label">Rename</span>
+        <div ngMenuItem value="Rename" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">edit</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Rename</span>
         </div>
 
-        <div ngMenuItem value="Delete">
-          <span class="icon material-symbols-outlined" translate="no">delete</span>
-          <span class="label">Move to trash</span>
+        <div ngMenuItem value="Delete" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">delete</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Move to trash</span>
         </div>
       </ng-template>
     </div>
@@ -93,7 +95,7 @@
     ngMenuItem
     #editEl
     #editItem="ngMenuItem"
-    class="menu-bar-item"
+    class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500"
     value="Edit"
     [submenu]="editMenu()"
   >
@@ -106,46 +108,46 @@
     [cdkConnectedOverlayPositions]="[{originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4}]"
     cdkAttachPopoverAsChild
   >
-    <div ngMenu #editMenu="ngMenu">
+    <div ngMenu #editMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
       <ng-template ngMenuContent>
-        <div ngMenuItem value="Undo">
-          <span class="icon material-symbols-outlined" translate="no">undo</span>
-          <span class="label">Undo</span>
-          <span class="shortcut">⌘Z</span>
+        <div ngMenuItem value="Undo" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">undo</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Undo</span>
+          <span class="opacity-[0.875] text-sm">⌘Z</span>
         </div>
 
-        <div ngMenuItem value="Redo">
-          <span class="icon material-symbols-outlined" translate="no">redo</span>
-          <span class="label">Redo</span>
-          <span class="shortcut">⌘Y</span>
+        <div ngMenuItem value="Redo" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">redo</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Redo</span>
+          <span class="opacity-[0.875] text-sm">⌘Y</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem value="Cut">
-          <span class="icon material-symbols-outlined" translate="no">content_cut</span>
-          <span class="label">Cut</span>
-          <span class="shortcut">⌘X</span>
+        <div ngMenuItem value="Cut" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">content_cut</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Cut</span>
+          <span class="opacity-[0.875] text-sm">⌘X</span>
         </div>
 
-        <div ngMenuItem value="Copy">
-          <span class="icon material-symbols-outlined" translate="no">content_copy</span>
-          <span class="label">Copy</span>
-          <span class="shortcut">⌘C</span>
+        <div ngMenuItem value="Copy" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">content_copy</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Copy</span>
+          <span class="opacity-[0.875] text-sm">⌘C</span>
         </div>
 
-        <div ngMenuItem value="Paste">
-          <span class="icon material-symbols-outlined" translate="no">content_paste</span>
-          <span class="label">Paste</span>
-          <span class="shortcut">⌘V</span>
+        <div ngMenuItem value="Paste" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">content_paste</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Paste</span>
+          <span class="opacity-[0.875] text-sm">⌘V</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem value="Find and replace">
-          <span class="icon material-symbols-outlined" translate="no">find_replace</span>
-          <span class="label">Find and replace</span>
-          <span class="shortcut">⇧⌘H</span>
+        <div ngMenuItem value="Find and replace" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">find_replace</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Find and replace</span>
+          <span class="opacity-[0.875] text-sm">⇧⌘H</span>
         </div>
       </ng-template>
     </div>
@@ -155,7 +157,7 @@
     ngMenuItem
     #viewEl
     #viewItem="ngMenuItem"
-    class="menu-bar-item"
+    class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500"
     value="View"
     [submenu]="viewMenu()"
   >
@@ -168,34 +170,34 @@
     [cdkConnectedOverlayPositions]="[{originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4}]"
     cdkAttachPopoverAsChild
   >
-    <div ngMenu #viewMenu="ngMenu">
+    <div ngMenu #viewMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
       <ng-template ngMenuContent>
-        <div ngMenuItem value="Show print layout" [disabled]="true">
-          <span class="icon material-symbols-outlined" translate="no">check</span>
-          <span class="label">Show print layout</span>
+        <div ngMenuItem value="Show print layout" [disabled]="true" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">check</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Show print layout</span>
         </div>
 
-        <div ngMenuItem value="Show ruler" [disabled]="true">
-          <span class="icon material-symbols-outlined" translate="no">check</span>
-          <span class="label">Show ruler</span>
+        <div ngMenuItem value="Show ruler" [disabled]="true" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">check</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Show ruler</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem value="Zoom in">
-          <span class="label">Zoom in</span>
-          <span class="shortcut">⌘+</span>
+        <div ngMenuItem value="Zoom in" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="flex-1 opacity-[0.875] text-sm">Zoom in</span>
+          <span class="opacity-[0.875] text-sm">⌘+</span>
         </div>
 
-        <div ngMenuItem value="Zoom out">
-          <span class="label">Zoom out</span>
-          <span class="shortcut">⌘-</span>
+        <div ngMenuItem value="Zoom out" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="flex-1 opacity-[0.875] text-sm">Zoom out</span>
+          <span class="opacity-[0.875] text-sm">⌘-</span>
         </div>
 
-        <div role="separator" class="example-menu-item-separator"></div>
+        <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
-        <div ngMenuItem value="Full screen">
-          <span class="label">Full screen</span>
+        <div ngMenuItem value="Full screen" class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500">
+          <span class="flex-1 opacity-[0.875] text-sm">Full screen</span>
         </div>
       </ng-template>
     </div>
@@ -205,7 +207,7 @@
     ngMenuItem
     #insertEl
     #insertItem="ngMenuItem"
-    class="menu-bar-item"
+    class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500"
     value="Insert"
     [submenu]="insertMenu()"
   >
@@ -218,11 +220,11 @@
     [cdkConnectedOverlayPositions]="[{originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4}]"
     cdkAttachPopoverAsChild
   >
-    <div ngMenu #insertMenu="ngMenu">
+    <div ngMenu #insertMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
       <ng-template ngMenuContent>
         <div ngMenuItem #imageEl value="Image" [submenu]="imageMenu()">
-          <span class="icon material-symbols-outlined" translate="no">image</span>
-          <span class="label">Image</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">image</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Image</span>
           <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
         </div>
 
@@ -232,34 +234,34 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #imageMenu="ngMenu">
+          <div ngMenu #imageMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
               <div ngMenuItem value="Upload from computer">
-                <span class="icon material-symbols-outlined" translate="no">upload</span>
-                <span class="label">Upload from computer</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">upload</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Upload from computer</span>
               </div>
 
               <div ngMenuItem value="Search the web">
-                <span class="icon material-symbols-outlined" translate="no">search</span>
-                <span class="label">Search the web</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">search</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Search the web</span>
               </div>
 
               <div ngMenuItem value="By URL">
-                <span class="icon material-symbols-outlined" translate="no">link</span>
-                <span class="label">By URL</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">link</span>
+                <span class="flex-1 opacity-[0.875] text-sm">By URL</span>
               </div>
             </ng-template>
           </div>
         </ng-template>
 
         <div ngMenuItem value="Table">
-          <span class="icon material-symbols-outlined" translate="no">table_chart</span>
-          <span class="label">Table</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">table_chart</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Table</span>
         </div>
 
         <div ngMenuItem #chartEl value="Chart" [submenu]="chartMenu()">
-          <span class="icon material-symbols-outlined" translate="no">insert_chart</span>
-          <span class="label">Chart</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">insert_chart</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Chart</span>
           <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
         </div>
 
@@ -269,34 +271,34 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #chartMenu="ngMenu">
+          <div ngMenu #chartMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
               <div ngMenuItem value="Bar">
-                <span class="icon material-symbols-outlined" translate="no">bar_chart</span>
-                <span class="label">Bar</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">bar_chart</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Bar</span>
               </div>
 
               <div ngMenuItem value="Column">
-                <span class="icon material-symbols-outlined" translate="no">insert_chart</span>
-                <span class="label">Column</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">insert_chart</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Column</span>
               </div>
 
               <div ngMenuItem value="Line">
-                <span class="icon material-symbols-outlined" translate="no">show_chart</span>
-                <span class="label">Line</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">show_chart</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Line</span>
               </div>
 
               <div ngMenuItem value="Pie">
-                <span class="icon material-symbols-outlined" translate="no">pie_chart</span>
-                <span class="label">Pie</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">pie_chart</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Pie</span>
               </div>
             </ng-template>
           </div>
         </ng-template>
 
         <div ngMenuItem value="Horizontal line">
-          <span class="icon material-symbols-outlined" translate="no">horizontal_rule</span>
-          <span class="label">Horizontal line</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">horizontal_rule</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Horizontal line</span>
         </div>
       </ng-template>
     </div>
@@ -306,7 +308,7 @@
     ngMenuItem
     #formatEl
     #formatItem="ngMenuItem"
-    class="menu-bar-item"
+    class="outline-none flex cursor-pointer items-center gap-2 p-2 text-sm rounded data-[active=true]:bg-gray-700/10 focus:outline-2 focus:outline-pink-500"
     value="Format"
     [submenu]="formatMenu()"
   >
@@ -319,11 +321,11 @@
     [cdkConnectedOverlayPositions]="[{originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4}]"
     cdkAttachPopoverAsChild
   >
-    <div ngMenu #formatMenu="ngMenu">
+    <div ngMenu #formatMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
       <ng-template ngMenuContent>
         <div ngMenuItem #textEl #textItem="ngMenuItem" value="Text" [submenu]="textMenu()">
-          <span class="icon material-symbols-outlined" translate="no">format_bold</span>
-          <span class="label">Text</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_bold</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Text</span>
           <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
         </div>
 
@@ -333,36 +335,36 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #textMenu="ngMenu">
+          <div ngMenu #textMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
               <div ngMenuItem value="Bold">
-                <span class="icon material-symbols-outlined" translate="no">format_bold</span>
-                <span class="label">Bold</span>
-                <span class="shortcut">⌘B</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_bold</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Bold</span>
+                <span class="opacity-[0.875] text-sm">⌘B</span>
               </div>
 
               <div ngMenuItem value="Italic">
-                <span class="icon material-symbols-outlined" translate="no">format_italic</span>
-                <span class="label">Italic</span>
-                <span class="shortcut">⌘I</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_italic</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Italic</span>
+                <span class="opacity-[0.875] text-sm">⌘I</span>
               </div>
 
               <div ngMenuItem value="Underline">
-                <span class="icon material-symbols-outlined" translate="no">format_underlined</span>
-                <span class="label">Underline</span>
-                <span class="shortcut">⌘U</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_underlined</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Underline</span>
+                <span class="opacity-[0.875] text-sm">⌘U</span>
               </div>
 
               <div ngMenuItem value="Strikethrough">
-                <span class="icon material-symbols-outlined" translate="no">strikethrough_s</span>
-                <span class="label">Strikethrough</span>
-                <span class="shortcut">⇧⌘X</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">strikethrough_s</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Strikethrough</span>
+                <span class="opacity-[0.875] text-sm">⇧⌘X</span>
               </div>
 
-              <div role="separator" class="example-menu-item-separator"></div>
+              <div role="separator" class="border-t border-gray-700/20 my-1 opacity-25"></div>
 
               <div ngMenuItem #sizeEl value="Size" [submenu]="sizeMenu()">
-                <span class="label">Size</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Size</span>
                 <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
               </div>
 
@@ -372,16 +374,16 @@
                 [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
                 cdkAttachPopoverAsChild
               >
-                <div ngMenu #sizeMenu="ngMenu">
+                <div ngMenu #sizeMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
                   <ng-template ngMenuContent>
                     <div ngMenuItem value="Increase font size">
-                      <span class="label">Increase font size</span>
-                      <span class="shortcut">⇧⌘.</span>
+                      <span class="flex-1 opacity-[0.875] text-sm">Increase font size</span>
+                      <span class="opacity-[0.875] text-sm">⇧⌘.</span>
                     </div>
 
                     <div ngMenuItem value="Decrease font size">
-                      <span class="label">Decrease font size</span>
-                      <span class="shortcut">⇧⌘,</span>
+                      <span class="flex-1 opacity-[0.875] text-sm">Decrease font size</span>
+                      <span class="opacity-[0.875] text-sm">⇧⌘,</span>
                     </div>
                   </ng-template>
                 </div>
@@ -391,8 +393,8 @@
         </ng-template>
 
         <div ngMenuItem #paragraphEl value="Paragraph styles" [submenu]="paragraphMenu()">
-          <span class="icon material-symbols-outlined" translate="no">format_align_justify</span>
-          <span class="label">Paragraph styles</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_align_justify</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Paragraph styles</span>
           <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
         </div>
 
@@ -402,7 +404,7 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #paragraphMenu="ngMenu">
+          <div ngMenu #paragraphMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
               <div ngMenuItem value="Normal text">Normal text</div>
               <div ngMenuItem value="Heading 1">Heading 1</div>
@@ -412,8 +414,8 @@
         </ng-template>
 
         <div ngMenuItem #alignEl [submenu]="alignMenu()" value="Align & indent">
-          <span class="icon material-symbols-outlined" translate="no">format_indent_increase</span>
-          <span class="label">Align & indent</span>
+          <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_indent_increase</span>
+          <span class="flex-1 opacity-[0.875] text-sm">Align & indent</span>
           <span class="icon arrow material-symbols-outlined" translate="no">arrow_right</span>
         </div>
 
@@ -423,26 +425,26 @@
           [cdkConnectedOverlayPositions]="[{originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 6}]"
           cdkAttachPopoverAsChild
         >
-          <div ngMenu #alignMenu="ngMenu">
+          <div ngMenu #alignMenu="ngMenu" class="m-0 w-60 p-1 rounded-lg border border-gray-700/20 bg-white data-[visible=false]:hidden">
             <ng-template ngMenuContent>
               <div ngMenuItem value="Align left">
-                <span class="icon material-symbols-outlined" translate="no">format_align_left</span>
-                <span class="label">Align left</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_align_left</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Align left</span>
               </div>
 
               <div ngMenuItem value="Align center">
-                <span class="icon material-symbols-outlined" translate="no">format_align_center</span>
-                <span class="label">Align center</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_align_center</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Align center</span>
               </div>
 
               <div ngMenuItem value="Align right">
-                <span class="icon material-symbols-outlined" translate="no">format_align_right</span>
-                <span class="label">Align right</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_align_right</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Align right</span>
               </div>
 
               <div ngMenuItem value="Justify">
-                <span class="icon material-symbols-outlined" translate="no">format_align_justify</span>
-                <span class="label">Justify</span>
+                <span class="opacity-[0.875] text-xl material-symbols-outlined" translate="no">format_align_justify</span>
+                <span class="flex-1 opacity-[0.875] text-sm">Justify</span>
               </div>
             </ng-template>
           </div>

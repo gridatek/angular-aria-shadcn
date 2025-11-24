@@ -7,9 +7,11 @@ import {
 } from '@angular/aria/accordion';
 
 @Component({
-  selector: 'app-disabled-focusable',
+  selector: 'app-disabled-focusable-example',
   templateUrl: 'disabled-focusable.html',
-  styleUrl: 'disabled-focusable.css',
   imports: [AccordionGroup, AccordionTrigger, AccordionPanel, AccordionContent],
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class DisabledFocusable {}
+export class DisabledFocusableExample {}

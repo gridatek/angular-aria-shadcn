@@ -7,9 +7,11 @@ import {
 } from '@angular/aria/accordion';
 
 @Component({
-  selector: 'app-multi-expansion',
+  selector: 'app-multi-expansion-example',
   templateUrl: 'multi-expansion.html',
-  styleUrl: 'multi-expansion.css',
   imports: [AccordionGroup, AccordionTrigger, AccordionPanel, AccordionContent],
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class MultiExpansion {}
+export class MultiExpansionExample {}

@@ -3,12 +3,14 @@ import {MenuBar, Menu, MenuContent, MenuItem} from '@angular/aria/menu';
 import {OverlayModule} from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-menubar',
+  selector: 'app-menubar-example',
   templateUrl: 'menubar.html',
-  styleUrl: 'menubar.css',
   imports: [MenuBar, Menu, MenuContent, MenuItem, OverlayModule],
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class Menubar {
+export class MenubarExample {
   fileMenu = viewChild<Menu<string>>('fileMenu');
   shareMenu = viewChild<Menu<string>>('shareMenu');
   editMenu = viewChild<Menu<string>>('editMenu');

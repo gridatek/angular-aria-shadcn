@@ -1,10 +1,12 @@
-<div ngCombobox readonly>
-  <div #origin class="select">
-    <span class="combobox-label">
-      <span class="selected-label-text">{{ displayValue() }}</span>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+
+<div ngCombobox readonly class="focus-within:*:outline focus-within:*:outline-2 focus-within:*:outline-pink-500/50">
+  <div #origin class="flex relative items-center text-pink-600 bg-pink-500/5 rounded-lg border border-pink-500/80 hover:bg-pink-500/15 has-[input[aria-disabled=true]]:opacity-60 has-[input[aria-disabled=true]]:cursor-default">
+    <span class="gap-4 left-6 flex absolute items-center pointer-events-none">
+      <span>{{ displayValue() }}</span>
     </span>
-    <input aria-label="Label dropdown" placeholder="Select a label" ngComboboxInput />
-    <span class="example-arrow material-symbols-outlined" translate="no">arrow_drop_down</span>
+    <input aria-label="Label dropdown" placeholder="Select a label" ngComboboxInput class="opacity-0 cursor-pointer px-6 h-10 border-none" />
+    <span class="right-4 absolute pointer-events-none transition-transform duration-150 ease-in-out aria-expanded:rotate-180 material-symbols-outlined" [attr.aria-expanded]="combobox()?.expanded()" translate="no">arrow_drop_down</span>
   </div>
 
   <ng-template ngComboboxPopupContainer>
@@ -12,12 +14,12 @@
       [cdkConnectedOverlay]="{origin, usePopover: 'inline', matchWidth: true}"
       [cdkConnectedOverlayOpen]="true"
     >
-      <div class="example-popup-container">
-        <div ngListbox>
+      <div class="w-full p-2 mt-2 rounded-lg bg-gray-100 text-sm max-h-44 opacity-100 visible transition-[max-height,visibility,opacity] duration-[150ms,0s,25ms] ease-[ease-out,_,ease-out] has-[input[aria-expanded=false]]:max-h-0 has-[input[aria-expanded=false]]:opacity-0 has-[input[aria-expanded=false]]:invisible has-[input[aria-expanded=false]]:transition-[max-height,visibility,opacity] has-[input[aria-expanded=false]]:duration-[150ms,0s_150ms,150ms] has-[input[aria-expanded=false]]:ease-[ease-in,_,ease-in]">
+        <div ngListbox class="gap-0.5 h-full flex overflow-auto flex-col">
           @for (label of labels; track label) {
-          <div ngOption [value]="label" [label]="label">
-            <span class="example-option-text">{{label}}</span>
-            <span class="example-option-check material-symbols-outlined" translate="no">check</span>
+          <div ngOption [value]="label" [label]="label" class="flex cursor-pointer items-center m-px px-4 min-h-9 rounded-lg hover:bg-gray-900/5 data-[active=true]:outline data-[active=true]:outline-2 data-[active=true]:-outline-offset-2 data-[active=true]:outline-pink-500/50 aria-selected:text-pink-500 aria-selected:bg-pink-500/5 [&:not([aria-selected=true])_.example-option-check]:hidden">
+            <span class="flex-1">{{label}}</span>
+            <span class="example-option-check text-sm material-symbols-outlined" translate="no">check</span>
           </div>
           }
         </div>

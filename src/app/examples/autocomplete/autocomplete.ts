@@ -13,9 +13,8 @@ import {
 import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-autocomplete',
+  selector: 'app-autocomplete-example',
   templateUrl: 'autocomplete.html',
-  styleUrl: 'autocomplete.css',
   imports: [
     Combobox,
     ComboboxInput,
@@ -26,8 +25,11 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'flex justify-center',
+  },
 })
-export class Autocomplete {
+export class AutocompleteExample {
   /** The combobox listbox popup. */
   listbox = viewChild<Listbox<string>>(Listbox);
 
