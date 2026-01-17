@@ -208,6 +208,25 @@ import {
       </ng-template>
     </div>
   `,
+  styles: `
+    [ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        max-height 150ms ease-in,
+        visibility 0s 150ms,
+        opacity 150ms ease-in;
+    }
+    [ngCombobox]:has([ngComboboxInput][aria-expanded='true']) .popup-container {
+      opacity: 1;
+      visibility: visible;
+      transition:
+        max-height 150ms ease-out,
+        visibility 0s,
+        opacity 25ms ease-out;
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectDemo {
