@@ -11,12 +11,16 @@ import { cn } from '../../utils';
 @Component({
   selector: 'div[sc-select]',
   imports: [Combobox],
-  hostDirectives: [Combobox],
+  hostDirectives: [
+    {
+      directive: Combobox,
+      inputs: ['readonly'],
+    },
+  ],
   template: `<ng-content />`,
   host: {
     'data-slot': 'select',
     '[class]': 'class()',
-    readonly: 'true',
   },
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
