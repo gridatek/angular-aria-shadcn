@@ -87,7 +87,16 @@ import { Listbox, Option } from '@angular/aria/listbox';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AriaStyledSelect {
-  readonly labels = ['Important', 'Starred', 'Work', 'Personal', 'To Do', 'Later', 'Read', 'Travel'];
+  readonly labels = [
+    'Important',
+    'Starred',
+    'Work',
+    'Personal',
+    'To Do',
+    'Later',
+    'Read',
+    'Travel',
+  ];
   readonly selectedValues = signal<string[]>([]);
 
   readonly selectedLabel = () => this.selectedValues()[0];

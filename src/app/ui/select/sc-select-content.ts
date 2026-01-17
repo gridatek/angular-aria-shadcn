@@ -52,8 +52,14 @@ export class ScSelectContent<T> {
   readonly classInput = input<string>('', { alias: 'class' });
   readonly position = input<'popper' | 'item-aligned'>('popper');
 
-  private readonly trigger = inject(forwardRef(() => ScSelectTrigger), { optional: true });
-  private readonly select = inject(forwardRef(() => ScSelect), { optional: true });
+  private readonly trigger = inject(
+    forwardRef(() => ScSelectTrigger),
+    { optional: true },
+  );
+  private readonly select = inject(
+    forwardRef(() => ScSelect),
+    { optional: true },
+  );
 
   readonly listbox = viewChild<Listbox<T>>('listbox');
 
@@ -101,7 +107,7 @@ export class ScSelectContent<T> {
       this.position() === 'popper' &&
         'data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
       'p-1',
-      this.classInput()
-    )
+      this.classInput(),
+    ),
   );
 }

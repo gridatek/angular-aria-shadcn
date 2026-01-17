@@ -60,7 +60,7 @@ export class ScSelectItem<T> {
   private readonly elementRef = inject(ElementRef);
 
   protected readonly labelText = computed(
-    () => this.label() ?? this.elementRef.nativeElement.textContent?.trim()
+    () => this.label() ?? this.elementRef.nativeElement.textContent?.trim(),
   );
 
   protected readonly optionClass = computed(() =>
@@ -69,7 +69,7 @@ export class ScSelectItem<T> {
       'focus:bg-accent focus:text-accent-foreground',
       'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
       '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
-      this.classInput()
-    )
+      this.classInput(),
+    ),
   );
 }

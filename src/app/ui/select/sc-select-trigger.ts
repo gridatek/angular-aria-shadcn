@@ -55,7 +55,10 @@ export class ScSelectTrigger {
   readonly classInput = input<string>('', { alias: 'class' });
 
   readonly origin = viewChild.required<CdkOverlayOrigin>('origin');
-  private readonly select = inject(forwardRef(() => ScSelect), { optional: true });
+  private readonly select = inject(
+    forwardRef(() => ScSelect),
+    { optional: true },
+  );
 
   readonly combobox = computed(() => this.select?.combobox());
 
@@ -66,7 +69,7 @@ export class ScSelectTrigger {
       'focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
       'disabled:cursor-not-allowed disabled:opacity-50',
       '[&>span]:line-clamp-1',
-      this.classInput()
-    )
+      this.classInput(),
+    ),
   );
 }

@@ -31,6 +31,6 @@ export class ScSelectValue {
   readonly displayValue = signal<string | undefined>(undefined);
 
   protected readonly hostClass = computed(() =>
-    cn('pointer-events-none line-clamp-1 flex items-center gap-2', this.classInput())
+    cn('pointer-events-none line-clamp-1 flex items-center gap-2', this.classInput()),
   );
 }

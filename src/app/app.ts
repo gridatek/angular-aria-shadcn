@@ -11,7 +11,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         <div class="container flex h-14 items-center px-4">
           <a routerLink="/" class="font-semibold">SC Components</a>
           <nav class="ml-6 flex items-center gap-4 text-sm">
-            <a routerLink="/select" class="text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              routerLink="/select"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Select
             </a>
           </nav>
