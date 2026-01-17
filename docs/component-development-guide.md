@@ -15,7 +15,7 @@ Start with an example from Angular ARIA documentation.
 - Verify accessibility (keyboard navigation, screen reader)
 - Keep original CSS/styling untouched
 
-**Location:** `src/app/examples/aria-{component}.ts`
+**Location:** `src/app/examples/{component}/aria-{component}.ts`
 
 ---
 
