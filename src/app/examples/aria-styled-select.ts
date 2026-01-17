@@ -121,7 +121,7 @@ import {
           [cdkConnectedOverlayOpen]="true"
         >
           <div
-            class="bg-popover text-popover-foreground z-50 mt-1 max-h-44 w-full overflow-hidden rounded-md border p-1 shadow-md"
+            class="popup-container bg-popover text-popover-foreground z-50 mt-1 max-h-44 w-full overflow-hidden rounded-md border p-1 shadow-md"
           >
             <div ngListbox class="flex flex-col gap-0.5 overflow-auto">
               @for (label of labels; track label.value) {
@@ -207,6 +207,25 @@ import {
         </ng-template>
       </ng-template>
     </div>
+  `,
+  styles: `
+    [ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        max-height 150ms ease-in,
+        visibility 0s 150ms,
+        opacity 150ms ease-in;
+    }
+    [ngCombobox]:has([ngComboboxInput][aria-expanded='true']) .popup-container {
+      opacity: 1;
+      visibility: visible;
+      transition:
+        max-height 150ms ease-out,
+        visibility 0s,
+        opacity 25ms ease-out;
+    }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
