@@ -121,9 +121,9 @@ import {
           [cdkConnectedOverlayOpen]="true"
         >
           <div
-            class="popup-container bg-popover text-popover-foreground z-50 mt-1 max-h-44 w-full overflow-hidden rounded-md border p-1 shadow-md"
+            class="popup-container bg-popover text-popover-foreground z-50 mt-1 max-h-44 w-full overflow-auto rounded-md border p-1 shadow-md"
           >
-            <div ngListbox class="flex flex-col gap-0.5 overflow-auto">
+            <div ngListbox class="flex flex-col gap-0.5">
               @for (label of labels; track label.value) {
                 <div
                   ngOption
