@@ -13,6 +13,7 @@ import {
   computed,
   viewChild,
   viewChildren,
+  ViewEncapsulation,
 } from '@angular/core';
 import { ScSelect } from '../../ui/select';
 
@@ -229,6 +230,7 @@ import { ScSelect } from '../../ui/select';
         opacity 25ms ease-out;
     }
   `,
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectDemo {
