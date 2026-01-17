@@ -213,7 +213,7 @@ import { ScSelect } from '../../ui/select';
     </div>
   `,
   styles: `
-    [ngCombobox]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
+    [sc-select]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
       max-height: 0;
       opacity: 0;
       visibility: hidden;
@@ -222,7 +222,7 @@ import { ScSelect } from '../../ui/select';
         visibility 0s 150ms,
         opacity 150ms ease-in;
     }
-    [ngCombobox]:has([ngComboboxInput][aria-expanded='true']) .popup-container {
+    [sc-select]:has([ngComboboxInput][aria-expanded='true']) .popup-container {
       opacity: 1;
       visibility: visible;
       transition:
