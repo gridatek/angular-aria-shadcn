@@ -1,0 +1,62 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AriaSelect } from '../../examples/aria-select';
+import { AriaStyledSelect } from '../../examples/aria-styled-select';
+import { ScSelectDemo } from '../../examples/sc-select-demo';
+
+@Component({
+  selector: 'app-select-page',
+  imports: [AriaSelect, AriaStyledSelect, ScSelectDemo],
+  template: `
+    <div class="space-y-8">
+      <div class="space-y-2">
+        <h1 class="text-3xl font-bold tracking-tight">Select</h1>
+        <p class="text-muted-foreground">
+          Displays a list of options for the user to pick from—triggered by a button.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Demo 1: Raw ARIA -->
+        <div class="space-y-4">
+          <div class="space-y-2">
+            <h2 class="text-xl font-semibold">1. Raw ARIA</h2>
+            <p class="text-sm text-muted-foreground">
+              Original Angular ARIA components with basic inline styles
+            </p>
+          </div>
+          <div class="w-[200px]">
+            <app-aria-select />
+          </div>
+        </div>
+
+        <!-- Demo 2: ARIA + shadcn -->
+        <div class="space-y-4">
+          <div class="space-y-2">
+            <h2 class="text-xl font-semibold">2. ARIA + shadcn</h2>
+            <p class="text-sm text-muted-foreground">
+              Angular ARIA with shadcn Tailwind classes applied directly
+            </p>
+          </div>
+          <div class="w-[200px]">
+            <app-aria-styled-select />
+          </div>
+        </div>
+
+        <!-- Demo 3: SC Components -->
+        <div class="space-y-4">
+          <div class="space-y-2">
+            <h2 class="text-xl font-semibold">3. SC Components</h2>
+            <p class="text-sm text-muted-foreground">
+              Wrapper components with clean markup and encapsulated styles
+            </p>
+          </div>
+          <div class="w-[200px]">
+            <app-sc-select-demo />
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export default class SelectPage {}
