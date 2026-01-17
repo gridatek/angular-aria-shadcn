@@ -16,6 +16,7 @@ import { cn } from '../../utils';
   host: {
     'data-slot': 'select',
     '[class]': 'class()',
+    readonly: 'true',
   },
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
