@@ -1,11 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AriaSelect } from '../../examples/aria-select';
-import { AriaStyledSelect } from '../../examples/aria-styled-select';
-import { ScSelectDemo } from '../../examples/sc-select-demo';
 
 @Component({
   selector: 'app-select-page',
-  imports: [AriaSelect, AriaStyledSelect, ScSelectDemo],
+  imports: [AriaSelect],
   template: `
     <div class="space-y-8">
       <div class="space-y-2">
@@ -37,9 +35,7 @@ import { ScSelectDemo } from '../../examples/sc-select-demo';
               Angular ARIA with shadcn Tailwind classes applied directly
             </p>
           </div>
-          <div class="w-[200px]">
-            <app-aria-styled-select />
-          </div>
+          <div class="w-[200px]"></div>
         </div>
 
         <!-- Demo 3: SC Components -->
@@ -50,9 +46,7 @@ import { ScSelectDemo } from '../../examples/sc-select-demo';
               Wrapper components with clean markup and encapsulated styles
             </p>
           </div>
-          <div class="w-[200px]">
-            <app-sc-select-demo />
-          </div>
+          <div class="w-[200px]"></div>
         </div>
       </div>
     </div>
