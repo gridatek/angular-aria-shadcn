@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { ComboboxInput } from '@angular/aria/combobox';
 import { CdkOverlayOrigin } from '@angular/cdk/overlay';
-import { cn } from '../../utils';
+import { cn } from '../../../utils';
 import { ScSelect } from './sc-select';
 
 @Component({

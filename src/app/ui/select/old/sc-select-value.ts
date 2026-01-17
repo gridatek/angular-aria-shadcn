@@ -6,7 +6,7 @@ import {
   signal,
   ViewEncapsulation,
 } from '@angular/core';
-import { cn } from '../../utils';
+import { cn } from '../../../utils';
 
 @Component({
   selector: 'sc-select-value',

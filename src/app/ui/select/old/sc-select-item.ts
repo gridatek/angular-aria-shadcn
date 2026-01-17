@@ -8,7 +8,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Option } from '@angular/aria/listbox';
-import { cn } from '../../utils';
+import { cn } from '../../../utils';
 
 @Component({
   selector: 'div[sc-select-item]',

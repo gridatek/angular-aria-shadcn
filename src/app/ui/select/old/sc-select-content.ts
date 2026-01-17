@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import { Listbox } from '@angular/aria/listbox';
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
-import { cn } from '../../utils';
+import { cn } from '../../../utils';
 import { ScSelect } from './sc-select';
 import { ScSelectTrigger } from './sc-select-trigger';
 import { ScSelectValue } from './sc-select-value';

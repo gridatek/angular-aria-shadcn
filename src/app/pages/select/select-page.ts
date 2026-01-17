@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AriaSelect } from '../../examples/aria-select';
-import { AriaStyledSelect } from '../../examples/aria-styled-select';
-import { ScSelectDemo } from '../../examples/sc-select-demo';
+import { AriaSelect } from '../../examples/select/aria-select';
+import { AriaStyledSelect } from '../../examples/select/aria-styled-select';
+import { ScSelectDemo } from '../../examples/select/sc-select-demo';
 
 @Component({
   selector: 'app-select-page',
