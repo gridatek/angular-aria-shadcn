@@ -11,6 +11,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  effect,
   viewChild,
   viewChildren,
   ViewEncapsulation,
@@ -261,6 +262,10 @@ export class ScSelectDemo {
   ];
 
   constructor() {
+    effect(() => {
+      console.log('combobox:', this.combobox(), 'expanded:', this.combobox()?.expanded());
+    });
+
     afterRenderEffect(() => {
       const option = this.options().find((opt) => opt.active());
       setTimeout(() => option?.element.scrollIntoView({ block: 'nearest' }), 50);
