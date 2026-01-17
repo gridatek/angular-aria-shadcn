@@ -11,7 +11,7 @@ import {
 import { ComboboxInput } from '@angular/aria/combobox';
 import { CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { cn } from '../../../utils';
-import { ScSelect } from './sc-select';
+import { ScSelect } from '../sc-select';
 
 @Component({
   selector: 'button[sc-select-trigger]',

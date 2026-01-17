@@ -1,4 +1,4 @@
-export { ScSelect } from './old/sc-select';
+export { ScSelect } from './sc-select';
 export { ScSelectContent } from './old/sc-select-content';
 export { ScSelectGroup } from './old/sc-select-group';
 export { ScSelectItem } from './old/sc-select-item';
