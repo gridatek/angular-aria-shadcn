@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   ScSelect,
-  ScSelectTrigger,
-  ScSelectValue,
   ScSelectContent,
-  ScSelectItem,
   ScSelectGroup,
+  ScSelectItem,
   ScSelectLabel,
   ScSelectSeparator,
-} from '../select/select';
+  ScSelectTrigger,
+  ScSelectValue,
+} from '../ui/select';
 
 /**
  * Demo 3: SC Select wrapper components - Clean markup, styles encapsulated
