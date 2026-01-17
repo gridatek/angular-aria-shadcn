@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AriaSelect } from '../../examples/aria-select';
 import { AriaStyledSelect } from '../../examples/aria-styled-select';
+import { ScSelectDemo } from '../../examples/sc-select-demo';
 
 @Component({
   selector: 'app-select-page',
-  imports: [AriaSelect, AriaStyledSelect],
+  imports: [AriaSelect, AriaStyledSelect, ScSelectDemo],
   template: `
     <div class="space-y-8">
       <div class="space-y-2">
@@ -49,7 +50,9 @@ import { AriaStyledSelect } from '../../examples/aria-styled-select';
               Wrapper components with clean markup and encapsulated styles
             </p>
           </div>
-          <div class="w-[200px]"></div>
+          <div class="w-[200px]">
+            <app-sc-select-demo />
+          </div>
         </div>
       </div>
     </div>
