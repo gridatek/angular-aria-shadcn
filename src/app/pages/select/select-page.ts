@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AriaSelect } from '../../examples/aria-select';
+import { AriaStyledSelect } from '../../examples/aria-styled-select';
 
 @Component({
   selector: 'app-select-page',
-  imports: [AriaSelect],
+  imports: [AriaSelect, AriaStyledSelect],
   template: `
     <div class="space-y-8">
       <div class="space-y-2">
@@ -35,7 +36,9 @@ import { AriaSelect } from '../../examples/aria-select';
               Angular ARIA with shadcn Tailwind classes applied directly
             </p>
           </div>
-          <div class="w-[200px]"></div>
+          <div class="w-[200px]">
+            <app-aria-styled-select />
+          </div>
         </div>
 
         <!-- Demo 3: SC Components -->
