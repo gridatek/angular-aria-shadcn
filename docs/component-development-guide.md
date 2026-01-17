@@ -31,7 +31,7 @@ Create an exact copy of Stage 1, but replace styling with Tailwind/shadcn.
 - Keep minimal custom CSS only when Tailwind can't handle it
 - Behavior must be identical to Stage 1
 
-**Location:** `src/app/examples/aria-styled-{component}.ts`
+**Location:** `src/app/examples/{component}/aria-styled-{component}.ts`
 
 ---
 
@@ -53,10 +53,10 @@ Create reusable wrapper components that encapsulate the ARIA complexity.
 
 ## Summary
 
-| Stage            | Purpose               | Styling      | Location                    |
-| ---------------- | --------------------- | ------------ | --------------------------- |
-| 1. Raw ARIA      | Make it work          | Original     | `examples/aria-*.ts`        |
-| 2. ARIA + shadcn | Same code, new styles | Tailwind     | `examples/aria-styled-*.ts` |
-| 3. SC Wrappers   | Clean API             | Encapsulated | `ui/{component}/`           |
+| Stage            | Purpose               | Styling      | Location                                |
+| ---------------- | --------------------- | ------------ | --------------------------------------- |
+| 1. Raw ARIA      | Make it work          | Original     | `examples/{component}/aria-*.ts`        |
+| 2. ARIA + shadcn | Same code, new styles | Tailwind     | `examples/{component}/aria-styled-*.ts` |
+| 3. SC Wrappers   | Clean API             | Encapsulated | `ui/{component}/`                       |
 
 This approach ensures accessibility is never broken by styling changes.
