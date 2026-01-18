@@ -1,4 +1,4 @@
-import { Combobox, ComboboxInput } from '@angular/aria/combobox';
+import { Combobox } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
 import {
   afterRenderEffect,
@@ -10,7 +10,13 @@ import {
   viewChildren,
   ViewEncapsulation,
 } from '@angular/core';
-import { ScSelect, ScSelectContent, ScSelectPopup, ScSelectTrigger } from '../../ui/select';
+import {
+  ScSelect,
+  ScSelectContent,
+  ScSelectInput,
+  ScSelectPopup,
+  ScSelectTrigger,
+} from '../../ui/select';
 
 /**
  * Demo 3: SC Select wrapper components - Clean markup, styles encapsulated
@@ -19,11 +25,11 @@ import { ScSelect, ScSelectContent, ScSelectPopup, ScSelectTrigger } from '../..
 @Component({
   selector: 'app-sc-select-demo',
   imports: [
-    ComboboxInput,
     Listbox,
     Option,
     ScSelect,
     ScSelectContent,
+    ScSelectInput,
     ScSelectPopup,
     ScSelectTrigger,
   ],
@@ -87,12 +93,7 @@ import { ScSelect, ScSelectContent, ScSelectPopup, ScSelectTrigger } from '../..
           }
           <span class="truncate">{{ displayValue() }}</span>
         </span>
-        <input
-          aria-label="Label dropdown"
-          placeholder="Select a label"
-          ngComboboxInput
-          class="h-full w-full cursor-pointer border-none bg-transparent px-8 opacity-0 outline-none"
-        />
+        <input sc-select-input aria-label="Label dropdown" placeholder="Select a label" />
         <svg
           class="text-muted-foreground pointer-events-none absolute right-3 size-4 shrink-0 opacity-50 transition-transform duration-150 [[aria-expanded=true]~&]:rotate-180"
           xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +197,7 @@ import { ScSelect, ScSelectContent, ScSelectPopup, ScSelectTrigger } from '../..
     </div>
   `,
   styles: `
-    [sc-select]:has([ngComboboxInput][aria-expanded='false']) .popup-container {
+    [sc-select]:has([sc-select-input][aria-expanded='false']) .popup-container {
       max-height: 0;
       opacity: 0;
       visibility: hidden;
@@ -205,7 +206,7 @@ import { ScSelect, ScSelectContent, ScSelectPopup, ScSelectTrigger } from '../..
         visibility 0s 150ms,
         opacity 150ms ease-in;
     }
-    [sc-select]:has([ngComboboxInput][aria-expanded='true']) .popup-container {
+    [sc-select]:has([sc-select-input][aria-expanded='true']) .popup-container {
       opacity: 1;
       visibility: visible;
       transition:
