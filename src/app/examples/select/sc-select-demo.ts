@@ -13,9 +13,11 @@ import {
 import {
   ScSelect,
   ScSelectContent,
+  ScSelectIcon,
   ScSelectInput,
   ScSelectPopup,
   ScSelectTrigger,
+  ScSelectValue,
 } from '../../ui/select';
 
 /**
@@ -29,14 +31,16 @@ import {
     Option,
     ScSelect,
     ScSelectContent,
+    ScSelectIcon,
     ScSelectInput,
     ScSelectPopup,
     ScSelectTrigger,
+    ScSelectValue,
   ],
   template: `
     <div sc-select readonly>
       <div sc-select-trigger>
-        <span class="pointer-events-none absolute left-3 flex items-center gap-2">
+        <span sc-select-value>
           @if (displayIcon(); as icon) {
             <svg
               class="text-muted-foreground size-4"
@@ -94,21 +98,7 @@ import {
           <span class="truncate">{{ displayValue() }}</span>
         </span>
         <input sc-select-input aria-label="Label dropdown" placeholder="Select a label" />
-        <svg
-          class="text-muted-foreground pointer-events-none absolute right-3 size-4 shrink-0 opacity-50 transition-transform duration-150 [[aria-expanded=true]~&]:rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
+        <sc-select-icon />
       </div>
       <div sc-select-popup>
         <div sc-select-content class="popup-container mt-1 max-h-44 p-1">
