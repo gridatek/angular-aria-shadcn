@@ -8,6 +8,9 @@ A set of components for building accessible select dropdowns following the Singl
 | ----------------- | ------------------------ | --------------------------------------------------------------- |
 | `ScSelect`        | `div[sc-select]`         | Root container, provides combobox behavior via `@angular/aria`  |
 | `ScSelectTrigger` | `div[sc-select-trigger]` | Trigger button styling, exposes overlay origin                  |
+| `ScSelectInput`   | `input[sc-select-input]` | Hidden input, wraps `ComboboxInput` from `@angular/aria`        |
+| `ScSelectValue`   | `span[sc-select-value]`  | Display selected value with styling                             |
+| `ScSelectIcon`    | `svg[sc-select-icon]`    | Chevron icon styling (use with `@semantic-icons/lucide-icons`)  |
 | `ScSelectPopup`   | `div[sc-select-popup]`   | Overlay positioning & combobox popup container (infrastructure) |
 | `ScSelectContent` | `div[sc-select-content]` | Content styling (presentation)                                  |
 
@@ -16,7 +19,9 @@ A set of components for building accessible select dropdowns following the Singl
 ```html
 <div sc-select readonly>
   <div sc-select-trigger>
-    <input ngComboboxInput placeholder="Select an option" />
+    <span sc-select-value>{{ selectedValue() }}</span>
+    <input sc-select-input aria-label="Select" placeholder="Select an option" />
+    <svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
   </div>
   <div sc-select-popup>
     <div sc-select-content>
@@ -35,7 +40,9 @@ A set of components for building accessible select dropdowns following the Singl
 ```
 ScSelect (root)
 ├── ScSelectTrigger (trigger + overlay origin)
-│   └── ngComboboxInput
+│   ├── ScSelectValue (display value)
+│   ├── ScSelectInput (hidden combobox input)
+│   └── ScSelectIcon (chevron icon)
 └── ScSelectPopup (overlay infrastructure)
     └── ScSelectContent (styled container)
         └── ngListbox + ngOption (content)
@@ -46,3 +53,4 @@ ScSelect (root)
 - `@angular/aria/combobox` - Combobox behavior
 - `@angular/aria/listbox` - Listbox and option behavior
 - `@angular/cdk/overlay` - Overlay positioning
+- `@semantic-icons/lucide-icons` - Icon library

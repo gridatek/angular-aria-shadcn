@@ -1,22 +1,12 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  input,
-  ViewEncapsulation,
-} from '@angular/core';
+import { computed, Directive, input } from '@angular/core';
 import { cn } from '../../utils';
 
-@Component({
+@Directive({
   selector: 'svg[sc-select-icon]',
-  imports: [],
-  template: ``,
   host: {
     'data-slot': 'select-icon',
     '[class]': 'class()',
   },
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectIcon {
   readonly classInput = input<string>('', { alias: 'class' });
