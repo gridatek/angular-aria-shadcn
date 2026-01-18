@@ -2,6 +2,14 @@
 
 A set of components for building accessible select dropdowns following the Single Responsibility Principle.
 
+## Features
+
+- Full keyboard navigation support
+- ARIA-compliant accessibility
+- Automatic scroll-to-active on keyboard navigation
+- Overlay positioning with CDK
+- Customizable styling via `class` input
+
 ## Components
 
 | Component               | Selector                        | Responsibility                                                  |
@@ -16,12 +24,12 @@ A set of components for building accessible select dropdowns following the Singl
 | `ScSelectItem`          | `div[sc-select-item]`           | Option item styling, wraps `Option` from `@angular/aria`        |
 | `ScSelectItemIndicator` | `svg[sc-select-item-indicator]` | Checkmark icon for selected state                               |
 
-## Usage
+## Basic Usage
 
 ### Template
 
 ```html
-<div sc-select readonly>
+<div sc-select>
   <div sc-select-trigger>
     <span sc-select-value>{{ displayValue() }}</span>
     <input sc-select-input aria-label="Select" placeholder="Select an option" />
@@ -91,7 +99,7 @@ export class ExampleComponent {
 }
 ```
 
-### Accessing Selected Values
+## Accessing Selected Values
 
 Use `viewChild` to query `ScSelect` and access the `values()` signal:
 
@@ -99,6 +107,70 @@ Use `viewChild` to query `ScSelect` and access the `values()` signal:
 private readonly select = viewChild.required(ScSelect);
 
 selectedValues = computed(() => this.select().values());
+```
+
+## Keyboard Navigation
+
+The select component supports full keyboard navigation:
+
+| Key               | Action                                |
+| ----------------- | ------------------------------------- |
+| `Enter` / `Space` | Open dropdown / Select focused option |
+| `ArrowDown`       | Move focus to next option             |
+| `ArrowUp`         | Move focus to previous option         |
+| `Home`            | Move focus to first option            |
+| `End`             | Move focus to last option             |
+| `Escape`          | Close dropdown                        |
+| `Tab`             | Close dropdown and move focus         |
+
+When navigating with keyboard, the dropdown automatically scrolls to keep the active option visible.
+
+## Accessibility
+
+The select components are built with accessibility in mind:
+
+- Uses `@angular/aria/combobox` and `@angular/aria/listbox` for proper ARIA roles
+- `aria-label` on the input for screen reader support
+- `aria-hidden="true"` on decorative icons
+- Visual focus indicators for keyboard navigation
+- Selected state indicated via `aria-selected`
+
+### Required Accessibility Attributes
+
+```html
+<!-- Always provide an accessible label -->
+<input sc-select-input aria-label="Select a fruit" />
+
+<!-- Hide decorative icons from screen readers -->
+<svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
+<svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
+```
+
+## API Reference
+
+### ScSelect
+
+| Property   | Type     | Description                       |
+| ---------- | -------- | --------------------------------- |
+| `class`    | `string` | Additional CSS classes            |
+| `values()` | `signal` | Signal containing selected values |
+
+### ScSelectItem
+
+| Property | Type     | Description                        |
+| -------- | -------- | ---------------------------------- |
+| `value`  | `any`    | The value of the option            |
+| `label`  | `string` | The label displayed for the option |
+| `class`  | `string` | Additional CSS classes             |
+
+### All Components
+
+All components accept a `class` input for custom styling:
+
+```html
+<div sc-select class="w-64">
+  <div sc-select-trigger class="bg-slate-100">...</div>
+</div>
 ```
 
 ## Architecture
