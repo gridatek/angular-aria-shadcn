@@ -95,7 +95,7 @@ import {
         <svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
       </div>
       <div sc-select-popup>
-        <div sc-select-content class="mt-1 max-h-44 p-1">
+        <div sc-select-content>
           @for (label of labels; track label.value) {
             <div sc-select-item [value]="label.value" [label]="label.value">
               <svg
