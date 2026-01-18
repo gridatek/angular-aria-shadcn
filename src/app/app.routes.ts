@@ -33,4 +33,8 @@ export const routes: Routes = [
     path: 'collapsible',
     loadComponent: () => import('./pages/collapsible/collapsible-page'),
   },
+  {
+    path: 'alert-dialog',
+    loadComponent: () => import('./pages/alert-dialog/alert-dialog-page'),
+  },
 ];

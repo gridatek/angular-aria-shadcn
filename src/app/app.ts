@@ -53,6 +53,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Collapsible
             </a>
+            <a
+              routerLink="/alert-dialog"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Alert Dialog
+            </a>
           </nav>
         </div>
       </header>
