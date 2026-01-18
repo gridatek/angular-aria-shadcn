@@ -41,6 +41,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Popover
             </a>
+            <a
+              routerLink="/tooltip"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tooltip
+            </a>
           </nav>
         </div>
       </header>

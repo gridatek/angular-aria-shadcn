@@ -25,4 +25,8 @@ export const routes: Routes = [
     path: 'popover',
     loadComponent: () => import('./pages/popover/popover-page'),
   },
+  {
+    path: 'tooltip',
+    loadComponent: () => import('./pages/tooltip/tooltip-page'),
+  },
 ];
