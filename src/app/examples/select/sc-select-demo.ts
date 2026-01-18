@@ -1,15 +1,5 @@
-import { Combobox } from '@angular/aria/combobox';
-import { Listbox, Option } from '@angular/aria/listbox';
+import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
 import { SiCheckIcon, SiChevronDownIcon } from '@semantic-icons/lucide-icons';
-import {
-  afterRenderEffect,
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  effect,
-  viewChild,
-  viewChildren,
-} from '@angular/core';
 import {
   ScSelect,
   ScSelectContent,
@@ -171,18 +161,14 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectDemo {
-  listbox = viewChild<Listbox<string>>(Listbox);
-  options = viewChildren<Option<string>>(Option);
-  combobox = viewChild<Combobox<string>>(Combobox);
-
   displayIcon = computed(() => {
-    const values = this.listbox()?.values() || [];
+    const values = ''; // get it from scSelect
     const label = this.labels.find((label) => label.value === values[0]);
     return label ? label.icon : '';
   });
 
   displayValue = computed(() => {
-    const values = this.listbox()?.values() || [];
+    const values = ''; // get it from scSelect
     return values.length ? values[0] : 'Select a label';
   });
 
@@ -196,21 +182,4 @@ export class ScSelectDemo {
     { value: 'Read', icon: 'menu_book' },
     { value: 'Travel', icon: 'flight' },
   ];
-
-  constructor() {
-    effect(() => {
-      console.log('combobox:', this.combobox(), 'expanded:', this.combobox()?.expanded());
-    });
-
-    afterRenderEffect(() => {
-      const option = this.options().find((opt) => opt.active());
-      setTimeout(() => option?.element.scrollIntoView({ block: 'nearest' }), 50);
-    });
-
-    afterRenderEffect(() => {
-      if (!this.combobox()?.expanded()) {
-        setTimeout(() => this.listbox()?.element.scrollTo(0, 0), 150);
-      }
-    });
-  }
 }
