@@ -17,6 +17,7 @@ import { cn } from '../../utils';
   hostDirectives: [Listbox],
   host: {
     'data-slot': 'select-content',
+    '[attr.data-state]': 'combobox.expanded() ? "open" : "closed"',
     '[class]': 'class()',
   },
   encapsulation: ViewEncapsulation.None,
@@ -26,7 +27,7 @@ export class ScSelectContent {
   readonly listbox = inject(Listbox);
   readonly classInput = input<string>('', { alias: 'class' });
 
-  private readonly combobox = inject(Combobox);
+  protected readonly combobox = inject(Combobox);
 
   protected readonly class = computed(() =>
     cn(
