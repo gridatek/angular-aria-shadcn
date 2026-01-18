@@ -5,6 +5,9 @@ import {
   ScMenuItem,
   ScMenuPopup,
   ScMenuSeparator,
+  ScMenuSubContent,
+  ScMenuSubIcon,
+  ScMenuSubTrigger,
   ScMenuTrigger,
 } from '../../ui/menu';
 
@@ -14,7 +17,17 @@ import {
  */
 @Component({
   selector: 'app-sc-menu-demo',
-  imports: [ScMenu, ScMenuContent, ScMenuItem, ScMenuPopup, ScMenuSeparator, ScMenuTrigger],
+  imports: [
+    ScMenu,
+    ScMenuContent,
+    ScMenuItem,
+    ScMenuPopup,
+    ScMenuSeparator,
+    ScMenuSubContent,
+    ScMenuSubIcon,
+    ScMenuSubTrigger,
+    ScMenuTrigger,
+  ],
   template: `
     <button sc-menu-trigger #trigger="scMenuTrigger" [menu]="menu.menu">
       <svg
@@ -77,6 +90,116 @@ import {
               <polyline points="12 6 12 12 16 14" />
             </svg>
             <span class="flex-1">Snooze</span>
+          </div>
+          <div sc-menu-separator></div>
+          <!-- Submenu -->
+          <div
+            sc-menu-sub-trigger
+            #subTrigger="scMenuSubTrigger"
+            value="Categorize"
+            [submenu]="subMenu.menu"
+          >
+            <svg
+              class="text-muted-foreground size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"
+              />
+              <path d="M7 7h.01" />
+            </svg>
+            <span class="flex-1">Categorize</span>
+            <svg
+              sc-menu-sub-icon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </div>
+          <div sc-menu-sub-content [trigger]="subTrigger" [parentMenu]="menu">
+            <div sc-menu #subMenu="scMenu">
+              <ng-template sc-menu-content>
+                <div sc-menu-item value="Important">
+                  <svg
+                    class="text-muted-foreground size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m15 5 4 4" />
+                    <path
+                      d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"
+                    />
+                    <path d="m8 6 2-2" />
+                    <path d="m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5Z" />
+                  </svg>
+                  <span class="flex-1">Important</span>
+                </div>
+                <div sc-menu-item value="Star">
+                  <svg
+                    class="text-muted-foreground size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    />
+                  </svg>
+                  <span class="flex-1">Star</span>
+                </div>
+                <div sc-menu-item value="Label">
+                  <svg
+                    class="text-muted-foreground size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"
+                    />
+                    <path d="M7 7h.01" />
+                  </svg>
+                  <span class="flex-1">Label</span>
+                </div>
+              </ng-template>
+            </div>
           </div>
           <div sc-menu-separator></div>
           <div sc-menu-item value="Archive">
