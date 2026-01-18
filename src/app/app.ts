@@ -17,6 +17,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Select
             </a>
+            <a
+              routerLink="/menu"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Menu
+            </a>
           </nav>
         </div>
       </header>
