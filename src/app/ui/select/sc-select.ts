@@ -3,10 +3,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  contentChild,
   input,
   ViewEncapsulation,
 } from '@angular/core';
 import { cn } from '../../utils';
+import { ScSelectTrigger } from './sc-select-trigger';
 
 @Component({
   selector: 'div[sc-select]',
@@ -27,6 +29,9 @@ import { cn } from '../../utils';
 })
 export class ScSelect {
   readonly classInput = input<string>('', { alias: 'class' });
+
+  private readonly trigger = contentChild(ScSelectTrigger);
+  readonly origin = computed(() => this.trigger()?.overlayOrigin);
 
   protected readonly class = computed(() => cn('relative', this.classInput()));
 }
