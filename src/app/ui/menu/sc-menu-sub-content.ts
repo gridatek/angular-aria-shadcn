@@ -1,31 +1,22 @@
-import { OverlayModule } from '@angular/cdk/overlay';
+import { Menu, MenuContent } from '@angular/aria/menu';
 import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  inject,
   input,
   ViewEncapsulation,
 } from '@angular/core';
-import { ScMenu } from './sc-menu';
-import { ScMenuSubTrigger } from './sc-menu-sub-trigger';
 import { cn } from '../../utils';
 
 @Component({
   selector: 'div[sc-menu-sub-content]',
-  imports: [OverlayModule],
+  imports: [MenuContent],
+  hostDirectives: [Menu],
   template: `
-    @if (parentMenu(); as parent) {
-      <ng-template
-        [cdkConnectedOverlayOpen]="parent.menu.visible()"
-        [cdkConnectedOverlay]="{ origin: trigger().overlayOrigin, usePopover: 'inline' }"
-        [cdkConnectedOverlayPositions]="[
-          { originX: 'end', originY: 'top', overlayY: 'top', overlayX: 'start', offsetX: 4 },
-        ]"
-        cdkAttachPopoverAsChild
-      >
-        <ng-content />
-      </ng-template>
-    }
+    <ng-template ngMenuContent>
+      <ng-content />
+    </ng-template>
   `,
   host: {
     'data-slot': 'menu-sub-content',
@@ -35,9 +26,16 @@ import { cn } from '../../utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScMenuSubContent {
-  readonly trigger = input.required<ScMenuSubTrigger>();
-  readonly parentMenu = input.required<ScMenu>();
+  readonly menu = inject(Menu);
   readonly classInput = input<string>('', { alias: 'class' });
 
-  protected readonly class = computed(() => cn('', this.classInput()));
+  protected readonly class = computed(() =>
+    cn(
+      'bg-popover text-popover-foreground z-50 min-w-[8rem] rounded-md border p-1 shadow-md',
+      this.menu.visible()
+        ? 'opacity-100 visible transition-[opacity,visibility] duration-150 ease-out'
+        : 'opacity-0 invisible transition-[opacity,visibility] duration-150 ease-in [transition-delay:0s,150ms]',
+      this.classInput(),
+    ),
+  );
 }

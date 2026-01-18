@@ -5,14 +5,7 @@ import { cn } from '../../utils';
 
 @Directive({
   selector: 'button[sc-menu-trigger]',
-  exportAs: 'scMenuTrigger',
-  hostDirectives: [
-    {
-      directive: MenuTrigger,
-      inputs: ['menu'],
-    },
-    CdkOverlayOrigin,
-  ],
+  hostDirectives: [MenuTrigger, CdkOverlayOrigin],
   host: {
     'data-slot': 'menu-trigger',
     '[class]': 'class()',

@@ -5,8 +5,10 @@ import {
   ScMenuItem,
   ScMenuPopup,
   ScMenuSeparator,
+  ScMenuSub,
   ScMenuSubContent,
   ScMenuSubIcon,
+  ScMenuSubPopup,
   ScMenuSubTrigger,
   ScMenuTrigger,
 } from '../../ui/menu';
@@ -23,35 +25,37 @@ import {
     ScMenuItem,
     ScMenuPopup,
     ScMenuSeparator,
+    ScMenuSub,
     ScMenuSubContent,
     ScMenuSubIcon,
+    ScMenuSubPopup,
     ScMenuSubTrigger,
     ScMenuTrigger,
   ],
   template: `
-    <button sc-menu-trigger #trigger="scMenuTrigger" [menu]="menu.menu">
-      <svg
-        class="size-4"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <line x1="4" x2="20" y1="12" y2="12" />
-        <line x1="4" x2="20" y1="6" y2="6" />
-        <line x1="4" x2="20" y1="18" y2="18" />
-      </svg>
-      Open Menu
-    </button>
-    <div sc-menu-popup [trigger]="trigger">
-      <div sc-menu #menu="scMenu">
-        <ng-template sc-menu-content>
+    <div sc-menu>
+      <button sc-menu-trigger>
+        <svg
+          class="size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+        Open Menu
+      </button>
+      <div sc-menu-popup>
+        <div sc-menu-content>
           <div sc-menu-item value="Mark as read">
             <svg
               class="text-muted-foreground size-4"
@@ -93,48 +97,44 @@ import {
           </div>
           <div sc-menu-separator></div>
           <!-- Submenu -->
-          <div
-            sc-menu-sub-trigger
-            #subTrigger="scMenuSubTrigger"
-            value="Categorize"
-            [submenu]="subMenu.menu"
-          >
-            <svg
-              class="text-muted-foreground size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"
-              />
-              <path d="M7 7h.01" />
-            </svg>
-            <span class="flex-1">Categorize</span>
-            <svg
-              sc-menu-sub-icon
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </div>
-          <div sc-menu-sub-content [trigger]="subTrigger" [parentMenu]="menu">
-            <div sc-menu #subMenu="scMenu">
-              <ng-template sc-menu-content>
-                <div sc-menu-item value="Important">
+          <div sc-menu-sub>
+            <div sc-menu-sub-trigger value="More options">
+              <svg
+                class="text-muted-foreground size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="19" cy="12" r="1" />
+                <circle cx="5" cy="12" r="1" />
+              </svg>
+              <span class="flex-1">More options</span>
+              <svg
+                sc-menu-sub-icon
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </div>
+            <div sc-menu-sub-popup>
+              <div sc-menu-sub-content>
+                <div sc-menu-item value="Reply">
                   <svg
                     class="text-muted-foreground size-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -148,16 +148,12 @@ import {
                     stroke-linejoin="round"
                     aria-hidden="true"
                   >
-                    <path d="m15 5 4 4" />
-                    <path
-                      d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13"
-                    />
-                    <path d="m8 6 2-2" />
-                    <path d="m2 22 5.5-1.5L21.17 6.83a2.82 2.82 0 0 0-4-4L3.5 16.5Z" />
+                    <polyline points="9 17 4 12 9 7" />
+                    <path d="M20 18v-2a4 4 0 0 0-4-4H4" />
                   </svg>
-                  <span class="flex-1">Important</span>
+                  <span class="flex-1">Reply</span>
                 </div>
-                <div sc-menu-item value="Star">
+                <div sc-menu-item value="Forward">
                   <svg
                     class="text-muted-foreground size-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -171,13 +167,12 @@ import {
                     stroke-linejoin="round"
                     aria-hidden="true"
                   >
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                    />
+                    <polyline points="15 17 20 12 15 7" />
+                    <path d="M4 18v-2a4 4 0 0 1 4-4h12" />
                   </svg>
-                  <span class="flex-1">Star</span>
+                  <span class="flex-1">Forward</span>
                 </div>
-                <div sc-menu-item value="Label">
+                <div sc-menu-item value="Move to folder">
                   <svg
                     class="text-muted-foreground size-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -192,13 +187,12 @@ import {
                     aria-hidden="true"
                   >
                     <path
-                      d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"
+                      d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
                     />
-                    <path d="M7 7h.01" />
                   </svg>
-                  <span class="flex-1">Label</span>
+                  <span class="flex-1">Move to folder</span>
                 </div>
-              </ng-template>
+              </div>
             </div>
           </div>
           <div sc-menu-separator></div>
@@ -269,7 +263,7 @@ import {
             </svg>
             <span class="flex-1">Delete</span>
           </div>
-        </ng-template>
+        </div>
       </div>
     </div>
   `,

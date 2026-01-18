@@ -5,11 +5,10 @@ import { cn } from '../../utils';
 
 @Directive({
   selector: 'div[sc-menu-sub-trigger]',
-  exportAs: 'scMenuSubTrigger',
   hostDirectives: [
     {
       directive: MenuItem,
-      inputs: ['value', 'submenu'],
+      inputs: ['value'],
     },
     CdkOverlayOrigin,
   ],
