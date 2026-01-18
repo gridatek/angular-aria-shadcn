@@ -29,6 +29,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Dialog
             </a>
+            <a
+              routerLink="/sheet"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Sheet
+            </a>
           </nav>
         </div>
       </header>

@@ -17,4 +17,8 @@ export const routes: Routes = [
     path: 'dialog',
     loadComponent: () => import('./pages/dialog/dialog-page'),
   },
+  {
+    path: 'sheet',
+    loadComponent: () => import('./pages/sheet/sheet-page'),
+  },
 ];
