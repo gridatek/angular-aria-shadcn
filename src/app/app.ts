@@ -47,6 +47,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Tooltip
             </a>
+            <a
+              routerLink="/collapsible"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Collapsible
+            </a>
           </nav>
         </div>
       </header>

@@ -29,4 +29,8 @@ export const routes: Routes = [
     path: 'tooltip',
     loadComponent: () => import('./pages/tooltip/tooltip-page'),
   },
+  {
+    path: 'collapsible',
+    loadComponent: () => import('./pages/collapsible/collapsible-page'),
+  },
 ];
