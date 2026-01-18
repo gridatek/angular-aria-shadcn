@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   ScMenu,
   ScMenuContent,
@@ -16,7 +16,7 @@ import {
   selector: 'app-sc-menu-demo',
   imports: [ScMenu, ScMenuContent, ScMenuItem, ScMenuPopup, ScMenuSeparator, ScMenuTrigger],
   template: `
-    <button sc-menu-trigger #trigger [menu]="menu()?.menu">
+    <button sc-menu-trigger #trigger="scMenuTrigger" [menu]="menu.menu">
       <svg
         class="size-4"
         xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ import {
       Open Menu
     </button>
     <div sc-menu-popup [trigger]="trigger">
-      <div sc-menu #menu>
+      <div sc-menu #menu="scMenu">
         <ng-template sc-menu-content>
           <div sc-menu-item value="Mark as read">
             <svg
@@ -152,6 +152,4 @@ import {
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ScMenuDemo {
-  readonly menu = viewChild<ScMenu>('menu');
-}
+export class ScMenuDemo {}

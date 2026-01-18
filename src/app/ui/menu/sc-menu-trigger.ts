@@ -5,6 +5,7 @@ import { cn } from '../../utils';
 
 @Directive({
   selector: 'button[sc-menu-trigger]',
+  exportAs: 'scMenuTrigger',
   hostDirectives: [
     {
       directive: MenuTrigger,

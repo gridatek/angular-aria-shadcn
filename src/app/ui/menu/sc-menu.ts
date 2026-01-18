@@ -11,6 +11,7 @@ import { cn } from '../../utils';
 
 @Component({
   selector: 'div[sc-menu]',
+  exportAs: 'scMenu',
   imports: [],
   hostDirectives: [Menu],
   template: `<ng-content />`,
