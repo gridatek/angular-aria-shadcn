@@ -23,6 +23,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Menu
             </a>
+            <a
+              routerLink="/dialog"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Dialog
+            </a>
           </nav>
         </div>
       </header>
