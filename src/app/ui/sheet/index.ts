@@ -1,4 +1,5 @@
-export { ScSheet, SheetSide } from './sc-sheet';
+export { ScSheet } from './sc-sheet';
+export type { SheetSide } from './sc-sheet';
 export { ScSheetTrigger } from './sc-sheet-trigger';
 export { ScSheetPortal } from './sc-sheet-portal';
 export { ScSheetContent } from './sc-sheet-content';
