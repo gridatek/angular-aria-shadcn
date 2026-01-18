@@ -1,5 +1,5 @@
 import { Option } from '@angular/aria/listbox';
-import { computed, Directive, input } from '@angular/core';
+import { computed, Directive, effect, ElementRef, inject, input } from '@angular/core';
 import { cn } from '../../utils';
 
 @Directive({
@@ -17,6 +17,17 @@ import { cn } from '../../utils';
 })
 export class ScSelectItem {
   readonly classInput = input<string>('', { alias: 'class' });
+
+  private readonly option = inject(Option);
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+
+  constructor() {
+    effect(() => {
+      if (this.option.active()) {
+        this.elementRef.nativeElement.scrollIntoView({ block: 'nearest' });
+      }
+    });
+  }
 
   protected readonly class = computed(() =>
     cn(
