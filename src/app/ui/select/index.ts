@@ -5,3 +5,4 @@ export { ScSelectValue } from './sc-select-value';
 export { ScSelectIcon } from './sc-select-icon';
 export { ScSelectPopup } from './sc-select-popup';
 export { ScSelectContent } from './sc-select-content';
+export { ScSelectItem } from './sc-select-item';

@@ -16,6 +16,7 @@ import {
   ScSelectContent,
   ScSelectIcon,
   ScSelectInput,
+  ScSelectItem,
   ScSelectPopup,
   ScSelectTrigger,
   ScSelectValue,
@@ -28,11 +29,11 @@ import {
 @Component({
   selector: 'app-sc-select-demo',
   imports: [
-    Option,
     ScSelect,
     ScSelectContent,
     ScSelectIcon,
     ScSelectInput,
+    ScSelectItem,
     ScSelectPopup,
     ScSelectTrigger,
     ScSelectValue,
@@ -104,12 +105,7 @@ import {
       <div sc-select-popup>
         <div sc-select-content class="popup-container mt-1 max-h-44 p-1">
           @for (label of labels; track label.value) {
-            <div
-              ngOption
-              [value]="label.value"
-              [label]="label.value"
-              class="relative flex min-h-9 cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 pr-8 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground data-[active=true]:ring-2 data-[active=true]:ring-ring data-[active=true]:ring-offset-1 aria-selected:bg-accent/50 aria-selected:text-accent-foreground"
-            >
+            <div sc-select-item [value]="label.value" [label]="label.value">
               <svg
                 class="text-muted-foreground size-4 shrink-0"
                 xmlns="http://www.w3.org/2000/svg"
