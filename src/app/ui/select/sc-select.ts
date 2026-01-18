@@ -4,9 +4,12 @@ import {
   Component,
   computed,
   contentChild,
+  effect,
+  inject,
   input,
   ViewEncapsulation,
 } from '@angular/core';
+import { SIGNAL, signalSetFn } from '@angular/core/primitives/signals';
 import { cn } from '../../utils';
 import { ScSelectContent } from './sc-select-content';
 import { ScSelectTrigger } from './sc-select-trigger';
@@ -17,7 +20,6 @@ import { ScSelectTrigger } from './sc-select-trigger';
   hostDirectives: [
     {
       directive: Combobox,
-      inputs: ['readonly'],
     },
   ],
   template: `<ng-content />`,
@@ -42,4 +44,10 @@ export class ScSelect {
   });
 
   protected readonly class = computed(() => cn('relative', this.classInput()));
+
+  private readonly combobox = inject(Combobox);
+
+  constructor() {
+    effect(() => signalSetFn(this.combobox.readonly[SIGNAL], true));
+  }
 }

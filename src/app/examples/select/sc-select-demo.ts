@@ -32,7 +32,7 @@ import {
     SiChevronDownIcon,
   ],
   template: `
-    <div sc-select readonly>
+    <div sc-select>
       <div sc-select-trigger>
         <span sc-select-value>
           @if (displayIcon(); as icon) {
