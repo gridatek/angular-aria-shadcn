@@ -16,7 +16,7 @@ import {
   viewChildren,
   ViewEncapsulation,
 } from '@angular/core';
-import { ScSelect } from '../../ui/select';
+import { ScSelect, ScSelectTrigger } from '../../ui/select';
 
 /**
  * Demo 3: SC Select wrapper components - Clean markup, styles encapsulated
@@ -33,13 +33,11 @@ import { ScSelect } from '../../ui/select';
     Option,
     OverlayModule,
     ScSelect,
+    ScSelectTrigger,
   ],
   template: `
     <div sc-select readonly>
-      <div
-        #origin
-        class="border-input bg-background relative flex h-9 w-full items-center rounded-md border px-3 text-sm shadow-xs transition-colors hover:bg-accent/50 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-background has-[[aria-disabled=true]]:cursor-not-allowed has-[[aria-disabled=true]]:opacity-50"
-      >
+      <div #origin="cdkOverlayOrigin" sc-select-trigger>
         <span class="pointer-events-none absolute left-3 flex items-center gap-2">
           @if (displayIcon(); as icon) {
             <svg
