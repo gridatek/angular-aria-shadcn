@@ -1,4 +1,5 @@
 import { Combobox } from '@angular/aria/combobox';
+import { Listbox } from '@angular/aria/listbox';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -31,7 +32,14 @@ export class ScSelect {
   readonly classInput = input<string>('', { alias: 'class' });
 
   private readonly trigger = contentChild(ScSelectTrigger);
+  private readonly listbox = contentChild(Listbox);
+
   readonly origin = computed(() => this.trigger()?.overlayOrigin);
+  readonly values = computed(() => this.listbox()?.values() ?? []);
+  readonly displayValue = computed(() => {
+    const vals = this.values();
+    return vals.length > 0 ? String(vals[0]) : '';
+  });
 
   protected readonly class = computed(() => cn('relative', this.classInput()));
 }

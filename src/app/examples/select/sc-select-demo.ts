@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, viewChild } from '@angular/core';
 import { SiCheckIcon, SiChevronDownIcon } from '@semantic-icons/lucide-icons';
 import {
   ScSelect,
@@ -161,14 +161,16 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectDemo {
+  private readonly select = viewChild.required(ScSelect);
+
   displayIcon = computed(() => {
-    const values = ''; // get it from scSelect
+    const values = this.select().values();
     const label = this.labels.find((label) => label.value === values[0]);
     return label ? label.icon : '';
   });
 
   displayValue = computed(() => {
-    const values = ''; // get it from scSelect
+    const values = this.select().values();
     return values.length ? values[0] : 'Select a label';
   });
 
