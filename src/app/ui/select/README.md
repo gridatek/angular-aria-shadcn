@@ -4,16 +4,17 @@ A set of components for building accessible select dropdowns following the Singl
 
 ## Components
 
-| Component         | Selector                 | Responsibility                                                  |
-| ----------------- | ------------------------ | --------------------------------------------------------------- |
-| `ScSelect`        | `div[sc-select]`         | Root container, wraps `Combobox` from `@angular/aria`           |
-| `ScSelectTrigger` | `div[sc-select-trigger]` | Trigger button styling, exposes overlay origin                  |
-| `ScSelectInput`   | `input[sc-select-input]` | Hidden input, wraps `ComboboxInput` from `@angular/aria`        |
-| `ScSelectValue`   | `span[sc-select-value]`  | Display selected value with styling                             |
-| `ScSelectIcon`    | `svg[sc-select-icon]`    | Chevron icon styling (use with `@semantic-icons/lucide-icons`)  |
-| `ScSelectPopup`   | `div[sc-select-popup]`   | Overlay positioning & combobox popup container (infrastructure) |
-| `ScSelectContent` | `div[sc-select-content]` | Content container, wraps `Listbox` from `@angular/aria`         |
-| `ScSelectItem`    | `div[sc-select-item]`    | Option item styling, wraps `Option` from `@angular/aria`        |
+| Component               | Selector                        | Responsibility                                                  |
+| ----------------------- | ------------------------------- | --------------------------------------------------------------- |
+| `ScSelect`              | `div[sc-select]`                | Root container, wraps `Combobox` from `@angular/aria`           |
+| `ScSelectTrigger`       | `div[sc-select-trigger]`        | Trigger button styling, exposes overlay origin                  |
+| `ScSelectInput`         | `input[sc-select-input]`        | Hidden input, wraps `ComboboxInput` from `@angular/aria`        |
+| `ScSelectValue`         | `span[sc-select-value]`         | Display selected value with styling                             |
+| `ScSelectIcon`          | `svg[sc-select-icon]`           | Chevron icon styling (use with `@semantic-icons/lucide-icons`)  |
+| `ScSelectPopup`         | `div[sc-select-popup]`          | Overlay positioning & combobox popup container (infrastructure) |
+| `ScSelectContent`       | `div[sc-select-content]`        | Content container, wraps `Listbox` from `@angular/aria`         |
+| `ScSelectItem`          | `div[sc-select-item]`           | Option item styling, wraps `Option` from `@angular/aria`        |
+| `ScSelectItemIndicator` | `svg[sc-select-item-indicator]` | Checkmark icon for selected state                               |
 
 ## Usage
 
@@ -26,9 +27,18 @@ A set of components for building accessible select dropdowns following the Singl
   </div>
   <div sc-select-popup>
     <div sc-select-content>
-      <div sc-select-item value="option1" label="Option 1">Option 1</div>
-      <div sc-select-item value="option2" label="Option 2">Option 2</div>
-      <div sc-select-item value="option3" label="Option 3">Option 3</div>
+      <div sc-select-item value="option1" label="Option 1">
+        Option 1
+        <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
+      </div>
+      <div sc-select-item value="option2" label="Option 2">
+        Option 2
+        <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
+      </div>
+      <div sc-select-item value="option3" label="Option 3">
+        Option 3
+        <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
+      </div>
     </div>
   </div>
 </div>
@@ -45,6 +55,7 @@ ScSelect (root, wraps Combobox)
 └── ScSelectPopup (overlay infrastructure)
     └── ScSelectContent (wraps Listbox)
         └── ScSelectItem (wraps Option)
+            └── ScSelectItemIndicator (checkmark icon)
 ```
 
 ## Dependencies
