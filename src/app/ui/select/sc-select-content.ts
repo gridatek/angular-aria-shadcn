@@ -13,7 +13,7 @@ import { cn } from '../../utils';
 import { ScSelect } from './sc-select';
 
 @Component({
-  selector: 'sc-select-content',
+  selector: 'div[sc-select-content]',
   imports: [ComboboxPopupContainer, OverlayModule],
   template: `
     <ng-template ngComboboxPopupContainer>

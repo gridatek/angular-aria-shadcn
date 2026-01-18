@@ -101,7 +101,7 @@ import { ScSelect, ScSelectContent, ScSelectTrigger } from '../../ui/select';
           <path d="m6 9 6 6 6-6" />
         </svg>
       </div>
-      <sc-select-content class="popup-container mt-1 max-h-44 p-1">
+      <div sc-select-content class="popup-container mt-1 max-h-44 p-1">
         <div ngListbox class="flex h-full flex-col gap-0.5 overflow-auto">
           @for (label of labels; track label.value) {
             <div
@@ -182,7 +182,7 @@ import { ScSelect, ScSelectContent, ScSelectTrigger } from '../../ui/select';
             </div>
           }
         </div>
-      </sc-select-content>
+      </div>
     </div>
   `,
   styles: `
