@@ -9,7 +9,6 @@ import {
   effect,
   viewChild,
   viewChildren,
-  ViewEncapsulation,
 } from '@angular/core';
 import {
   ScSelect,
@@ -106,7 +105,7 @@ import {
         <svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
       </div>
       <div sc-select-popup>
-        <div sc-select-content class="popup-container mt-1 max-h-44 p-1">
+        <div sc-select-content class="mt-1 max-h-44 p-1">
           @for (label of labels; track label.value) {
             <div sc-select-item [value]="label.value" [label]="label.value">
               <svg
@@ -169,26 +168,6 @@ import {
       </div>
     </div>
   `,
-  styles: `
-    [sc-select]:has([sc-select-input][aria-expanded='false']) .popup-container {
-      max-height: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition:
-        max-height 150ms ease-in,
-        visibility 0s 150ms,
-        opacity 150ms ease-in;
-    }
-    [sc-select]:has([sc-select-input][aria-expanded='true']) .popup-container {
-      opacity: 1;
-      visibility: visible;
-      transition:
-        max-height 150ms ease-out,
-        visibility 0s,
-        opacity 25ms ease-out;
-    }
-  `,
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScSelectDemo {
