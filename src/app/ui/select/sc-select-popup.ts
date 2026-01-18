@@ -5,9 +5,11 @@ import {
   Component,
   computed,
   inject,
+  input,
   ViewEncapsulation,
 } from '@angular/core';
 import { ScSelect } from './sc-select';
+import { cn } from '../../utils';
 
 @Component({
   selector: 'div[sc-select-popup]',
@@ -45,7 +47,7 @@ import { ScSelect } from './sc-select';
   `,
   host: {
     'data-slot': 'select-popup',
-    style: 'display: contents',
+    '[class]': 'class()',
   },
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -54,4 +56,8 @@ export class ScSelectPopup {
   private readonly select = inject(ScSelect);
 
   protected readonly origin = computed(() => this.select.origin());
+
+  readonly classInput = input<string>('', { alias: 'class' });
+
+  protected readonly class = computed(() => cn('', this.classInput()));
 }
