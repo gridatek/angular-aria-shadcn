@@ -1,5 +1,6 @@
 import { Combobox } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
+import { SiChevronDownIcon } from '@semantic-icons/lucide-icons';
 import {
   afterRenderEffect,
   ChangeDetectionStrategy,
@@ -36,6 +37,7 @@ import {
     ScSelectPopup,
     ScSelectTrigger,
     ScSelectValue,
+    SiChevronDownIcon,
   ],
   template: `
     <div sc-select readonly>
@@ -98,7 +100,7 @@ import {
           <span class="truncate">{{ displayValue() }}</span>
         </span>
         <input sc-select-input aria-label="Label dropdown" placeholder="Select a label" />
-        <sc-select-icon />
+        <svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
       </div>
       <div sc-select-popup>
         <div sc-select-content class="popup-container mt-1 max-h-44 p-1">
