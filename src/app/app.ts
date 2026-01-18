@@ -35,6 +35,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Sheet
             </a>
+            <a
+              routerLink="/popover"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Popover
+            </a>
           </nav>
         </div>
       </header>

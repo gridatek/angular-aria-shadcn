@@ -21,4 +21,8 @@ export const routes: Routes = [
     path: 'sheet',
     loadComponent: () => import('./pages/sheet/sheet-page'),
   },
+  {
+    path: 'popover',
+    loadComponent: () => import('./pages/popover/popover-page'),
+  },
 ];
