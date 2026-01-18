@@ -1,6 +1,6 @@
 import { Combobox } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
-import { SiChevronDownIcon } from '@semantic-icons/lucide-icons';
+import { SiCheckIcon, SiChevronDownIcon } from '@semantic-icons/lucide-icons';
 import {
   afterRenderEffect,
   ChangeDetectionStrategy,
@@ -17,6 +17,7 @@ import {
   ScSelectIcon,
   ScSelectInput,
   ScSelectItem,
+  ScSelectItemIndicator,
   ScSelectPopup,
   ScSelectTrigger,
   ScSelectValue,
@@ -34,9 +35,11 @@ import {
     ScSelectIcon,
     ScSelectInput,
     ScSelectItem,
+    ScSelectItemIndicator,
     ScSelectPopup,
     ScSelectTrigger,
     ScSelectValue,
+    SiCheckIcon,
     SiChevronDownIcon,
   ],
   template: `
@@ -159,22 +162,7 @@ import {
                 }
               </svg>
               <span class="flex-1">{{ label.value }}</span>
-              <svg
-                class="absolute right-2 size-4 opacity-0 aria-selected:opacity-100"
-                [class.opacity-100]="listbox()?.values()?.[0] === label.value"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
+              <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
             </div>
           }
         </div>
