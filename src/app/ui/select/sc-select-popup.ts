@@ -26,25 +26,6 @@ import { cn } from '../../utils';
       }
     </ng-template>
   `,
-  styles: `
-    [sc-select]:has([sc-select-input][aria-expanded='false']) [data-slot='select-content'] {
-      max-height: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition:
-        max-height 150ms ease-in,
-        visibility 0s 150ms,
-        opacity 150ms ease-in;
-    }
-    [sc-select]:has([sc-select-input][aria-expanded='true']) [data-slot='select-content'] {
-      opacity: 1;
-      visibility: visible;
-      transition:
-        max-height 150ms ease-out,
-        visibility 0s,
-        opacity 25ms ease-out;
-    }
-  `,
   host: {
     'data-slot': 'select-popup',
     '[class]': 'class()',
