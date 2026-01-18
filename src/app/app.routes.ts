@@ -37,4 +37,8 @@ export const routes: Routes = [
     path: 'alert-dialog',
     loadComponent: () => import('./pages/alert-dialog/alert-dialog-page'),
   },
+  {
+    path: 'toast',
+    loadComponent: () => import('./pages/toast/toast-page'),
+  },
 ];

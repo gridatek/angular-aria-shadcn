@@ -59,6 +59,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Alert Dialog
             </a>
+            <a
+              routerLink="/toast"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Toast
+            </a>
           </nav>
         </div>
       </header>
