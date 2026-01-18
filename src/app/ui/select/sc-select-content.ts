@@ -27,7 +27,7 @@ export class ScSelectContent {
 
   protected readonly class = computed(() =>
     cn(
-      'bg-popover text-popover-foreground z-50 mt-1 flex max-h-44 min-w-[8rem] flex-col gap-0.5 overflow-auto rounded-md border p-1 shadow-md',
+      'bg-popover text-popover-foreground z-50 mt-1 flex w-full max-h-44 min-w-[8rem] flex-col gap-0.5 overflow-auto rounded-md border p-1 shadow-md',
       'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
       this.classInput(),
     ),
