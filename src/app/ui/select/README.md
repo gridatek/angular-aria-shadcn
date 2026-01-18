@@ -18,30 +18,87 @@ A set of components for building accessible select dropdowns following the Singl
 
 ## Usage
 
+### Template
+
 ```html
 <div sc-select readonly>
   <div sc-select-trigger>
-    <span sc-select-value>{{ selectedValue() }}</span>
+    <span sc-select-value>{{ displayValue() }}</span>
     <input sc-select-input aria-label="Select" placeholder="Select an option" />
     <svg sc-select-icon si-chevron-down-icon aria-hidden="true"></svg>
   </div>
   <div sc-select-popup>
     <div sc-select-content>
-      <div sc-select-item value="option1" label="Option 1">
-        Option 1
+      @for (option of options; track option.value) {
+      <div sc-select-item [value]="option.value" [label]="option.label">
+        {{ option.label }}
         <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
       </div>
-      <div sc-select-item value="option2" label="Option 2">
-        Option 2
-        <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
-      </div>
-      <div sc-select-item value="option3" label="Option 3">
-        Option 3
-        <svg sc-select-item-indicator si-check-icon aria-hidden="true"></svg>
-      </div>
+      }
     </div>
   </div>
 </div>
+```
+
+### Component
+
+```typescript
+import { ChangeDetectionStrategy, Component, computed, viewChild } from '@angular/core';
+import { SiCheckIcon, SiChevronDownIcon } from '@semantic-icons/lucide-icons';
+import {
+  ScSelect,
+  ScSelectContent,
+  ScSelectIcon,
+  ScSelectInput,
+  ScSelectItem,
+  ScSelectItemIndicator,
+  ScSelectPopup,
+  ScSelectTrigger,
+  ScSelectValue,
+} from '@app/ui/select';
+
+@Component({
+  selector: 'app-example',
+  imports: [
+    ScSelect,
+    ScSelectContent,
+    ScSelectIcon,
+    ScSelectInput,
+    ScSelectItem,
+    ScSelectItemIndicator,
+    ScSelectPopup,
+    ScSelectTrigger,
+    ScSelectValue,
+    SiCheckIcon,
+    SiChevronDownIcon,
+  ],
+  template: `...`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class ExampleComponent {
+  private readonly select = viewChild.required(ScSelect);
+
+  displayValue = computed(() => {
+    const values = this.select().values();
+    return values.length ? values[0] : 'Select an option';
+  });
+
+  options = [
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' },
+  ];
+}
+```
+
+### Accessing Selected Values
+
+Use `viewChild` to query `ScSelect` and access the `values()` signal:
+
+```typescript
+private readonly select = viewChild.required(ScSelect);
+
+selectedValues = computed(() => this.select().values());
 ```
 
 ## Architecture
