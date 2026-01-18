@@ -1,5 +1,4 @@
 import { Combobox } from '@angular/aria/combobox';
-import { Listbox } from '@angular/aria/listbox';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -9,6 +8,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { cn } from '../../utils';
+import { ScSelectContent } from './sc-select-content';
 import { ScSelectTrigger } from './sc-select-trigger';
 
 @Component({
@@ -32,10 +32,10 @@ export class ScSelect {
   readonly classInput = input<string>('', { alias: 'class' });
 
   private readonly trigger = contentChild(ScSelectTrigger);
-  private readonly listbox = contentChild(Listbox);
+  private readonly content = contentChild(ScSelectContent, { descendants: true });
 
   readonly origin = computed(() => this.trigger()?.overlayOrigin);
-  readonly values = computed(() => this.listbox()?.values() ?? []);
+  readonly values = computed(() => this.content()?.listbox.values() ?? []);
   readonly displayValue = computed(() => {
     const vals = this.values();
     return vals.length > 0 ? String(vals[0]) : '';

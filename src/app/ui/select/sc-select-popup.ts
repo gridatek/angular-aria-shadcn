@@ -1,11 +1,10 @@
 import { ComboboxPopupContainer } from '@angular/aria/combobox';
-import { CdkConnectedOverlay, OverlayModule } from '@angular/cdk/overlay';
+import { OverlayModule } from '@angular/cdk/overlay';
 import {
   ChangeDetectionStrategy,
   Component,
   computed,
   inject,
-  viewChild,
   ViewEncapsulation,
 } from '@angular/core';
 import { ScSelect } from './sc-select';
@@ -17,10 +16,8 @@ import { ScSelect } from './sc-select';
     <ng-template ngComboboxPopupContainer>
       @if (origin(); as origin) {
         <ng-template
-          cdkConnectedOverlay
-          [cdkConnectedOverlayOrigin]="origin"
+          [cdkConnectedOverlay]="{ origin, usePopover: 'inline', matchWidth: true }"
           [cdkConnectedOverlayOpen]="true"
-          [cdkConnectedOverlayWidth]="originWidth()"
         >
           <ng-content />
         </ng-template>
@@ -55,12 +52,6 @@ import { ScSelect } from './sc-select';
 })
 export class ScSelectPopup {
   private readonly select = inject(ScSelect);
-  private readonly overlay = viewChild(CdkConnectedOverlay);
 
   protected readonly origin = computed(() => this.select.origin());
-
-  protected readonly originWidth = computed(() => {
-    const origin = this.origin();
-    return origin?.elementRef.nativeElement.offsetWidth ?? 'auto';
-  });
 }
