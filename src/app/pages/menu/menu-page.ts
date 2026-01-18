@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AriaManu } from '../../examples/menu/aria-menu';
 import { AriaStyledMenu } from '../../examples/menu/aria-styled-menu';
+import { ScMenuDemo } from '../../examples/menu/sc-menu-demo';
 
 @Component({
   selector: 'app-menu-page',
-  imports: [AriaManu, AriaStyledMenu],
+  imports: [AriaManu, AriaStyledMenu, ScMenuDemo],
   template: `
     <div class="space-y-8">
       <div class="space-y-2">
@@ -51,7 +52,7 @@ import { AriaStyledMenu } from '../../examples/menu/aria-styled-menu';
             </p>
           </div>
           <div>
-            <p class="text-sm text-muted-foreground italic">Coming soon...</p>
+            <app-sc-menu-demo />
           </div>
         </div>
       </div>
