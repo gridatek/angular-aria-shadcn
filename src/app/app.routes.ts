@@ -9,4 +9,8 @@ export const routes: Routes = [
     path: 'select',
     loadComponent: () => import('./pages/select/select-page'),
   },
+  {
+    path: 'menu',
+    loadComponent: () => import('./pages/menu/menu-page'),
+  },
 ];
