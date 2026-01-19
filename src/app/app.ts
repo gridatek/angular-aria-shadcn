@@ -89,6 +89,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Tabs
             </a>
+            <a
+              routerLink="/accordion"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Accordion
+            </a>
           </nav>
         </div>
       </header>

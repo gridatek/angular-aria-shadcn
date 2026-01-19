@@ -57,4 +57,8 @@ export const routes: Routes = [
     path: 'tabs',
     loadComponent: () => import('./pages/tabs/tabs-page'),
   },
+  {
+    path: 'accordion',
+    loadComponent: () => import('./pages/accordion/accordion-page'),
+  },
 ];
