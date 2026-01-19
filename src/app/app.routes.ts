@@ -169,4 +169,8 @@ export const routes: Routes = [
     path: 'date-picker',
     loadComponent: () => import('./pages/date-picker/date-picker-page'),
   },
+  {
+    path: 'button',
+    loadComponent: () => import('./pages/button/button-page'),
+  },
 ];

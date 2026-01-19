@@ -257,6 +257,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Date Picker
             </a>
+            <a
+              routerLink="/button"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Button
+            </a>
           </nav>
         </div>
       </header>
