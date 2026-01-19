@@ -239,6 +239,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Aspect Ratio
             </a>
+            <a
+              routerLink="/resizable"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Resizable
+            </a>
           </nav>
         </div>
       </header>

@@ -157,4 +157,8 @@ export const routes: Routes = [
     path: 'aspect-ratio',
     loadComponent: () => import('./pages/aspect-ratio/aspect-ratio-page'),
   },
+  {
+    path: 'resizable',
+    loadComponent: () => import('./pages/resizable/resizable-page'),
+  },
 ];
