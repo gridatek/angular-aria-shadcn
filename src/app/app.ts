@@ -341,6 +341,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Rating
             </a>
+            <a
+              routerLink="/data-table"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Data Table
+            </a>
           </nav>
         </div>
       </header>

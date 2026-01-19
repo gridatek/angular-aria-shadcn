@@ -225,4 +225,8 @@ export const routes: Routes = [
     path: 'rating',
     loadComponent: () => import('./pages/rating/rating-page'),
   },
+  {
+    path: 'data-table',
+    loadComponent: () => import('./pages/data-table/data-table-page'),
+  },
 ];
