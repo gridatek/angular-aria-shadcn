@@ -149,6 +149,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Badge
             </a>
+            <a
+              routerLink="/switch"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Switch
+            </a>
           </nav>
         </div>
       </header>

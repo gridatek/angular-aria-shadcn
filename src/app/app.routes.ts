@@ -97,4 +97,8 @@ export const routes: Routes = [
     path: 'badge',
     loadComponent: () => import('./pages/badge/badge-page'),
   },
+  {
+    path: 'switch',
+    loadComponent: () => import('./pages/switch/switch-page'),
+  },
 ];
