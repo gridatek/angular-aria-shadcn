@@ -299,6 +299,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Dropdown Menu
             </a>
+            <a
+              routerLink="/stepper"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Stepper
+            </a>
           </nav>
         </div>
       </header>

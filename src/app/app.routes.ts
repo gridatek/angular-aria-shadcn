@@ -197,4 +197,8 @@ export const routes: Routes = [
     path: 'dropdown-menu',
     loadComponent: () => import('./pages/dropdown-menu/dropdown-menu-page'),
   },
+  {
+    path: 'stepper',
+    loadComponent: () => import('./pages/stepper/stepper-page'),
+  },
 ];
