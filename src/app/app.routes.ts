@@ -65,4 +65,8 @@ export const routes: Routes = [
     path: 'command',
     loadComponent: () => import('./pages/command/command-page'),
   },
+  {
+    path: 'drawer',
+    loadComponent: () => import('./pages/drawer/drawer-page'),
+  },
 ];

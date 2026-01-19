@@ -101,6 +101,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Command
             </a>
+            <a
+              routerLink="/drawer"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Drawer
+            </a>
           </nav>
         </div>
       </header>
