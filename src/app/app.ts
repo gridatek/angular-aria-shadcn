@@ -245,6 +245,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Resizable
             </a>
+            <a
+              routerLink="/calendar"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Calendar
+            </a>
           </nav>
         </div>
       </header>

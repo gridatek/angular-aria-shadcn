@@ -161,4 +161,8 @@ export const routes: Routes = [
     path: 'resizable',
     loadComponent: () => import('./pages/resizable/resizable-page'),
   },
+  {
+    path: 'calendar',
+    loadComponent: () => import('./pages/calendar/calendar-page'),
+  },
 ];
