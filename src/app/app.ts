@@ -305,6 +305,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Stepper
             </a>
+            <a
+              routerLink="/file-upload"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              File Upload
+            </a>
           </nav>
         </div>
       </header>

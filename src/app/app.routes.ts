@@ -201,4 +201,8 @@ export const routes: Routes = [
     path: 'stepper',
     loadComponent: () => import('./pages/stepper/stepper-page'),
   },
+  {
+    path: 'file-upload',
+    loadComponent: () => import('./pages/file-upload/file-upload-page'),
+  },
 ];
