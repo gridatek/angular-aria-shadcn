@@ -267,7 +267,7 @@ const SAMPLE_DATA: User[] = [
       <!-- Filtering Only -->
       <div class="space-y-4">
         <h3 class="text-sm font-medium">With Filter Only</h3>
-        <div #filterTable sc-data-table [data]="data" [columns]="columns">
+        <div #filterTable="scDataTable" sc-data-table [data]="data" [columns]="columns">
           <div class="py-4">
             <input sc-data-table-filter placeholder="Type to filter..." class="max-w-sm" />
           </div>
