@@ -113,4 +113,8 @@ export const routes: Routes = [
     path: 'toggle-group',
     loadComponent: () => import('./pages/toggle-group/toggle-group-page'),
   },
+  {
+    path: 'input-otp',
+    loadComponent: () => import('./pages/input-otp/input-otp-page'),
+  },
 ];

@@ -173,6 +173,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Toggle Group
             </a>
+            <a
+              routerLink="/input-otp"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Input OTP
+            </a>
           </nav>
         </div>
       </header>
