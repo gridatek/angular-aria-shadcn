@@ -137,4 +137,8 @@ export const routes: Routes = [
     path: 'textarea',
     loadComponent: () => import('./pages/textarea/textarea-page'),
   },
+  {
+    path: 'card',
+    loadComponent: () => import('./pages/card/card-page'),
+  },
 ];

@@ -209,6 +209,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Textarea
             </a>
+            <a
+              routerLink="/card"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Card
+            </a>
           </nav>
         </div>
       </header>
