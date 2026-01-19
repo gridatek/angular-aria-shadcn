@@ -221,4 +221,8 @@ export const routes: Routes = [
     path: 'color-picker',
     loadComponent: () => import('./pages/color-picker/color-picker-page'),
   },
+  {
+    path: 'rating',
+    loadComponent: () => import('./pages/rating/rating-page'),
+  },
 ];

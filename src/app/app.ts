@@ -335,6 +335,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Color Picker
             </a>
+            <a
+              routerLink="/rating"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Rating
+            </a>
           </nav>
         </div>
       </header>
