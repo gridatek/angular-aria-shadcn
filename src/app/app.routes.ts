@@ -41,4 +41,8 @@ export const routes: Routes = [
     path: 'toast',
     loadComponent: () => import('./pages/toast/toast-page'),
   },
+  {
+    path: 'hover-card',
+    loadComponent: () => import('./pages/hover-card/hover-card-page'),
+  },
 ];

@@ -65,6 +65,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Toast
             </a>
+            <a
+              routerLink="/hover-card"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Hover Card
+            </a>
           </nav>
         </div>
       </header>
