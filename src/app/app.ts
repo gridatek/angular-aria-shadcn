@@ -83,6 +83,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Context Menu
             </a>
+            <a
+              routerLink="/tabs"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tabs
+            </a>
           </nav>
         </div>
       </header>

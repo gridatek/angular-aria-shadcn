@@ -53,4 +53,8 @@ export const routes: Routes = [
     path: 'context-menu',
     loadComponent: () => import('./pages/context-menu/context-menu-page'),
   },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./pages/tabs/tabs-page'),
+  },
 ];
