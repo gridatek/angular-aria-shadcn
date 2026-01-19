@@ -229,4 +229,8 @@ export const routes: Routes = [
     path: 'data-table',
     loadComponent: () => import('./pages/data-table/data-table-page'),
   },
+  {
+    path: 'number-input',
+    loadComponent: () => import('./pages/number-input/number-input-page'),
+  },
 ];

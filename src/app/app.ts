@@ -347,6 +347,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Data Table
             </a>
+            <a
+              routerLink="/number-input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Number Input
+            </a>
           </nav>
         </div>
       </header>
