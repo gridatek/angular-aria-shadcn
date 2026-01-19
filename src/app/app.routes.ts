@@ -45,4 +45,8 @@ export const routes: Routes = [
     path: 'hover-card',
     loadComponent: () => import('./pages/hover-card/hover-card-page'),
   },
+  {
+    path: 'navigation-menu',
+    loadComponent: () => import('./pages/navigation-menu/navigation-menu-page'),
+  },
 ];
