@@ -317,6 +317,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Kbd
             </a>
+            <a
+              routerLink="/chart"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Chart
+            </a>
           </nav>
         </div>
       </header>

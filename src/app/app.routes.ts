@@ -209,4 +209,8 @@ export const routes: Routes = [
     path: 'kbd',
     loadComponent: () => import('./pages/kbd/kbd-page'),
   },
+  {
+    path: 'chart',
+    loadComponent: () => import('./pages/chart/chart-page'),
+  },
 ];
