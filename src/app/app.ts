@@ -281,6 +281,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Sidebar
             </a>
+            <a
+              routerLink="/form"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Form
+            </a>
           </nav>
         </div>
       </header>

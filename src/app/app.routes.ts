@@ -185,4 +185,8 @@ export const routes: Routes = [
     path: 'sidebar',
     loadComponent: () => import('./pages/sidebar/sidebar-page'),
   },
+  {
+    path: 'form',
+    loadComponent: () => import('./pages/form/form-page'),
+  },
 ];
