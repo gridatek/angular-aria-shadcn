@@ -113,6 +113,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Progress
             </a>
+            <a
+              routerLink="/scroll-area"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Scroll Area
+            </a>
           </nav>
         </div>
       </header>

@@ -73,4 +73,8 @@ export const routes: Routes = [
     path: 'progress',
     loadComponent: () => import('./pages/progress/progress-page'),
   },
+  {
+    path: 'scroll-area',
+    loadComponent: () => import('./pages/scroll-area/scroll-area-page'),
+  },
 ];
