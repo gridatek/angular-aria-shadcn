@@ -141,4 +141,8 @@ export const routes: Routes = [
     path: 'card',
     loadComponent: () => import('./pages/card/card-page'),
   },
+  {
+    path: 'alert',
+    loadComponent: () => import('./pages/alert/alert-page'),
+  },
 ];

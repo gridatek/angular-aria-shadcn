@@ -215,6 +215,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Card
             </a>
+            <a
+              routerLink="/alert"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Alert
+            </a>
           </nav>
         </div>
       </header>
