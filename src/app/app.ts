@@ -125,6 +125,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Breadcrumb
             </a>
+            <a
+              routerLink="/separator"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Separator
+            </a>
           </nav>
         </div>
       </header>

@@ -81,4 +81,8 @@ export const routes: Routes = [
     path: 'breadcrumb',
     loadComponent: () => import('./pages/breadcrumb/breadcrumb-page'),
   },
+  {
+    path: 'separator',
+    loadComponent: () => import('./pages/separator/separator-page'),
+  },
 ];
