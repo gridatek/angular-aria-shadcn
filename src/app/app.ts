@@ -251,6 +251,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Calendar
             </a>
+            <a
+              routerLink="/date-picker"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Date Picker
+            </a>
           </nav>
         </div>
       </header>

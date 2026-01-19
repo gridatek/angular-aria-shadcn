@@ -165,4 +165,8 @@ export const routes: Routes = [
     path: 'calendar',
     loadComponent: () => import('./pages/calendar/calendar-page'),
   },
+  {
+    path: 'date-picker',
+    loadComponent: () => import('./pages/date-picker/date-picker-page'),
+  },
 ];
