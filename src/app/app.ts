@@ -137,6 +137,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Skeleton
             </a>
+            <a
+              routerLink="/avatar"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Avatar
+            </a>
           </nav>
         </div>
       </header>

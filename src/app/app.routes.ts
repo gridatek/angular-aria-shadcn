@@ -89,4 +89,8 @@ export const routes: Routes = [
     path: 'skeleton',
     loadComponent: () => import('./pages/skeleton/skeleton-page'),
   },
+  {
+    path: 'avatar',
+    loadComponent: () => import('./pages/avatar/avatar-page'),
+  },
 ];
