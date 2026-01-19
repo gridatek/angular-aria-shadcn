@@ -117,4 +117,8 @@ export const routes: Routes = [
     path: 'input-otp',
     loadComponent: () => import('./pages/input-otp/input-otp-page'),
   },
+  {
+    path: 'checkbox',
+    loadComponent: () => import('./pages/checkbox/checkbox-page'),
+  },
 ];

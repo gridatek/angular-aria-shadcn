@@ -179,6 +179,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Input OTP
             </a>
+            <a
+              routerLink="/checkbox"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Checkbox
+            </a>
           </nav>
         </div>
       </header>
