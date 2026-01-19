@@ -287,6 +287,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Form
             </a>
+            <a
+              routerLink="/tree-view"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tree View
+            </a>
           </nav>
         </div>
       </header>

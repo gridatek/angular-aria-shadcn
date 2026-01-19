@@ -189,4 +189,8 @@ export const routes: Routes = [
     path: 'form',
     loadComponent: () => import('./pages/form/form-page'),
   },
+  {
+    path: 'tree-view',
+    loadComponent: () => import('./pages/tree-view/tree-view-page'),
+  },
 ];
