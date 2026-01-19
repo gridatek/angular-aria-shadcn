@@ -54,4 +54,9 @@ export class ScHoverCard {
   hide(): void {
     this.open.set(false);
   }
+
+  /** Cancel pending hide timeout on the trigger */
+  cancelTriggerHide(): void {
+    this.triggerChild()?.cancelHide();
+  }
 }

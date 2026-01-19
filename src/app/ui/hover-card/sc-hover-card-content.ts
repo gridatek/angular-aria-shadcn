@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 import { cn } from '../../utils';
 import { HoverCardAlign, HoverCardSide, ScHoverCard } from './sc-hover-card';
-import { ScHoverCardTrigger } from './sc-hover-card-trigger';
 
 type PositionKey = `${HoverCardSide}-${HoverCardAlign}`;
 
@@ -126,7 +125,6 @@ const positionMap: Record<PositionKey, ConnectedPosition> = {
 })
 export class ScHoverCardContent {
   readonly hoverCard = inject(ScHoverCard);
-  private readonly trigger = inject(ScHoverCardTrigger);
   readonly classInput = input<string>('', { alias: 'class' });
 
   protected readonly origin = computed(() => this.hoverCard.origin());
@@ -152,7 +150,7 @@ export class ScHoverCardContent {
   private hideTimeout: ReturnType<typeof setTimeout> | null = null;
 
   onMouseEnter(): void {
-    this.trigger.cancelHide();
+    this.hoverCard.cancelTriggerHide();
     this.cancelHide();
     this.hoverCard.show();
   }
