@@ -181,4 +181,8 @@ export const routes: Routes = [
     path: 'carousel',
     loadComponent: () => import('./pages/carousel/carousel-page'),
   },
+  {
+    path: 'sidebar',
+    loadComponent: () => import('./pages/sidebar/sidebar-page'),
+  },
 ];

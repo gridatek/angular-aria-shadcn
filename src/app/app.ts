@@ -275,6 +275,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Carousel
             </a>
+            <a
+              routerLink="/sidebar"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Sidebar
+            </a>
           </nav>
         </div>
       </header>
