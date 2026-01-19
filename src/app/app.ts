@@ -119,6 +119,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Scroll Area
             </a>
+            <a
+              routerLink="/breadcrumb"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Breadcrumb
+            </a>
           </nav>
         </div>
       </header>

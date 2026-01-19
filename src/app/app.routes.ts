@@ -77,4 +77,8 @@ export const routes: Routes = [
     path: 'scroll-area',
     loadComponent: () => import('./pages/scroll-area/scroll-area-page'),
   },
+  {
+    path: 'breadcrumb',
+    loadComponent: () => import('./pages/breadcrumb/breadcrumb-page'),
+  },
 ];
