@@ -185,6 +185,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Checkbox
             </a>
+            <a
+              routerLink="/radio-group"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Radio Group
+            </a>
           </nav>
         </div>
       </header>

@@ -121,4 +121,8 @@ export const routes: Routes = [
     path: 'checkbox',
     loadComponent: () => import('./pages/checkbox/checkbox-page'),
   },
+  {
+    path: 'radio-group',
+    loadComponent: () => import('./pages/radio-group/radio-group-page'),
+  },
 ];
