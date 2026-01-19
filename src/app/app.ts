@@ -95,6 +95,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Accordion
             </a>
+            <a
+              routerLink="/command"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Command
+            </a>
           </nav>
         </div>
       </header>

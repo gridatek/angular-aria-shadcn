@@ -61,4 +61,8 @@ export const routes: Routes = [
     path: 'accordion',
     loadComponent: () => import('./pages/accordion/accordion-page'),
   },
+  {
+    path: 'command',
+    loadComponent: () => import('./pages/command/command-page'),
+  },
 ];
