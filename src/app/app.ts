@@ -203,6 +203,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Input
             </a>
+            <a
+              routerLink="/textarea"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Textarea
+            </a>
           </nav>
         </div>
       </header>

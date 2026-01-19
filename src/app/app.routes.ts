@@ -133,4 +133,8 @@ export const routes: Routes = [
     path: 'input',
     loadComponent: () => import('./pages/input/input-page'),
   },
+  {
+    path: 'textarea',
+    loadComponent: () => import('./pages/textarea/textarea-page'),
+  },
 ];
