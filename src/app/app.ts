@@ -161,6 +161,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Slider
             </a>
+            <a
+              routerLink="/toggle"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Toggle
+            </a>
           </nav>
         </div>
       </header>

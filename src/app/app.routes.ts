@@ -105,4 +105,8 @@ export const routes: Routes = [
     path: 'slider',
     loadComponent: () => import('./pages/slider/slider-page'),
   },
+  {
+    path: 'toggle',
+    loadComponent: () => import('./pages/toggle/toggle-page'),
+  },
 ];
