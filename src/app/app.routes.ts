@@ -217,4 +217,8 @@ export const routes: Routes = [
     path: 'time-picker',
     loadComponent: () => import('./pages/time-picker/time-picker-page'),
   },
+  {
+    path: 'color-picker',
+    loadComponent: () => import('./pages/color-picker/color-picker-page'),
+  },
 ];

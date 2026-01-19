@@ -329,6 +329,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Time Picker
             </a>
+            <a
+              routerLink="/color-picker"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Color Picker
+            </a>
           </nav>
         </div>
       </header>
