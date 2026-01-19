@@ -177,4 +177,8 @@ export const routes: Routes = [
     path: 'combobox',
     loadComponent: () => import('./pages/combobox/combobox-page'),
   },
+  {
+    path: 'carousel',
+    loadComponent: () => import('./pages/carousel/carousel-page'),
+  },
 ];
