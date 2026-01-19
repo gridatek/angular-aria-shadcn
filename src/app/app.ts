@@ -311,6 +311,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               File Upload
             </a>
+            <a
+              routerLink="/kbd"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Kbd
+            </a>
           </nav>
         </div>
       </header>

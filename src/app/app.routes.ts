@@ -205,4 +205,8 @@ export const routes: Routes = [
     path: 'file-upload',
     loadComponent: () => import('./pages/file-upload/file-upload-page'),
   },
+  {
+    path: 'kbd',
+    loadComponent: () => import('./pages/kbd/kbd-page'),
+  },
 ];
