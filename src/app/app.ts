@@ -221,6 +221,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Alert
             </a>
+            <a
+              routerLink="/table"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Table
+            </a>
           </nav>
         </div>
       </header>

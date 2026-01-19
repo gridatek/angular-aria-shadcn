@@ -145,4 +145,8 @@ export const routes: Routes = [
     path: 'alert',
     loadComponent: () => import('./pages/alert/alert-page'),
   },
+  {
+    path: 'table',
+    loadComponent: () => import('./pages/table/table-page'),
+  },
 ];
