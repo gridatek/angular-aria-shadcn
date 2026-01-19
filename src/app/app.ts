@@ -227,6 +227,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Table
             </a>
+            <a
+              routerLink="/pagination"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Pagination
+            </a>
           </nav>
         </div>
       </header>

@@ -149,4 +149,8 @@ export const routes: Routes = [
     path: 'table',
     loadComponent: () => import('./pages/table/table-page'),
   },
+  {
+    path: 'pagination',
+    loadComponent: () => import('./pages/pagination/pagination-page'),
+  },
 ];
