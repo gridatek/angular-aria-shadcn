@@ -197,6 +197,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Label
             </a>
+            <a
+              routerLink="/input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Input
+            </a>
           </nav>
         </div>
       </header>

@@ -129,4 +129,8 @@ export const routes: Routes = [
     path: 'label',
     loadComponent: () => import('./pages/label/label-page'),
   },
+  {
+    path: 'input',
+    loadComponent: () => import('./pages/input/input-page'),
+  },
 ];
