@@ -107,6 +107,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Drawer
             </a>
+            <a
+              routerLink="/progress"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Progress
+            </a>
           </nav>
         </div>
       </header>

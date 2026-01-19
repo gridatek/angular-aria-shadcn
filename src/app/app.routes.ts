@@ -69,4 +69,8 @@ export const routes: Routes = [
     path: 'drawer',
     loadComponent: () => import('./pages/drawer/drawer-page'),
   },
+  {
+    path: 'progress',
+    loadComponent: () => import('./pages/progress/progress-page'),
+  },
 ];
