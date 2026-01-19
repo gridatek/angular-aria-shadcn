@@ -77,6 +77,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Nav Menu
             </a>
+            <a
+              routerLink="/context-menu"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Context Menu
+            </a>
           </nav>
         </div>
       </header>

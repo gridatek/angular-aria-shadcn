@@ -49,4 +49,8 @@ export const routes: Routes = [
     path: 'navigation-menu',
     loadComponent: () => import('./pages/navigation-menu/navigation-menu-page'),
   },
+  {
+    path: 'context-menu',
+    loadComponent: () => import('./pages/context-menu/context-menu-page'),
+  },
 ];
