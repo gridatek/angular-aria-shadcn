@@ -93,4 +93,8 @@ export const routes: Routes = [
     path: 'avatar',
     loadComponent: () => import('./pages/avatar/avatar-page'),
   },
+  {
+    path: 'badge',
+    loadComponent: () => import('./pages/badge/badge-page'),
+  },
 ];

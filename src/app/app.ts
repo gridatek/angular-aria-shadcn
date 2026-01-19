@@ -143,6 +143,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Avatar
             </a>
+            <a
+              routerLink="/badge"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Badge
+            </a>
           </nav>
         </div>
       </header>
