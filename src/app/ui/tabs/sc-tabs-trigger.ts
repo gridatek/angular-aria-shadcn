@@ -48,12 +48,12 @@ export class ScTabsTrigger {
     }
   }
 
-  onArrowLeft(event: KeyboardEvent): void {
+  onArrowLeft(event: Event): void {
     event.preventDefault();
     this.focusSibling(-1);
   }
 
-  onArrowRight(event: KeyboardEvent): void {
+  onArrowRight(event: Event): void {
     event.preventDefault();
     this.focusSibling(1);
   }
