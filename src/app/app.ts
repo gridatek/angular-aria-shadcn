@@ -167,6 +167,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Toggle
             </a>
+            <a
+              routerLink="/toggle-group"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Toggle Group
+            </a>
           </nav>
         </div>
       </header>

@@ -109,4 +109,8 @@ export const routes: Routes = [
     path: 'toggle',
     loadComponent: () => import('./pages/toggle/toggle-page'),
   },
+  {
+    path: 'toggle-group',
+    loadComponent: () => import('./pages/toggle-group/toggle-group-page'),
+  },
 ];
