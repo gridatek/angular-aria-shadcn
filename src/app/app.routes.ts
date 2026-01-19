@@ -173,4 +173,8 @@ export const routes: Routes = [
     path: 'button',
     loadComponent: () => import('./pages/button/button-page'),
   },
+  {
+    path: 'combobox',
+    loadComponent: () => import('./pages/combobox/combobox-page'),
+  },
 ];

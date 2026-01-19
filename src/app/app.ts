@@ -263,6 +263,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Button
             </a>
+            <a
+              routerLink="/combobox"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Combobox
+            </a>
           </nav>
         </div>
       </header>
