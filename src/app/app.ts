@@ -233,6 +233,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Pagination
             </a>
+            <a
+              routerLink="/aspect-ratio"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Aspect Ratio
+            </a>
           </nav>
         </div>
       </header>

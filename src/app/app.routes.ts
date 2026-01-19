@@ -153,4 +153,8 @@ export const routes: Routes = [
     path: 'pagination',
     loadComponent: () => import('./pages/pagination/pagination-page'),
   },
+  {
+    path: 'aspect-ratio',
+    loadComponent: () => import('./pages/aspect-ratio/aspect-ratio-page'),
+  },
 ];
