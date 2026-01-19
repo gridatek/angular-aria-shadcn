@@ -131,6 +131,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Separator
             </a>
+            <a
+              routerLink="/skeleton"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Skeleton
+            </a>
           </nav>
         </div>
       </header>

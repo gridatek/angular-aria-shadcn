@@ -85,4 +85,8 @@ export const routes: Routes = [
     path: 'separator',
     loadComponent: () => import('./pages/separator/separator-page'),
   },
+  {
+    path: 'skeleton',
+    loadComponent: () => import('./pages/skeleton/skeleton-page'),
+  },
 ];
