@@ -323,6 +323,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Chart
             </a>
+            <a
+              routerLink="/time-picker"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Time Picker
+            </a>
           </nav>
         </div>
       </header>

@@ -213,4 +213,8 @@ export const routes: Routes = [
     path: 'chart',
     loadComponent: () => import('./pages/chart/chart-page'),
   },
+  {
+    path: 'time-picker',
+    loadComponent: () => import('./pages/time-picker/time-picker-page'),
+  },
 ];
