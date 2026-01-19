@@ -193,4 +193,8 @@ export const routes: Routes = [
     path: 'tree-view',
     loadComponent: () => import('./pages/tree-view/tree-view-page'),
   },
+  {
+    path: 'dropdown-menu',
+    loadComponent: () => import('./pages/dropdown-menu/dropdown-menu-page'),
+  },
 ];

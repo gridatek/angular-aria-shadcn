@@ -293,6 +293,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Tree View
             </a>
+            <a
+              routerLink="/dropdown-menu"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Dropdown Menu
+            </a>
           </nav>
         </div>
       </header>
