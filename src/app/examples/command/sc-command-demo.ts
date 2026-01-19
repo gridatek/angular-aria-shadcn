@@ -29,7 +29,7 @@ import {
       <!-- Basic Command -->
       <div class="w-full max-w-md">
         <div sc-command class="rounded-lg border shadow-md">
-          <div sc-command-input placeholder="Type a command or search..." />
+          <div sc-command-input placeholder="Type a command or search..."></div>
           <div sc-command-list>
             <div sc-command-empty>No results found.</div>
             <div sc-command-group>
