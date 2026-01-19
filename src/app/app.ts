@@ -191,6 +191,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Radio Group
             </a>
+            <a
+              routerLink="/label"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Label
+            </a>
           </nav>
         </div>
       </header>

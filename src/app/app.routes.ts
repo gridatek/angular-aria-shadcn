@@ -125,4 +125,8 @@ export const routes: Routes = [
     path: 'radio-group',
     loadComponent: () => import('./pages/radio-group/radio-group-page'),
   },
+  {
+    path: 'label',
+    loadComponent: () => import('./pages/label/label-page'),
+  },
 ];
