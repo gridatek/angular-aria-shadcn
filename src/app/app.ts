@@ -155,6 +155,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Switch
             </a>
+            <a
+              routerLink="/slider"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Slider
+            </a>
           </nav>
         </div>
       </header>

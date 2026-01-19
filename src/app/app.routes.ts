@@ -101,4 +101,8 @@ export const routes: Routes = [
     path: 'switch',
     loadComponent: () => import('./pages/switch/switch-page'),
   },
+  {
+    path: 'slider',
+    loadComponent: () => import('./pages/slider/slider-page'),
+  },
 ];
