@@ -313,4 +313,12 @@ export const routes: Routes = [
     path: 'qr-code',
     loadComponent: () => import('./pages/qr-code/qr-code-page'),
   },
+  {
+    path: 'video-player',
+    loadComponent: () => import('./pages/video-player/video-player-page'),
+  },
+  {
+    path: 'barcode-scanner',
+    loadComponent: () => import('./pages/barcode-scanner/barcode-scanner-page'),
+  },
 ];

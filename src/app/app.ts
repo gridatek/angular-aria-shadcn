@@ -473,6 +473,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               QR Code
             </a>
+            <a
+              routerLink="/video-player"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Video Player
+            </a>
+            <a
+              routerLink="/barcode-scanner"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Barcode Scanner
+            </a>
           </nav>
         </div>
       </header>
