@@ -425,6 +425,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Multi-Select
             </a>
+            <a
+              routerLink="/date-range-picker"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Date Range Picker
+            </a>
+            <a
+              routerLink="/countdown"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Countdown
+            </a>
           </nav>
         </div>
       </header>

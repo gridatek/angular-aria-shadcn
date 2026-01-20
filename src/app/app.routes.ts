@@ -281,4 +281,12 @@ export const routes: Routes = [
     path: 'multi-select',
     loadComponent: () => import('./pages/multi-select/multi-select-page'),
   },
+  {
+    path: 'date-range-picker',
+    loadComponent: () => import('./pages/date-range-picker/date-range-picker-page'),
+  },
+  {
+    path: 'countdown',
+    loadComponent: () => import('./pages/countdown/countdown-page'),
+  },
 ];
