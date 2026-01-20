@@ -413,6 +413,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Phone Input
             </a>
+            <a
+              routerLink="/mention-input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Mention Input
+            </a>
+            <a
+              routerLink="/multi-select"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Multi-Select
+            </a>
           </nav>
         </div>
       </header>

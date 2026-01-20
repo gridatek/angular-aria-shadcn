@@ -273,4 +273,12 @@ export const routes: Routes = [
     path: 'phone-input',
     loadComponent: () => import('./pages/phone-input/phone-input-page'),
   },
+  {
+    path: 'mention-input',
+    loadComponent: () => import('./pages/mention-input/mention-input-page'),
+  },
+  {
+    path: 'multi-select',
+    loadComponent: () => import('./pages/multi-select/multi-select-page'),
+  },
 ];
