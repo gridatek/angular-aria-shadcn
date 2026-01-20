@@ -371,6 +371,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Sortable List
             </a>
+            <a
+              routerLink="/copy-button"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Copy Button
+            </a>
           </nav>
         </div>
       </header>

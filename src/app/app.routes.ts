@@ -245,4 +245,8 @@ export const routes: Routes = [
     path: 'sortable-list',
     loadComponent: () => import('./pages/sortable-list/sortable-list-page'),
   },
+  {
+    path: 'copy-button',
+    loadComponent: () => import('./pages/copy-button/copy-button-page'),
+  },
 ];
