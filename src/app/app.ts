@@ -461,6 +461,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Image Compare
             </a>
+            <a
+              routerLink="/audio-player"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Audio Player
+            </a>
+            <a
+              routerLink="/qr-code"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              QR Code
+            </a>
           </nav>
         </div>
       </header>

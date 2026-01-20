@@ -305,4 +305,12 @@ export const routes: Routes = [
     path: 'image-compare',
     loadComponent: () => import('./pages/image-compare/image-compare-page'),
   },
+  {
+    path: 'audio-player',
+    loadComponent: () => import('./pages/audio-player/audio-player-page'),
+  },
+  {
+    path: 'qr-code',
+    loadComponent: () => import('./pages/qr-code/qr-code-page'),
+  },
 ];
