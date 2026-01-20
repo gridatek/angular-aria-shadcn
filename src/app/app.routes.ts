@@ -237,4 +237,8 @@ export const routes: Routes = [
     path: 'image-cropper',
     loadComponent: () => import('./pages/image-cropper/image-cropper-page'),
   },
+  {
+    path: 'tag-input',
+    loadComponent: () => import('./pages/tag-input/tag-input-page'),
+  },
 ];

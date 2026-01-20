@@ -359,6 +359,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Image Cropper
             </a>
+            <a
+              routerLink="/tag-input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tag Input
+            </a>
           </nav>
         </div>
       </header>
