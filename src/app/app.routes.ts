@@ -297,4 +297,12 @@ export const routes: Routes = [
     path: 'lightbox',
     loadComponent: () => import('./pages/lightbox/lightbox-page'),
   },
+  {
+    path: 'signature-pad',
+    loadComponent: () => import('./pages/signature-pad/signature-pad-page'),
+  },
+  {
+    path: 'image-compare',
+    loadComponent: () => import('./pages/image-compare/image-compare-page'),
+  },
 ];

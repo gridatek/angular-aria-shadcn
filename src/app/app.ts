@@ -449,6 +449,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Lightbox
             </a>
+            <a
+              routerLink="/signature-pad"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Signature Pad
+            </a>
+            <a
+              routerLink="/image-compare"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Image Compare
+            </a>
           </nav>
         </div>
       </header>
