@@ -353,6 +353,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Number Input
             </a>
+            <a
+              routerLink="/image-cropper"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Image Cropper
+            </a>
           </nav>
         </div>
       </header>
