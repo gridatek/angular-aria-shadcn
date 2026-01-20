@@ -265,4 +265,8 @@ export const routes: Routes = [
     path: 'marquee',
     loadComponent: () => import('./pages/marquee/marquee-page'),
   },
+  {
+    path: 'password-input',
+    loadComponent: () => import('./pages/password-input/password-input-page'),
+  },
 ];

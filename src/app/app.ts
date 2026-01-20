@@ -401,6 +401,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Marquee
             </a>
+            <a
+              routerLink="/password-input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Password Input
+            </a>
           </nav>
         </div>
       </header>
