@@ -377,6 +377,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Copy Button
             </a>
+            <a
+              routerLink="/spinner"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Spinner
+            </a>
+            <a
+              routerLink="/timeline"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Timeline
+            </a>
           </nav>
         </div>
       </header>

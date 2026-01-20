@@ -249,4 +249,12 @@ export const routes: Routes = [
     path: 'copy-button',
     loadComponent: () => import('./pages/copy-button/copy-button-page'),
   },
+  {
+    path: 'spinner',
+    loadComponent: () => import('./pages/spinner/spinner-page'),
+  },
+  {
+    path: 'timeline',
+    loadComponent: () => import('./pages/timeline/timeline-page'),
+  },
 ];
