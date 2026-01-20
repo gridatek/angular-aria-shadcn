@@ -321,4 +321,12 @@ export const routes: Routes = [
     path: 'barcode-scanner',
     loadComponent: () => import('./pages/barcode-scanner/barcode-scanner-page'),
   },
+  {
+    path: 'tour-guide',
+    loadComponent: () => import('./pages/tour-guide/tour-guide-page'),
+  },
+  {
+    path: 'spotlight',
+    loadComponent: () => import('./pages/spotlight/spotlight-page'),
+  },
 ];

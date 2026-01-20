@@ -485,6 +485,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Barcode Scanner
             </a>
+            <a
+              routerLink="/tour-guide"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tour Guide
+            </a>
+            <a
+              routerLink="/spotlight"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Spotlight
+            </a>
           </nav>
         </div>
       </header>
