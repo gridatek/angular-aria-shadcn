@@ -437,6 +437,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Countdown
             </a>
+            <a
+              routerLink="/infinite-scroll"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Infinite Scroll
+            </a>
+            <a
+              routerLink="/lightbox"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Lightbox
+            </a>
           </nav>
         </div>
       </header>

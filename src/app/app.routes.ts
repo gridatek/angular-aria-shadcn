@@ -289,4 +289,12 @@ export const routes: Routes = [
     path: 'countdown',
     loadComponent: () => import('./pages/countdown/countdown-page'),
   },
+  {
+    path: 'infinite-scroll',
+    loadComponent: () => import('./pages/infinite-scroll/infinite-scroll-page'),
+  },
+  {
+    path: 'lightbox',
+    loadComponent: () => import('./pages/lightbox/lightbox-page'),
+  },
 ];
