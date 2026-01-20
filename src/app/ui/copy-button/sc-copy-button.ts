@@ -194,7 +194,7 @@ export class ScCopyButtonWithText {
         [variant]="'outline'"
         [size]="'icon'"
         class="rounded-l-none border-l-0"
-      />
+      ></button>
     </div>
   `,
   host: {
@@ -235,7 +235,7 @@ export class ScCopyInput {
         class="absolute right-2 top-2"
         [variant]="'ghost'"
         [size]="'icon'"
-      />
+      ></button>
     </div>
   `,
   host: {
