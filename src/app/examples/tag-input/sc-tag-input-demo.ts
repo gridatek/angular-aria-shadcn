@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import {
   ScTagInput,
@@ -9,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-sc-tag-input-demo',
-  imports: [ScTagInput, ScTagInputField, ScTagInputTag, ScTagInputClear, ScTagInputCount],
+  imports: [JsonPipe, ScTagInput, ScTagInputField, ScTagInputTag, ScTagInputClear, ScTagInputCount],
   template: `
     <div class="space-y-8">
       <!-- Basic -->
