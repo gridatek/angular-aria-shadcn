@@ -257,4 +257,12 @@ export const routes: Routes = [
     path: 'timeline',
     loadComponent: () => import('./pages/timeline/timeline-page'),
   },
+  {
+    path: 'emoji-picker',
+    loadComponent: () => import('./pages/emoji-picker/emoji-picker-page'),
+  },
+  {
+    path: 'marquee',
+    loadComponent: () => import('./pages/marquee/marquee-page'),
+  },
 ];

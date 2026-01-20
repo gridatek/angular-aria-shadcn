@@ -389,6 +389,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Timeline
             </a>
+            <a
+              routerLink="/emoji-picker"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Emoji Picker
+            </a>
+            <a
+              routerLink="/marquee"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Marquee
+            </a>
           </nav>
         </div>
       </header>
