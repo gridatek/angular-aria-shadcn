@@ -241,4 +241,8 @@ export const routes: Routes = [
     path: 'tag-input',
     loadComponent: () => import('./pages/tag-input/tag-input-page'),
   },
+  {
+    path: 'sortable-list',
+    loadComponent: () => import('./pages/sortable-list/sortable-list-page'),
+  },
 ];

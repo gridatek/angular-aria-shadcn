@@ -365,6 +365,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Tag Input
             </a>
+            <a
+              routerLink="/sortable-list"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Sortable List
+            </a>
           </nav>
         </div>
       </header>
