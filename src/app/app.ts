@@ -407,6 +407,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Password Input
             </a>
+            <a
+              routerLink="/phone-input"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Phone Input
+            </a>
           </nav>
         </div>
       </header>

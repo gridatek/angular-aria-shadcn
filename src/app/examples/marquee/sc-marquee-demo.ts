@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
-import {
-  ScMarquee,
-  ScMarqueeItem,
-  ScMarqueeClone,
-  ScMarqueeFade,
-  ScAutoMarquee,
-  ScMarqueeText,
-} from '../../ui/marquee';
+import { ScMarquee, ScMarqueeClone, ScMarqueeItem, ScMarqueeText } from '../../ui/marquee';
 
 @Component({
   selector: 'sc-marquee-demo',
-  imports: [ScMarquee, ScMarqueeItem, ScMarqueeClone, ScMarqueeFade, ScAutoMarquee, ScMarqueeText],
+  imports: [ScMarquee, ScMarqueeItem, ScMarqueeClone, ScMarqueeText],
   template: `
     <div class="space-y-10">
       <!-- Text Marquee -->

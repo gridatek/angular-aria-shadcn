@@ -269,4 +269,8 @@ export const routes: Routes = [
     path: 'password-input',
     loadComponent: () => import('./pages/password-input/password-input-page'),
   },
+  {
+    path: 'phone-input',
+    loadComponent: () => import('./pages/phone-input/phone-input-page'),
+  },
 ];
