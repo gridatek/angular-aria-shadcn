@@ -4,7 +4,7 @@ import { computeDiff, computeWordDiff, DiffLine, DiffResult } from './diff-algor
 
 export type DiffViewMode = 'split' | 'unified';
 
-export { DiffLine, DiffResult } from './diff-algorithm';
+export type { DiffLine, DiffResult } from './diff-algorithm';
 
 @Component({
   selector: 'sc-diff-viewer',
