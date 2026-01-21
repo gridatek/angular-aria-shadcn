@@ -847,6 +847,22 @@ import { RouterLink } from '@angular/router';
           <h3 class="font-semibold leading-none tracking-tight">Org Chart</h3>
           <p class="text-sm text-muted-foreground mt-2">Hierarchical organization visualization.</p>
         </a>
+
+        <a
+          routerLink="/theme-toggle"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Theme Toggle</h3>
+          <p class="text-sm text-muted-foreground mt-2">Switch between light and dark themes.</p>
+        </a>
+
+        <a
+          routerLink="/language-switcher"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Language Switcher</h3>
+          <p class="text-sm text-muted-foreground mt-2">Switch between different languages.</p>
+        </a>
       </div>
     </div>
   `,
