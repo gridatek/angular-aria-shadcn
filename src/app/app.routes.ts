@@ -369,4 +369,8 @@ export const routes: Routes = [
     path: 'pdf-viewer',
     loadComponent: () => import('./pages/pdf-viewer/pdf-viewer-page'),
   },
+  {
+    path: 'masonry-grid',
+    loadComponent: () => import('./pages/masonry-grid/masonry-grid-page'),
+  },
 ];

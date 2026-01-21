@@ -819,6 +819,16 @@ import { RouterLink } from '@angular/router';
             Document viewer with navigation and zoom controls.
           </p>
         </a>
+
+        <a
+          routerLink="/masonry-grid"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Masonry Grid</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            Pinterest-style layout with varying item heights.
+          </p>
+        </a>
       </div>
     </div>
   `,
