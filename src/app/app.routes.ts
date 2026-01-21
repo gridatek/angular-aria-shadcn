@@ -357,4 +357,8 @@ export const routes: Routes = [
     path: 'timezone',
     loadComponent: () => import('./pages/timezone/timezone-page'),
   },
+  {
+    path: 'navbar',
+    loadComponent: () => import('./pages/navbar/navbar-page'),
+  },
 ];
