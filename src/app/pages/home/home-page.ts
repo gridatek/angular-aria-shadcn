@@ -789,6 +789,16 @@ import { RouterLink } from '@angular/router';
             A component for selecting and displaying timezones.
           </p>
         </a>
+
+        <a
+          routerLink="/navbar"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Navbar</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            A responsive navigation bar with mobile menu support.
+          </p>
+        </a>
       </div>
     </div>
   `,
