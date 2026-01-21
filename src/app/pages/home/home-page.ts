@@ -863,6 +863,40 @@ import { RouterLink } from '@angular/router';
           <h3 class="font-semibold leading-none tracking-tight">Language Switcher</h3>
           <p class="text-sm text-muted-foreground mt-2">Switch between different languages.</p>
         </a>
+
+        <a
+          routerLink="/avatar-group"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Avatar Group</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            Stacked/overlapping avatars with overflow.
+          </p>
+        </a>
+
+        <a
+          routerLink="/split-button"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Split Button</h3>
+          <p class="text-sm text-muted-foreground mt-2">Button with dropdown actions.</p>
+        </a>
+
+        <a
+          routerLink="/virtual-list"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Virtual List</h3>
+          <p class="text-sm text-muted-foreground mt-2">Virtualized scrolling for large lists.</p>
+        </a>
+
+        <a
+          routerLink="/image-annotator"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Image Annotator</h3>
+          <p class="text-sm text-muted-foreground mt-2">Draw and markup on images.</p>
+        </a>
       </div>
     </div>
   `,

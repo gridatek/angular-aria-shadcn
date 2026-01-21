@@ -381,4 +381,20 @@ export const routes: Routes = [
     path: 'org-chart',
     loadComponent: () => import('./pages/org-chart/org-chart-page'),
   },
+  {
+    path: 'avatar-group',
+    loadComponent: () => import('./pages/avatar-group/avatar-group-page'),
+  },
+  {
+    path: 'split-button',
+    loadComponent: () => import('./pages/split-button/split-button-page'),
+  },
+  {
+    path: 'virtual-list',
+    loadComponent: () => import('./pages/virtual-list/virtual-list-page'),
+  },
+  {
+    path: 'image-annotator',
+    loadComponent: () => import('./pages/image-annotator/image-annotator-page'),
+  },
 ];
