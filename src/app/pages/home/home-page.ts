@@ -799,6 +799,16 @@ import { RouterLink } from '@angular/router';
             A responsive navigation bar with mobile menu support.
           </p>
         </a>
+
+        <a
+          routerLink="/notification-center"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Notification Center</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            Grouped notification management with filtering.
+          </p>
+        </a>
       </div>
     </div>
   `,
