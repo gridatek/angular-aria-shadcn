@@ -361,4 +361,8 @@ export const routes: Routes = [
     path: 'navbar',
     loadComponent: () => import('./pages/navbar/navbar-page'),
   },
+  {
+    path: 'notification-center',
+    loadComponent: () => import('./pages/notification-center/notification-center-page'),
+  },
 ];
