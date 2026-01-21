@@ -353,4 +353,8 @@ export const routes: Routes = [
     path: 'language-switcher',
     loadComponent: () => import('./pages/language-switcher/language-switcher-page'),
   },
+  {
+    path: 'timezone',
+    loadComponent: () => import('./pages/timezone/timezone-page'),
+  },
 ];
