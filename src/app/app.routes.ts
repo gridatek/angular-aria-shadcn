@@ -349,4 +349,8 @@ export const routes: Routes = [
     path: 'theme-toggle',
     loadComponent: () => import('./pages/theme-toggle/theme-toggle-page'),
   },
+  {
+    path: 'language-switcher',
+    loadComponent: () => import('./pages/language-switcher/language-switcher-page'),
+  },
 ];
