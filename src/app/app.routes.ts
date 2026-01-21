@@ -329,4 +329,8 @@ export const routes: Routes = [
     path: 'spotlight',
     loadComponent: () => import('./pages/spotlight/spotlight-page'),
   },
+  {
+    path: 'code-editor',
+    loadComponent: () => import('./pages/code-editor/code-editor-page'),
+  },
 ];

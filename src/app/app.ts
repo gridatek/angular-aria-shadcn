@@ -497,6 +497,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Spotlight
             </a>
+            <a
+              routerLink="/code-editor"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Code Editor
+            </a>
           </nav>
         </div>
       </header>
