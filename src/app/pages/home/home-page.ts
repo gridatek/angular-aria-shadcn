@@ -809,6 +809,16 @@ import { RouterLink } from '@angular/router';
             Grouped notification management with filtering.
           </p>
         </a>
+
+        <a
+          routerLink="/pdf-viewer"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">PDF Viewer</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            Document viewer with navigation and zoom controls.
+          </p>
+        </a>
       </div>
     </div>
   `,

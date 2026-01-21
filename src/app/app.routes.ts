@@ -365,4 +365,8 @@ export const routes: Routes = [
     path: 'notification-center',
     loadComponent: () => import('./pages/notification-center/notification-center-page'),
   },
+  {
+    path: 'pdf-viewer',
+    loadComponent: () => import('./pages/pdf-viewer/pdf-viewer-page'),
+  },
 ];
