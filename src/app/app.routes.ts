@@ -345,4 +345,8 @@ export const routes: Routes = [
     path: 'kanban-board',
     loadComponent: () => import('./pages/kanban-board/kanban-board-page'),
   },
+  {
+    path: 'theme-toggle',
+    loadComponent: () => import('./pages/theme-toggle/theme-toggle-page'),
+  },
 ];
