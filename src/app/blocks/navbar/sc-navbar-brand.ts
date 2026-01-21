@@ -13,6 +13,7 @@ export class ScNavbarBrand {
 
   protected readonly class = computed(() =>
     cn(
+      'relative z-50',
       'flex items-center gap-2',
       'text-lg font-semibold',
       'text-foreground',
