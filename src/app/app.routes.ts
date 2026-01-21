@@ -333,4 +333,8 @@ export const routes: Routes = [
     path: 'code-editor',
     loadComponent: () => import('./pages/code-editor/code-editor-page'),
   },
+  {
+    path: 'rich-text-editor',
+    loadComponent: () => import('./pages/rich-text-editor/rich-text-editor-page'),
+  },
 ];

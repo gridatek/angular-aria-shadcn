@@ -503,6 +503,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Code Editor
             </a>
+            <a
+              routerLink="/rich-text-editor"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Rich Text Editor
+            </a>
           </nav>
         </div>
       </header>
