@@ -129,9 +129,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Context Menu</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A menu displayed on right-click.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A menu displayed on right-click.</p>
         </a>
 
         <a
@@ -209,9 +207,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Separator</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Visually separates content with a line.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Visually separates content with a line.</p>
         </a>
 
         <a
@@ -329,9 +325,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Input</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A text input field for user data entry.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A text input field for user data entry.</p>
         </a>
 
         <a
@@ -339,9 +333,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Textarea</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A multi-line text input field.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A multi-line text input field.</p>
         </a>
 
         <a
@@ -359,9 +351,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Alert</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Displays important messages to the user.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Displays important messages to the user.</p>
         </a>
 
         <a
@@ -409,9 +399,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Calendar</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A date picker calendar component.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A date picker calendar component.</p>
         </a>
 
         <a
@@ -439,9 +427,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Combobox</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            An autocomplete input with filtering.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">An autocomplete input with filtering.</p>
         </a>
 
         <a
@@ -459,9 +445,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Sidebar</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A collapsible side navigation panel.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A collapsible side navigation panel.</p>
         </a>
 
         <a
@@ -479,9 +463,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Tree View</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A hierarchical view of nested items.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A hierarchical view of nested items.</p>
         </a>
 
         <a
@@ -489,9 +471,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Dropdown Menu</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A menu displayed on button click.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A menu displayed on button click.</p>
         </a>
 
         <a
@@ -509,9 +489,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">File Upload</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A drag-and-drop file upload component.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A drag-and-drop file upload component.</p>
         </a>
 
         <a
@@ -519,9 +497,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Kbd</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Displays keyboard shortcuts and keys.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Displays keyboard shortcuts and keys.</p>
         </a>
 
         <a
@@ -529,9 +505,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Chart</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Beautiful charts for data visualization.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Beautiful charts for data visualization.</p>
         </a>
 
         <a
@@ -539,9 +513,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Time Picker</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A component for selecting time values.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A component for selecting time values.</p>
         </a>
 
         <a
@@ -549,9 +521,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Color Picker</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A component for selecting colors.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A component for selecting colors.</p>
         </a>
 
         <a
@@ -559,9 +529,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Rating</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A star rating component for feedback.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A star rating component for feedback.</p>
         </a>
 
         <a
@@ -589,9 +557,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Image Cropper</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A tool for cropping and resizing images.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A tool for cropping and resizing images.</p>
         </a>
 
         <a
@@ -599,9 +565,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Tag Input</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            An input for adding and managing tags.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">An input for adding and managing tags.</p>
         </a>
 
         <a
@@ -609,9 +573,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Sortable List</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A drag-and-drop sortable list.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A drag-and-drop sortable list.</p>
         </a>
 
         <a
@@ -619,9 +581,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Copy Button</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A button that copies text to clipboard.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A button that copies text to clipboard.</p>
         </a>
 
         <a
@@ -629,9 +589,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Spinner</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A loading indicator animation.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A loading indicator animation.</p>
         </a>
 
         <a
@@ -639,9 +597,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Timeline</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Displays events in chronological order.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Displays events in chronological order.</p>
         </a>
 
         <a
@@ -649,9 +605,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Emoji Picker</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A picker for selecting emojis.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A picker for selecting emojis.</p>
         </a>
 
         <a
@@ -659,9 +613,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Marquee</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A scrolling text or content animation.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A scrolling text or content animation.</p>
         </a>
 
         <a
@@ -669,9 +621,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Password Input</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A password input with visibility toggle.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A password input with visibility toggle.</p>
         </a>
 
         <a
@@ -689,9 +639,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Mention Input</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            An input with mention suggestions.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">An input with mention suggestions.</p>
         </a>
 
         <a
@@ -709,9 +657,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Date Range Picker</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Select a range of dates with a calendar.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Select a range of dates with a calendar.</p>
         </a>
 
         <a
@@ -719,9 +665,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Countdown</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A countdown timer display.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A countdown timer display.</p>
         </a>
 
         <a
@@ -729,9 +673,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Infinite Scroll</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Load more content as the user scrolls.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Load more content as the user scrolls.</p>
         </a>
 
         <a
@@ -739,9 +681,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Lightbox</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A full-screen image viewer.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A full-screen image viewer.</p>
         </a>
 
         <a
@@ -749,9 +689,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Signature Pad</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A canvas for capturing signatures.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A canvas for capturing signatures.</p>
         </a>
 
         <a
@@ -759,9 +697,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Image Compare</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Compare two images with a slider.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Compare two images with a slider.</p>
         </a>
 
         <a
@@ -769,9 +705,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Audio Player</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A custom audio player with controls.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A custom audio player with controls.</p>
         </a>
 
         <a
@@ -779,9 +713,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">QR Code</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Generate and display QR codes.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Generate and display QR codes.</p>
         </a>
 
         <a
@@ -789,9 +721,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Video Player</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A custom video player with controls.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A custom video player with controls.</p>
         </a>
 
         <a
@@ -799,9 +729,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Barcode Scanner</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Scan barcodes using the camera.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Scan barcodes using the camera.</p>
         </a>
 
         <a
@@ -809,9 +737,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Tour Guide</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Create interactive product tours.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Create interactive product tours.</p>
         </a>
 
         <a
@@ -819,9 +745,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Spotlight</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A spotlight search interface.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A spotlight search interface.</p>
         </a>
 
         <a
@@ -829,9 +753,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Code Editor</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A syntax-highlighted code editor.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A syntax-highlighted code editor.</p>
         </a>
 
         <a
@@ -839,9 +761,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Rich Text Editor</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            A WYSIWYG text editor.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">A WYSIWYG text editor.</p>
         </a>
 
         <a
@@ -849,9 +769,7 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Diff Viewer</h3>
-          <p class="text-sm text-muted-foreground mt-2">
-            Compare and display text differences.
-          </p>
+          <p class="text-sm text-muted-foreground mt-2">Compare and display text differences.</p>
         </a>
 
         <a
@@ -859,8 +777,16 @@ import { RouterLink } from '@angular/router';
           class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
         >
           <h3 class="font-semibold leading-none tracking-tight">Kanban Board</h3>
+          <p class="text-sm text-muted-foreground mt-2">A drag-and-drop task board.</p>
+        </a>
+
+        <a
+          routerLink="/timezone"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Timezone</h3>
           <p class="text-sm text-muted-foreground mt-2">
-            A drag-and-drop task board.
+            A component for selecting and displaying timezones.
           </p>
         </a>
       </div>
