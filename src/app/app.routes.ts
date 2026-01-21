@@ -397,4 +397,16 @@ export const routes: Routes = [
     path: 'image-annotator',
     loadComponent: () => import('./pages/image-annotator/image-annotator-page'),
   },
+  {
+    path: 'confetti',
+    loadComponent: () => import('./pages/confetti/confetti-page'),
+  },
+  {
+    path: 'animated-counter',
+    loadComponent: () => import('./pages/animated-counter/animated-counter-page'),
+  },
+  {
+    path: 'dock',
+    loadComponent: () => import('./pages/dock/dock-page'),
+  },
 ];

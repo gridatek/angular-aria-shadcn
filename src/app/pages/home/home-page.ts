@@ -897,6 +897,32 @@ import { RouterLink } from '@angular/router';
           <h3 class="font-semibold leading-none tracking-tight">Image Annotator</h3>
           <p class="text-sm text-muted-foreground mt-2">Draw and markup on images.</p>
         </a>
+
+        <a
+          routerLink="/confetti"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Confetti</h3>
+          <p class="text-sm text-muted-foreground mt-2">Celebration animation effect.</p>
+        </a>
+
+        <a
+          routerLink="/animated-counter"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Animated Counter</h3>
+          <p class="text-sm text-muted-foreground mt-2">Numbers that animate up/down.</p>
+        </a>
+
+        <a
+          routerLink="/dock"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Dock</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            macOS-style icon dock with magnification.
+          </p>
+        </a>
       </div>
     </div>
   `,
