@@ -337,4 +337,8 @@ export const routes: Routes = [
     path: 'rich-text-editor',
     loadComponent: () => import('./pages/rich-text-editor/rich-text-editor-page'),
   },
+  {
+    path: 'diff-viewer',
+    loadComponent: () => import('./pages/diff-viewer/diff-viewer-page'),
+  },
 ];

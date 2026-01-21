@@ -509,6 +509,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Rich Text Editor
             </a>
+            <a
+              routerLink="/diff-viewer"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Diff Viewer
+            </a>
           </nav>
         </div>
       </header>
