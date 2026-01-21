@@ -377,4 +377,8 @@ export const routes: Routes = [
     path: 'speed-dial',
     loadComponent: () => import('./pages/speed-dial/speed-dial-page'),
   },
+  {
+    path: 'org-chart',
+    loadComponent: () => import('./pages/org-chart/org-chart-page'),
+  },
 ];

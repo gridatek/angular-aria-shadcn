@@ -839,6 +839,14 @@ import { RouterLink } from '@angular/router';
             Floating action button with expandable menu.
           </p>
         </a>
+
+        <a
+          routerLink="/org-chart"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Org Chart</h3>
+          <p class="text-sm text-muted-foreground mt-2">Hierarchical organization visualization.</p>
+        </a>
       </div>
     </div>
   `,
