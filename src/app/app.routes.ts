@@ -341,4 +341,8 @@ export const routes: Routes = [
     path: 'diff-viewer',
     loadComponent: () => import('./pages/diff-viewer/diff-viewer-page'),
   },
+  {
+    path: 'kanban-board',
+    loadComponent: () => import('./pages/kanban-board/kanban-board-page'),
+  },
 ];

@@ -515,6 +515,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             >
               Diff Viewer
             </a>
+            <a
+              routerLink="/kanban-board"
+              class="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Kanban Board
+            </a>
           </nav>
         </div>
       </header>
