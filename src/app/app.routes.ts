@@ -373,4 +373,8 @@ export const routes: Routes = [
     path: 'masonry-grid',
     loadComponent: () => import('./pages/masonry-grid/masonry-grid-page'),
   },
+  {
+    path: 'speed-dial',
+    loadComponent: () => import('./pages/speed-dial/speed-dial-page'),
+  },
 ];

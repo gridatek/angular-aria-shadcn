@@ -829,6 +829,16 @@ import { RouterLink } from '@angular/router';
             Pinterest-style layout with varying item heights.
           </p>
         </a>
+
+        <a
+          routerLink="/speed-dial"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Speed Dial</h3>
+          <p class="text-sm text-muted-foreground mt-2">
+            Floating action button with expandable menu.
+          </p>
+        </a>
       </div>
     </div>
   `,
