@@ -1,428 +1,433 @@
 import { Routes } from '@angular/router';
+import { showcaseRoutes } from './showcase/showcase.routes';
 
 export const routes: Routes = [
+  // Showcase routes (landing, dashboard, etc.)
+  ...showcaseRoutes,
+
+  // Component documentation routes under /components
   {
-    path: '',
+    path: 'components',
     loadComponent: () => import('./pages/home/home-page'),
   },
   {
-    path: 'select',
+    path: 'components/select',
     loadComponent: () => import('./pages/select/select-page'),
   },
   {
-    path: 'menu',
+    path: 'components/menu',
     loadComponent: () => import('./pages/menu/menu-page'),
   },
   {
-    path: 'dialog',
+    path: 'components/dialog',
     loadComponent: () => import('./pages/dialog/dialog-page'),
   },
   {
-    path: 'sheet',
+    path: 'components/sheet',
     loadComponent: () => import('./pages/sheet/sheet-page'),
   },
   {
-    path: 'popover',
+    path: 'components/popover',
     loadComponent: () => import('./pages/popover/popover-page'),
   },
   {
-    path: 'tooltip',
+    path: 'components/tooltip',
     loadComponent: () => import('./pages/tooltip/tooltip-page'),
   },
   {
-    path: 'collapsible',
+    path: 'components/collapsible',
     loadComponent: () => import('./pages/collapsible/collapsible-page'),
   },
   {
-    path: 'alert-dialog',
+    path: 'components/alert-dialog',
     loadComponent: () => import('./pages/alert-dialog/alert-dialog-page'),
   },
   {
-    path: 'toast',
+    path: 'components/toast',
     loadComponent: () => import('./pages/toast/toast-page'),
   },
   {
-    path: 'hover-card',
+    path: 'components/hover-card',
     loadComponent: () => import('./pages/hover-card/hover-card-page'),
   },
   {
-    path: 'navigation-menu',
+    path: 'components/navigation-menu',
     loadComponent: () => import('./pages/navigation-menu/navigation-menu-page'),
   },
   {
-    path: 'context-menu',
+    path: 'components/context-menu',
     loadComponent: () => import('./pages/context-menu/context-menu-page'),
   },
   {
-    path: 'tabs',
+    path: 'components/tabs',
     loadComponent: () => import('./pages/tabs/tabs-page'),
   },
   {
-    path: 'accordion',
+    path: 'components/accordion',
     loadComponent: () => import('./pages/accordion/accordion-page'),
   },
   {
-    path: 'command',
+    path: 'components/command',
     loadComponent: () => import('./pages/command/command-page'),
   },
   {
-    path: 'drawer',
+    path: 'components/drawer',
     loadComponent: () => import('./pages/drawer/drawer-page'),
   },
   {
-    path: 'progress',
+    path: 'components/progress',
     loadComponent: () => import('./pages/progress/progress-page'),
   },
   {
-    path: 'scroll-area',
+    path: 'components/scroll-area',
     loadComponent: () => import('./pages/scroll-area/scroll-area-page'),
   },
   {
-    path: 'breadcrumb',
+    path: 'components/breadcrumb',
     loadComponent: () => import('./pages/breadcrumb/breadcrumb-page'),
   },
   {
-    path: 'separator',
+    path: 'components/separator',
     loadComponent: () => import('./pages/separator/separator-page'),
   },
   {
-    path: 'skeleton',
+    path: 'components/skeleton',
     loadComponent: () => import('./pages/skeleton/skeleton-page'),
   },
   {
-    path: 'avatar',
+    path: 'components/avatar',
     loadComponent: () => import('./pages/avatar/avatar-page'),
   },
   {
-    path: 'badge',
+    path: 'components/badge',
     loadComponent: () => import('./pages/badge/badge-page'),
   },
   {
-    path: 'switch',
+    path: 'components/switch',
     loadComponent: () => import('./pages/switch/switch-page'),
   },
   {
-    path: 'slider',
+    path: 'components/slider',
     loadComponent: () => import('./pages/slider/slider-page'),
   },
   {
-    path: 'toggle',
+    path: 'components/toggle',
     loadComponent: () => import('./pages/toggle/toggle-page'),
   },
   {
-    path: 'toggle-group',
+    path: 'components/toggle-group',
     loadComponent: () => import('./pages/toggle-group/toggle-group-page'),
   },
   {
-    path: 'input-otp',
+    path: 'components/input-otp',
     loadComponent: () => import('./pages/input-otp/input-otp-page'),
   },
   {
-    path: 'checkbox',
+    path: 'components/checkbox',
     loadComponent: () => import('./pages/checkbox/checkbox-page'),
   },
   {
-    path: 'radio-group',
+    path: 'components/radio-group',
     loadComponent: () => import('./pages/radio-group/radio-group-page'),
   },
   {
-    path: 'label',
+    path: 'components/label',
     loadComponent: () => import('./pages/label/label-page'),
   },
   {
-    path: 'input',
+    path: 'components/input',
     loadComponent: () => import('./pages/input/input-page'),
   },
   {
-    path: 'textarea',
+    path: 'components/textarea',
     loadComponent: () => import('./pages/textarea/textarea-page'),
   },
   {
-    path: 'card',
+    path: 'components/card',
     loadComponent: () => import('./pages/card/card-page'),
   },
   {
-    path: 'alert',
+    path: 'components/alert',
     loadComponent: () => import('./pages/alert/alert-page'),
   },
   {
-    path: 'table',
+    path: 'components/table',
     loadComponent: () => import('./pages/table/table-page'),
   },
   {
-    path: 'pagination',
+    path: 'components/pagination',
     loadComponent: () => import('./pages/pagination/pagination-page'),
   },
   {
-    path: 'aspect-ratio',
+    path: 'components/aspect-ratio',
     loadComponent: () => import('./pages/aspect-ratio/aspect-ratio-page'),
   },
   {
-    path: 'resizable',
+    path: 'components/resizable',
     loadComponent: () => import('./pages/resizable/resizable-page'),
   },
   {
-    path: 'calendar',
+    path: 'components/calendar',
     loadComponent: () => import('./pages/calendar/calendar-page'),
   },
   {
-    path: 'date-picker',
+    path: 'components/date-picker',
     loadComponent: () => import('./pages/date-picker/date-picker-page'),
   },
   {
-    path: 'button',
+    path: 'components/button',
     loadComponent: () => import('./pages/button/button-page'),
   },
   {
-    path: 'combobox',
+    path: 'components/combobox',
     loadComponent: () => import('./pages/combobox/combobox-page'),
   },
   {
-    path: 'carousel',
+    path: 'components/carousel',
     loadComponent: () => import('./pages/carousel/carousel-page'),
   },
   {
-    path: 'sidebar',
+    path: 'components/sidebar',
     loadComponent: () => import('./pages/sidebar/sidebar-page'),
   },
   {
-    path: 'form',
+    path: 'components/form',
     loadComponent: () => import('./pages/form/form-page'),
   },
   {
-    path: 'tree-view',
+    path: 'components/tree-view',
     loadComponent: () => import('./pages/tree-view/tree-view-page'),
   },
   {
-    path: 'dropdown-menu',
+    path: 'components/dropdown-menu',
     loadComponent: () => import('./pages/dropdown-menu/dropdown-menu-page'),
   },
   {
-    path: 'stepper',
+    path: 'components/stepper',
     loadComponent: () => import('./pages/stepper/stepper-page'),
   },
   {
-    path: 'file-upload',
+    path: 'components/file-upload',
     loadComponent: () => import('./pages/file-upload/file-upload-page'),
   },
   {
-    path: 'kbd',
+    path: 'components/kbd',
     loadComponent: () => import('./pages/kbd/kbd-page'),
   },
   {
-    path: 'chart',
+    path: 'components/chart',
     loadComponent: () => import('./pages/chart/chart-page'),
   },
   {
-    path: 'time-picker',
+    path: 'components/time-picker',
     loadComponent: () => import('./pages/time-picker/time-picker-page'),
   },
   {
-    path: 'color-picker',
+    path: 'components/color-picker',
     loadComponent: () => import('./pages/color-picker/color-picker-page'),
   },
   {
-    path: 'rating',
+    path: 'components/rating',
     loadComponent: () => import('./pages/rating/rating-page'),
   },
   {
-    path: 'data-table',
+    path: 'components/data-table',
     loadComponent: () => import('./pages/data-table/data-table-page'),
   },
   {
-    path: 'number-input',
+    path: 'components/number-input',
     loadComponent: () => import('./pages/number-input/number-input-page'),
   },
   {
-    path: 'image-cropper',
+    path: 'components/image-cropper',
     loadComponent: () => import('./pages/image-cropper/image-cropper-page'),
   },
   {
-    path: 'tag-input',
+    path: 'components/tag-input',
     loadComponent: () => import('./pages/tag-input/tag-input-page'),
   },
   {
-    path: 'sortable-list',
+    path: 'components/sortable-list',
     loadComponent: () => import('./pages/sortable-list/sortable-list-page'),
   },
   {
-    path: 'copy-button',
+    path: 'components/copy-button',
     loadComponent: () => import('./pages/copy-button/copy-button-page'),
   },
   {
-    path: 'spinner',
+    path: 'components/spinner',
     loadComponent: () => import('./pages/spinner/spinner-page'),
   },
   {
-    path: 'timeline',
+    path: 'components/timeline',
     loadComponent: () => import('./pages/timeline/timeline-page'),
   },
   {
-    path: 'emoji-picker',
+    path: 'components/emoji-picker',
     loadComponent: () => import('./pages/emoji-picker/emoji-picker-page'),
   },
   {
-    path: 'marquee',
+    path: 'components/marquee',
     loadComponent: () => import('./pages/marquee/marquee-page'),
   },
   {
-    path: 'password-input',
+    path: 'components/password-input',
     loadComponent: () => import('./pages/password-input/password-input-page'),
   },
   {
-    path: 'phone-input',
+    path: 'components/phone-input',
     loadComponent: () => import('./pages/phone-input/phone-input-page'),
   },
   {
-    path: 'mention-input',
+    path: 'components/mention-input',
     loadComponent: () => import('./pages/mention-input/mention-input-page'),
   },
   {
-    path: 'multi-select',
+    path: 'components/multi-select',
     loadComponent: () => import('./pages/multi-select/multi-select-page'),
   },
   {
-    path: 'date-range-picker',
+    path: 'components/date-range-picker',
     loadComponent: () => import('./pages/date-range-picker/date-range-picker-page'),
   },
   {
-    path: 'countdown',
+    path: 'components/countdown',
     loadComponent: () => import('./pages/countdown/countdown-page'),
   },
   {
-    path: 'infinite-scroll',
+    path: 'components/infinite-scroll',
     loadComponent: () => import('./pages/infinite-scroll/infinite-scroll-page'),
   },
   {
-    path: 'lightbox',
+    path: 'components/lightbox',
     loadComponent: () => import('./pages/lightbox/lightbox-page'),
   },
   {
-    path: 'signature-pad',
+    path: 'components/signature-pad',
     loadComponent: () => import('./pages/signature-pad/signature-pad-page'),
   },
   {
-    path: 'image-compare',
+    path: 'components/image-compare',
     loadComponent: () => import('./pages/image-compare/image-compare-page'),
   },
   {
-    path: 'audio-player',
+    path: 'components/audio-player',
     loadComponent: () => import('./pages/audio-player/audio-player-page'),
   },
   {
-    path: 'qr-code',
+    path: 'components/qr-code',
     loadComponent: () => import('./pages/qr-code/qr-code-page'),
   },
   {
-    path: 'video-player',
+    path: 'components/video-player',
     loadComponent: () => import('./pages/video-player/video-player-page'),
   },
   {
-    path: 'barcode-scanner',
+    path: 'components/barcode-scanner',
     loadComponent: () => import('./pages/barcode-scanner/barcode-scanner-page'),
   },
   {
-    path: 'tour-guide',
+    path: 'components/tour-guide',
     loadComponent: () => import('./pages/tour-guide/tour-guide-page'),
   },
   {
-    path: 'spotlight',
+    path: 'components/spotlight',
     loadComponent: () => import('./pages/spotlight/spotlight-page'),
   },
   {
-    path: 'code-editor',
+    path: 'components/code-editor',
     loadComponent: () => import('./pages/code-editor/code-editor-page'),
   },
   {
-    path: 'rich-text-editor',
+    path: 'components/rich-text-editor',
     loadComponent: () => import('./pages/rich-text-editor/rich-text-editor-page'),
   },
   {
-    path: 'diff-viewer',
+    path: 'components/diff-viewer',
     loadComponent: () => import('./pages/diff-viewer/diff-viewer-page'),
   },
   {
-    path: 'kanban-board',
+    path: 'components/kanban-board',
     loadComponent: () => import('./pages/kanban-board/kanban-board-page'),
   },
   {
-    path: 'theme-toggle',
+    path: 'components/theme-toggle',
     loadComponent: () => import('./pages/theme-toggle/theme-toggle-page'),
   },
   {
-    path: 'language-switcher',
+    path: 'components/language-switcher',
     loadComponent: () => import('./pages/language-switcher/language-switcher-page'),
   },
   {
-    path: 'timezone',
+    path: 'components/timezone',
     loadComponent: () => import('./pages/timezone/timezone-page'),
   },
   {
-    path: 'navbar',
+    path: 'components/navbar',
     loadComponent: () => import('./pages/navbar/navbar-page'),
   },
   {
-    path: 'notification-center',
+    path: 'components/notification-center',
     loadComponent: () => import('./pages/notification-center/notification-center-page'),
   },
   {
-    path: 'pdf-viewer',
+    path: 'components/pdf-viewer',
     loadComponent: () => import('./pages/pdf-viewer/pdf-viewer-page'),
   },
   {
-    path: 'masonry-grid',
+    path: 'components/masonry-grid',
     loadComponent: () => import('./pages/masonry-grid/masonry-grid-page'),
   },
   {
-    path: 'speed-dial',
+    path: 'components/speed-dial',
     loadComponent: () => import('./pages/speed-dial/speed-dial-page'),
   },
   {
-    path: 'org-chart',
+    path: 'components/org-chart',
     loadComponent: () => import('./pages/org-chart/org-chart-page'),
   },
   {
-    path: 'avatar-group',
+    path: 'components/avatar-group',
     loadComponent: () => import('./pages/avatar-group/avatar-group-page'),
   },
   {
-    path: 'split-button',
+    path: 'components/split-button',
     loadComponent: () => import('./pages/split-button/split-button-page'),
   },
   {
-    path: 'virtual-list',
+    path: 'components/virtual-list',
     loadComponent: () => import('./pages/virtual-list/virtual-list-page'),
   },
   {
-    path: 'image-annotator',
+    path: 'components/image-annotator',
     loadComponent: () => import('./pages/image-annotator/image-annotator-page'),
   },
   {
-    path: 'confetti',
+    path: 'components/confetti',
     loadComponent: () => import('./pages/confetti/confetti-page'),
   },
   {
-    path: 'animated-counter',
+    path: 'components/animated-counter',
     loadComponent: () => import('./pages/animated-counter/animated-counter-page'),
   },
   {
-    path: 'dock',
+    path: 'components/dock',
     loadComponent: () => import('./pages/dock/dock-page'),
   },
   {
-    path: 'search-input',
+    path: 'components/search-input',
     loadComponent: () => import('./pages/search-input/search-input-page'),
   },
   {
-    path: 'stat-card',
+    path: 'components/stat-card',
     loadComponent: () => import('./pages/stat-card/stat-card-page'),
   },
   {
-    path: 'empty-state',
+    path: 'components/empty-state',
     loadComponent: () => import('./pages/empty-state/empty-state-page'),
   },
   {
-    path: 'transfer-list',
+    path: 'components/transfer-list',
     loadComponent: () => import('./pages/transfer-list/transfer-list-page'),
   },
 ];
