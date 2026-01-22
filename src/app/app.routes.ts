@@ -409,4 +409,20 @@ export const routes: Routes = [
     path: 'dock',
     loadComponent: () => import('./pages/dock/dock-page'),
   },
+  {
+    path: 'search-input',
+    loadComponent: () => import('./pages/search-input/search-input-page'),
+  },
+  {
+    path: 'stat-card',
+    loadComponent: () => import('./pages/stat-card/stat-card-page'),
+  },
+  {
+    path: 'empty-state',
+    loadComponent: () => import('./pages/empty-state/empty-state-page'),
+  },
+  {
+    path: 'transfer-list',
+    loadComponent: () => import('./pages/transfer-list/transfer-list-page'),
+  },
 ];

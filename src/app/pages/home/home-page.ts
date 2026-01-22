@@ -923,6 +923,38 @@ import { RouterLink } from '@angular/router';
             macOS-style icon dock with magnification.
           </p>
         </a>
+
+        <a
+          routerLink="/search-input"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Search Input</h3>
+          <p class="text-sm text-muted-foreground mt-2">Search with autocomplete suggestions.</p>
+        </a>
+
+        <a
+          routerLink="/stat-card"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Stat Card</h3>
+          <p class="text-sm text-muted-foreground mt-2">Statistics and metrics display.</p>
+        </a>
+
+        <a
+          routerLink="/empty-state"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Empty State</h3>
+          <p class="text-sm text-muted-foreground mt-2">Placeholder for empty content.</p>
+        </a>
+
+        <a
+          routerLink="/transfer-list"
+          class="group relative rounded-lg border p-6 hover:bg-accent transition-colors"
+        >
+          <h3 class="font-semibold leading-none tracking-tight">Transfer List</h3>
+          <p class="text-sm text-muted-foreground mt-2">Move items between two lists.</p>
+        </a>
       </div>
     </div>
   `,
