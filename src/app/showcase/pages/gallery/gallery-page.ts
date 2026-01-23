@@ -359,7 +359,7 @@ import { ScSpinner } from '../../../ui/spinner';
                 <div sc-card-content>
                   <div class="space-y-2">
                     <label sc-label>Choose an option</label>
-                    <sc-select [(value)]="selectValue">
+                    <div sc-select [(value)]="selectValue">
                       <button sc-select-trigger class="w-full">
                         {{ selectValue || 'Select...' }}
                       </button>
@@ -368,7 +368,7 @@ import { ScSpinner } from '../../../ui/spinner';
                         <div sc-select-item value="Option 2">Option 2</div>
                         <div sc-select-item value="Option 3">Option 3</div>
                       </div>
-                    </sc-select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -563,7 +563,7 @@ import { ScSpinner } from '../../../ui/spinner';
               <div sc-card-content class="pt-6">
                 <div class="flex flex-wrap gap-4">
                   <!-- Dialog -->
-                  <sc-dialog>
+                  <div sc-dialog>
                     <button sc-dialog-trigger sc-button variant="outline">Open Dialog</button>
                     <div sc-dialog-content>
                       <div sc-dialog-header>
@@ -576,10 +576,10 @@ import { ScSpinner } from '../../../ui/spinner';
                         <button sc-dialog-close sc-button>Continue</button>
                       </div>
                     </div>
-                  </sc-dialog>
+                  </div>
 
                   <!-- Sheet -->
-                  <sc-sheet>
+                  <div sc-sheet>
                     <button sc-sheet-trigger sc-button variant="outline">Open Sheet</button>
                     <div sc-sheet-content side="right">
                       <div sc-sheet-header>
@@ -591,10 +591,10 @@ import { ScSpinner } from '../../../ui/spinner';
                       </div>
                       <button sc-sheet-close sc-button class="w-full">Close</button>
                     </div>
-                  </sc-sheet>
+                  </div>
 
                   <!-- Alert Dialog -->
-                  <sc-alert-dialog>
+                  <div sc-alert-dialog>
                     <button sc-alert-dialog-trigger sc-button variant="destructive">
                       Delete Item
                     </button>
@@ -608,7 +608,7 @@ import { ScSpinner } from '../../../ui/spinner';
                         <button sc-alert-dialog-action>Delete</button>
                       </div>
                     </div>
-                  </sc-alert-dialog>
+                  </div>
 
                   <!-- Tooltip -->
                   <sc-tooltip>

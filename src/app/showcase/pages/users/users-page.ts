@@ -233,7 +233,7 @@ interface User {
           </div>
 
           <!-- Add User Dialog -->
-          <sc-dialog>
+          <div sc-dialog>
             <button sc-dialog-trigger sc-button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +277,7 @@ interface User {
                 </div>
                 <div class="grid gap-2">
                   <label sc-label for="role">Role</label>
-                  <sc-select [(value)]="newUser.role">
+                  <div sc-select [(value)]="newUser.role">
                     <button sc-select-trigger id="role">
                       {{ newUser.role || 'Select role' }}
                     </button>
@@ -286,7 +286,7 @@ interface User {
                       <div sc-select-item value="Editor">Editor</div>
                       <div sc-select-item value="Viewer">Viewer</div>
                     </div>
-                  </sc-select>
+                  </div>
                 </div>
               </div>
               <div sc-dialog-footer>
@@ -294,7 +294,7 @@ interface User {
                 <button sc-dialog-close sc-button (click)="addUser()">Add User</button>
               </div>
             </div>
-          </sc-dialog>
+          </div>
         </header>
 
         <main class="flex-1 p-4 lg:p-6">
@@ -371,7 +371,7 @@ interface User {
                       </td>
                       <td sc-data-table-cell>{{ formatDate(user.createdAt) }}</td>
                       <td sc-data-table-cell>
-                        <sc-dropdown-menu>
+                        <div sc-dropdown-menu>
                           <button sc-dropdown-menu-trigger sc-button variant="ghost" size="icon">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -393,7 +393,7 @@ interface User {
                           </button>
                           <div sc-dropdown-menu-content align="end">
                             <!-- View Details Sheet -->
-                            <sc-sheet>
+                            <div sc-sheet>
                               <button sc-sheet-trigger sc-dropdown-menu-item>
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -461,10 +461,10 @@ interface User {
                                   <button sc-sheet-close sc-button variant="outline">Close</button>
                                 </div>
                               </div>
-                            </sc-sheet>
+                            </div>
 
                             <!-- Edit User Dialog -->
-                            <sc-dialog>
+                            <div sc-dialog>
                               <button sc-dialog-trigger sc-dropdown-menu-item>
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -500,18 +500,18 @@ interface User {
                                   </div>
                                   <div class="grid gap-2">
                                     <label sc-label>Role</label>
-                                    <sc-select [value]="user.role">
+                                    <div sc-select [value]="user.role">
                                       <button sc-select-trigger>{{ user.role }}</button>
                                       <div sc-select-content>
                                         <div sc-select-item value="Admin">Admin</div>
                                         <div sc-select-item value="Editor">Editor</div>
                                         <div sc-select-item value="Viewer">Viewer</div>
                                       </div>
-                                    </sc-select>
+                                    </div>
                                   </div>
                                   <div class="grid gap-2">
                                     <label sc-label>Status</label>
-                                    <sc-select [value]="user.status">
+                                    <div sc-select [value]="user.status">
                                       <button sc-select-trigger class="capitalize">
                                         {{ user.status }}
                                       </button>
@@ -520,7 +520,7 @@ interface User {
                                         <div sc-select-item value="inactive">Inactive</div>
                                         <div sc-select-item value="pending">Pending</div>
                                       </div>
-                                    </sc-select>
+                                    </div>
                                   </div>
                                 </div>
                                 <div sc-dialog-footer>
@@ -530,12 +530,12 @@ interface User {
                                   <button sc-dialog-close sc-button>Save Changes</button>
                                 </div>
                               </div>
-                            </sc-dialog>
+                            </div>
 
                             <div sc-dropdown-menu-separator></div>
 
                             <!-- Delete Confirmation -->
-                            <sc-alert-dialog>
+                            <div sc-alert-dialog>
                               <button
                                 sc-alert-dialog-trigger
                                 sc-dropdown-menu-item
@@ -577,9 +577,9 @@ interface User {
                                   </button>
                                 </div>
                               </div>
-                            </sc-alert-dialog>
+                            </div>
                           </div>
-                        </sc-dropdown-menu>
+                        </div>
                       </td>
                     </tr>
                   } @empty {

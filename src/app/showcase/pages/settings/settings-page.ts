@@ -321,7 +321,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                           Permanently delete your account and all data.
                         </div>
                       </div>
-                      <sc-alert-dialog>
+                      <div sc-alert-dialog>
                         <button sc-alert-dialog-trigger sc-button variant="destructive" size="sm">
                           Delete Account
                         </button>
@@ -338,7 +338,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                             <button sc-alert-dialog-action>Delete Account</button>
                           </div>
                         </div>
-                      </sc-alert-dialog>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -404,7 +404,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                     <p sc-card-description>Select your preferred theme.</p>
                   </div>
                   <div sc-card-content>
-                    <sc-radio-group [(value)]="theme" class="grid grid-cols-3 gap-4">
+                    <div sc-radio-group [(value)]="theme" class="grid grid-cols-3 gap-4">
                       @for (option of themeOptions; track option.value) {
                         <label
                           class="cursor-pointer [&:has([data-state=checked])>div]:border-primary"
@@ -418,7 +418,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                           </div>
                         </label>
                       }
-                    </sc-radio-group>
+                    </div>
                   </div>
                 </div>
 
@@ -430,13 +430,14 @@ import { ToastService } from '../../../ui/toast/toast.service';
                   <div sc-card-content class="space-y-4">
                     <div class="flex items-center gap-4">
                       <span class="text-sm">A</span>
-                      <sc-slider
+                      <div
+                        sc-slider
                         [(value)]="fontSize"
                         [min]="12"
                         [max]="20"
                         [step]="1"
                         class="flex-1"
-                      />
+                      ></div>
                       <span class="text-lg">A</span>
                     </div>
                     <p class="text-sm text-muted-foreground">Current: {{ fontSize }}px</p>
@@ -449,7 +450,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                     <p sc-card-description>Select your preferred language.</p>
                   </div>
                   <div sc-card-content>
-                    <sc-select [(value)]="language">
+                    <div sc-select [(value)]="language">
                       <button sc-select-trigger class="w-full sm:w-[240px]">
                         {{ getLanguageLabel(language) }}
                       </button>
@@ -458,7 +459,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                           <div sc-select-item [value]="lang.value">{{ lang.label }}</div>
                         }
                       </div>
-                    </sc-select>
+                    </div>
                   </div>
                 </div>
               </div>

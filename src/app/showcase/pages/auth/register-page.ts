@@ -195,7 +195,7 @@ import {
                   </div>
                   <div class="space-y-2">
                     <label sc-label for="role">Role</label>
-                    <sc-select [(value)]="formData.role">
+                    <div sc-select [(value)]="formData.role">
                       <button sc-select-trigger id="role" class="w-full">
                         {{ formData.role || 'Select your role' }}
                       </button>
@@ -206,7 +206,7 @@ import {
                         <div sc-select-item value="Marketing">Marketing</div>
                         <div sc-select-item value="Other">Other</div>
                       </div>
-                    </sc-select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ import {
                 <div class="space-y-6">
                   <div class="space-y-2">
                     <label sc-label for="country">Country</label>
-                    <sc-select [(value)]="formData.country">
+                    <div sc-select [(value)]="formData.country">
                       <button sc-select-trigger id="country" class="w-full">
                         {{ formData.country || 'Select your country' }}
                       </button>
@@ -229,7 +229,7 @@ import {
                         <div sc-select-item value="Australia">Australia</div>
                         <div sc-select-item value="Other">Other</div>
                       </div>
-                    </sc-select>
+                    </div>
                   </div>
 
                   <div class="space-y-4">
