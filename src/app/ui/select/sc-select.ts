@@ -7,6 +7,7 @@ import {
   effect,
   inject,
   input,
+  model,
   ViewEncapsulation,
 } from '@angular/core';
 import { SIGNAL, signalSetFn } from '@angular/core/primitives/signals';
@@ -17,11 +18,7 @@ import { ScSelectTrigger } from './sc-select-trigger';
 @Component({
   selector: 'div[sc-select]',
   imports: [Combobox],
-  hostDirectives: [
-    {
-      directive: Combobox,
-    },
-  ],
+  hostDirectives: [Combobox],
   template: `<ng-content />`,
   host: {
     'data-slot': 'select',
@@ -32,6 +29,8 @@ import { ScSelectTrigger } from './sc-select-trigger';
 })
 export class ScSelect {
   readonly classInput = input<string>('', { alias: 'class' });
+  readonly value = model<any>(null);
+  readonly disabled = input<boolean>(false);
 
   private readonly trigger = contentChild(ScSelectTrigger);
   private readonly content = contentChild(ScSelectContent, { descendants: true });
@@ -49,5 +48,29 @@ export class ScSelect {
 
   constructor() {
     effect(() => signalSetFn(this.combobox.readonly[SIGNAL], true));
+
+    // Sync external value to listbox values
+    effect(() => {
+      const val = this.value();
+      const content = this.content();
+      if (content) {
+        // We only support single selection for now in this sync
+        content.listbox.values.set(val !== null && val !== undefined ? [val] : []);
+      }
+    });
+
+    // Sync listbox values to external value
+    effect(
+      () => {
+        const content = this.content();
+        if (content) {
+          const vals = content.listbox.values();
+          if (vals.length > 0) {
+            this.value.set(vals[0]);
+          }
+        }
+      },
+      { allowSignalWrites: true },
+    );
   }
 }

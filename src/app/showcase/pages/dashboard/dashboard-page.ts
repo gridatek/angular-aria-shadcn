@@ -388,7 +388,7 @@ import {
                       <span class="text-sm font-medium">{{ project.name }}</span>
                       <span class="text-sm text-muted-foreground">{{ project.progress }}%</span>
                     </div>
-                    <sc-progress [value]="project.progress" class="h-2" />
+                    <div sc-progress [value]="project.progress" class="h-2"></div>
                   </div>
                 }
               </div>

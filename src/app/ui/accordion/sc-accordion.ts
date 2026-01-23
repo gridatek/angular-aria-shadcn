@@ -1,4 +1,5 @@
 import {
+  booleanAttribute,
   ChangeDetectionStrategy,
   Component,
   computed,
@@ -27,7 +28,7 @@ export class ScAccordion {
   readonly type = input<AccordionType>('single');
 
   /** Whether accordion can be fully collapsed (only for single type) */
-  readonly collapsible = input<boolean>(false);
+  readonly collapsible = input<boolean, unknown>(false, { transform: booleanAttribute });
 
   /** Currently open item(s) - string for single, string[] for multiple */
   readonly value = model<string | string[]>('');

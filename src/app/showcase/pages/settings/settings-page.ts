@@ -188,7 +188,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
               <p class="text-muted-foreground">Manage your account settings and preferences.</p>
             </div>
 
-            <sc-tabs [(value)]="activeTab" class="space-y-6">
+            <div sc-tabs [(value)]="activeTab" class="space-y-6">
               <div sc-tabs-list class="grid w-full grid-cols-4">
                 <button sc-tabs-trigger value="profile">Profile</button>
                 <button sc-tabs-trigger value="account">Account</button>
@@ -302,7 +302,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                           Use an authenticator app to generate codes.
                         </div>
                       </div>
-                      <sc-switch [(checked)]="twoFactorEnabled" />
+                      <button sc-switch [(checked)]="twoFactorEnabled"></button>
                     </div>
                   </div>
                 </div>
@@ -360,7 +360,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                             {{ notification.description }}
                           </div>
                         </div>
-                        <sc-switch [(checked)]="notification.enabled" />
+                        <button sc-switch [(checked)]="notification.enabled"></button>
                       </div>
                     }
                   </div>
@@ -372,7 +372,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                     <p sc-card-description>Configure push notification preferences.</p>
                   </div>
                   <div sc-card-content class="space-y-4">
-                    <sc-radio-group [(value)]="pushNotificationSetting" class="space-y-3">
+                    <div sc-radio-group [(value)]="pushNotificationSetting" class="space-y-3">
                       <div class="flex items-center space-x-3">
                         <input sc-radio-group-item value="all" id="push-all" />
                         <label sc-label for="push-all" class="font-normal cursor-pointer">
@@ -391,7 +391,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                           No push notifications
                         </label>
                       </div>
-                    </sc-radio-group>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -440,7 +440,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                       ></div>
                       <span class="text-lg">A</span>
                     </div>
-                    <p class="text-sm text-muted-foreground">Current: {{ fontSize }}px</p>
+                    <p class="text-sm text-muted-foreground">Current: {{ fontSize() }}px</p>
                   </div>
                 </div>
 
@@ -452,7 +452,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                   <div sc-card-content>
                     <div sc-select [(value)]="language">
                       <button sc-select-trigger class="w-full sm:w-[240px]">
-                        {{ getLanguageLabel(language) }}
+                        {{ getLanguageLabel(language()) }}
                       </button>
                       <div sc-select-content>
                         @for (lang of languages; track lang.value) {
@@ -463,7 +463,7 @@ import { ToastService } from '../../../ui/toast/toast.service';
                   </div>
                 </div>
               </div>
-            </sc-tabs>
+            </div>
           </div>
         </main>
       </div>

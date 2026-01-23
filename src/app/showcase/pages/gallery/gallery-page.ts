@@ -267,7 +267,7 @@ import { ScSpinner } from '../../../ui/spinner';
                   <div class="flex flex-wrap gap-3">
                     <button sc-button disabled>Disabled</button>
                     <button sc-button>
-                      <sc-spinner class="mr-2 h-4 w-4" />
+                      <div sc-spinner class="mr-2 h-4 w-4"></div>
                       Loading
                     </button>
                   </div>
@@ -345,7 +345,7 @@ import { ScSpinner } from '../../../ui/spinner';
                     <label for="checkbox2" class="text-sm cursor-pointer">Checked</label>
                   </div>
                   <div class="flex items-center space-x-2">
-                    <sc-switch [(checked)]="switchValue" />
+                    <button sc-switch [(checked)]="switchValue"></button>
                     <span class="text-sm">Enable notifications</span>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ import { ScSpinner } from '../../../ui/spinner';
                   <h3 sc-card-title>Radio Group</h3>
                 </div>
                 <div sc-card-content>
-                  <sc-radio-group [(value)]="radioValue" class="space-y-2">
+                  <div sc-radio-group [(value)]="radioValue" class="space-y-2">
                     <div class="flex items-center space-x-2">
                       <input sc-radio-group-item value="option1" id="r1" />
                       <label for="r1" class="text-sm cursor-pointer">Option 1</label>
@@ -392,7 +392,7 @@ import { ScSpinner } from '../../../ui/spinner';
                       <input sc-radio-group-item value="option3" id="r3" />
                       <label for="r3" class="text-sm cursor-pointer">Option 3</label>
                     </div>
-                  </sc-radio-group>
+                  </div>
                 </div>
               </div>
 
@@ -403,8 +403,8 @@ import { ScSpinner } from '../../../ui/spinner';
                 </div>
                 <div sc-card-content class="space-y-4">
                   <div class="space-y-2">
-                    <label sc-label>Volume: {{ sliderValue }}</label>
-                    <sc-slider [(value)]="sliderValue" [max]="100" />
+                    <label sc-label>Volume: {{ sliderValue() }}</label>
+                    <div sc-slider [(value)]="sliderValue" [max]="100"></div>
                   </div>
                 </div>
               </div>
@@ -420,9 +420,9 @@ import { ScSpinner } from '../../../ui/spinner';
                   <h3 sc-card-title>Progress</h3>
                 </div>
                 <div sc-card-content class="space-y-4">
-                  <sc-progress [value]="33" />
-                  <sc-progress [value]="66" />
-                  <sc-progress [value]="100" />
+                  <div sc-progress [value]="33"></div>
+                  <div sc-progress [value]="66"></div>
+                  <div sc-progress [value]="100"></div>
                 </div>
               </div>
               <div sc-card>
@@ -431,10 +431,10 @@ import { ScSpinner } from '../../../ui/spinner';
                 </div>
                 <div sc-card-content>
                   <div class="flex items-center space-x-4">
-                    <sc-skeleton class="h-12 w-12 rounded-full" />
+                    <div sc-skeleton class="h-12 w-12 rounded-full"></div>
                     <div class="space-y-2">
-                      <sc-skeleton class="h-4 w-[250px]" />
-                      <sc-skeleton class="h-4 w-[200px]" />
+                      <div sc-skeleton class="h-4 w-[250px]"></div>
+                      <div sc-skeleton class="h-4 w-[200px]"></div>
                     </div>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ import { ScSpinner } from '../../../ui/spinner';
                   <h3 sc-card-title>Tabs</h3>
                 </div>
                 <div sc-card-content>
-                  <sc-tabs value="tab1">
+                  <div sc-tabs value="tab1">
                     <div sc-tabs-list>
                       <button sc-tabs-trigger value="tab1">Account</button>
                       <button sc-tabs-trigger value="tab2">Password</button>
@@ -507,7 +507,7 @@ import { ScSpinner } from '../../../ui/spinner';
                     <div sc-tabs-content value="tab3" class="p-4">
                       <p class="text-sm text-muted-foreground">General settings content.</p>
                     </div>
-                  </sc-tabs>
+                  </div>
                 </div>
               </div>
 
@@ -611,10 +611,10 @@ import { ScSpinner } from '../../../ui/spinner';
                   </div>
 
                   <!-- Tooltip -->
-                  <sc-tooltip>
+                  <div sc-tooltip>
                     <button sc-tooltip-trigger sc-button variant="outline">Hover me</button>
                     <div sc-tooltip-content>This is a tooltip</div>
-                  </sc-tooltip>
+                  </div>
                 </div>
               </div>
             </div>
